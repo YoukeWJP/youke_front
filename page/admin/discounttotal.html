@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>创建整单折扣</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/mobiscroll.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_admin.css">
+    <link rel="stylesheet" type="text/css" href="../../page/admin/discounttotal.css">
+    <script src="../../page/common/script.js"></script>
+    <!-- 破解方法链接：http://blog.csdn.net/cdnight/article/details/49306957 -->
+    <script src="../../js/third-party/mobiscroll.custom.min.js"></script>
+</head>
+
+<body>
+    <header class="top">
+        <i class="back"></i>
+        <span class="title">创建整单折扣</span>
+        <i class="confirm"></i>
+    </header>
+    <article class="main">
+        <div class="content">
+            <ul>
+                <li class="name">
+                    <input type="text" placeholder="折扣名称" maxlength="16" id="discountName">
+                </li>
+                <li class="period">
+                    <label>有效期：</label>
+                    <input type="text" placeholder="开始日期：年-月-日" maxlength="10" class="beginDate" id="beginDate" readonly="readonly">
+                    <input type="text" placeholder="结束日期：年-月-日" maxlength="10" class="endDate" id="endDate" readonly="readonly">
+                </li>
+                <li class="title">
+                    <label>折扣条件：</label>
+                </li>
+                <li class="condition">
+                    <label>总金额（去掉单项折扣）需满：</label>
+                    <input type="text" placeholder="输入订单金额" maxlength="16" id="total">
+                    <p class="msg">如总金额满2000打8折的活动，应设置当前值为"2000"。不设置或设置为“0”则表示不限制</p>
+                </li>
+                <li class="title mt-20">
+                    <label>折扣方式：</label>
+                </li>
+                <li class="mode">
+                    <a href="javascript:void(0);" class="first">
+                        <i></i>
+                        <span>折扣</span>
+                    </a>
+                    <a href="javascript:void(0);" class="second active">
+                        <i class="checked"></i>
+                        <span>返现</span>
+                        <p>
+                            <label>返现额度：</label>
+                            <input type="text" placeholder="返现额度：如100.00" id="amount">
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </article>
+    <footer class="bottom">
+        <div class="bar">
+            <a href="javascript:void(0);" class="confirm">保存</a>
+        </div>
+    </footer>
+    <script src="../admin/discounttotal.js"></script>
+</body>
+
+</html>

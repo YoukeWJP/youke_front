@@ -1,0 +1,1002 @@
+/*header --- BEGIN*/
+.header {
+    height: 48px;
+    background: #DDDDDD;
+}
+.header>span {
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    margin-left: 48px;
+    color: #555452;
+}
+.header:before {
+    position: absolute;
+    background: url("../../images/icons_service/student-top.png") no-repeat;
+    width: 17px;
+    height: 15px;
+    top: 18px;
+    left: 16px;
+    content: '';
+}
+/*header --- END*/
+.main {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    bottom: 55px;
+    left: 0;
+    background: #FFFFFF;
+}
+.main .body {
+    position: absolute;
+    top: 0;
+    right: 372px;
+    bottom: 0;
+    left: 0;
+}
+/*student-info --- BEGIN*/
+.main .body .student-info .search-bar {
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.main .body .student-info .search-bar .left {
+    display: block;
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: #EEEEEE;
+}
+.main .body .student-info .search-bar .left:before {
+    position: absolute;
+    background: url("../../images/icons_service/search.png") no-repeat;
+    width: 33px;
+    height: 31px;
+    margin-top: 10px;
+    margin-left: 9px;
+    content: '';
+}
+.main .body .student-info .search-bar>input {
+    height: 50px;
+    width: calc(100% - 130px);
+    line-height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    font-size: 24px;
+    color: #555453;
+}
+.main .body .student-info .search-bar .right {
+    display: block;
+    float: right;
+    height: 50px;
+    width: 50px;
+    background: #EEEEEE;
+}
+.main .body .student-info .search-bar .right:before {
+    position: absolute;
+    background: url("../../images/icons_service/nine-block.png") no-repeat;
+    width: 36px;
+    height: 26px;
+    margin-top: 12px;
+    margin-left: 7px;
+    content: '';
+}
+.main .body .student-info .content ul {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+}
+.main .body .student-info .content ul li {
+    height: 64px;
+    border-bottom: 2px solid #CCCCCC;
+}
+.main .body .student-info .content ul li.active{
+    background: #F6F6F6;
+}
+.main .body .student-info .content ul li span.icon {
+    display: inline-block;
+    float: left;
+    height: 64px;
+    width: 64px;
+    color: #FFFFFF;
+}
+.main .body .student-info .content ul li span.icon:before {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    background: #307FAC;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    text-align: center;
+    content: '';
+}
+.main .body .student-info .content ul li .left,.main .body .student-info .content ul li .right {
+    margin-right: 5px;
+    height: 64px;
+}
+.main .body .student-info .content ul li .left {
+    float: left;
+    color: #555452;
+}
+.main .body .student-info .content ul li .left>h3 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+.main .body .student-info .content ul li .left>span {
+    font-size: 12px;
+}
+.main .body .student-info .content ul li .right {
+    float: right;
+}
+.main .body .student-info .content ul li .right>h3 {
+    margin-top: 10px;
+    font-weight: normal;
+    text-align: right;
+    height: 25px;
+}
+.main .body .student-info .content ul li .right>span {
+    display: block;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    margin-right: 0;
+}
+.main .body .student-info .content ul li .right>span:before {
+    position: absolute;
+    background: url("../../images/icons_service/mobile-small.png") no-repeat;
+    margin-top: 12px;
+    margin-left: -10px;
+    width: 6px;
+    height: 8px;
+    content: '';
+}
+/*student-info --- END*/
+/*sidebar-right-list --- BEGIN*/
+.main .sidebar-right-list {
+    float: right;
+    width: 372px;
+    height: 100%;
+    background: #EEEEEE;
+}
+.main .sidebar-right-list ul {
+    width: 100%;
+    height: 100%;
+}
+.main .sidebar-right-list ul li {
+    height: 66px;
+}
+.main .sidebar-right-list ul li.first:before,
+.main .sidebar-right-list ul li.second:before,
+.main .sidebar-right-list ul li.third:before{
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border-radius: 21px;
+    margin-left: 12px;
+    margin-top: 12px;
+    content: '';
+}
+.main .sidebar-right-list ul li.first:before {
+    background: url("../../images/icons_service/sidebar-right-back.png") no-repeat;
+}
+.main .sidebar-right-list ul li.second:before {
+    background: url("../../images/icons_service/sidebar-right-add-student.png") no-repeat;
+}
+.main .sidebar-right-list ul li.third:before {
+    background: url("../../images/icons_service/sidebar-right-batch-import.png") no-repeat;
+}
+.main .sidebar-right-list ul li a {
+    position: absolute;
+    text-align: left;
+    margin-left: 13px;
+    height: 66px;
+    text-decoration: none;
+    color: #555453;
+}
+.main .sidebar-right-list ul li a h3 {
+    margin-top: 13px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.main .sidebar-right-list ul li a span {
+    color: #969696;
+    font-size: 12px;
+}
+.main .sidebar-right-list ul li.active {
+    background: #CCCCCC;
+}
+/*sidebar-right-list --- END*/
+/*sidebar-right-student-detail --- BEGIN*/
+.main .sidebar-right-student-detail {
+    float: right;
+    width: 372px;
+    height: 100%;
+    background: #EEEEEE;
+}
+.main .sidebar-right-student-detail .title{
+    width: 100%;
+    height: 40px;
+    background: #CCCCCC;
+    color: #5A5A5A;
+}
+.main .sidebar-right-student-detail .title i {
+    position: absolute;
+    background: url("../../images/icons_service/sidebar-back.png") no-repeat;
+    width: 11px;
+    height: 14px;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+.main .sidebar-right-student-detail .title span {
+    background: #CCCCCC;
+    color: #5A5A5A;
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    font-weight: normal;
+    float: left;
+}
+.main .sidebar-right-student-detail .content .student{
+    width: 348px;
+    margin-top: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #FFFFFF;
+}
+.main .sidebar-right-student-detail .content .student h3 {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 12px;
+    background: #187FAD;
+    color: #FFFFFF;
+}
+.main .sidebar-right-student-detail .content .student .name {
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 12px;
+}
+.main .sidebar-right-student-detail .content .student .student-info {
+    min-height: 55px;
+    background: #FFFFFF;
+}
+.main .sidebar-right-student-detail .content .student .student-info .student-birth {
+    display: block;
+    height: 35px;
+    color: #464646;
+    margin: 0 12px;
+    border-bottom: 2px solid #000000;
+    text-decoration: none;
+}
+.main .sidebar-right-student-detail .content .student .student-info .student-birth .icon {
+    float: left;
+    width: 12px;
+    height: 18px;
+    margin-top: 3px;
+}
+.main .sidebar-right-student-detail .content .student .student-info .student-birth .icon.man {
+    background: url("../../images/icons_service/sidebar-man.png") no-repeat;
+}
+.main .sidebar-right-student-detail .content .student .student-info .student-birth .icon.woman {
+    background: url("../../images/icons_service/sidebar-woman.png") no-repeat;
+}
+.main .sidebar-right-student-detail .content .student .student-info .student-birth .sex {
+    float: left;
+    margin-left: 5px;
+    width: 20px;
+}
+.main .sidebar-right-student-detail .content .student .student-info .student-birth .slide {
+    float: right;
+    width: 10px;
+    height: 14px;
+    margin-top: 3px;
+    margin-right: 12px;
+}
+.main .sidebar-right-student-detail .content .student .student-info .student-birth .icon-birth {
+    float: left;
+    width: 21px;
+    height: 17px;
+    margin-left: 20px;
+    margin-top: 3px;
+    background: url("../../images/icons_service/sidebar-birth.png") no-repeat;
+}
+.main .sidebar-right-student-detail .content .student .student-info .student-birth .birth {
+    float: left;
+    margin-left: 5px;
+}
+.main .sidebar-right-student-detail .content .student .student-info .student-birth .slide.up {
+    background: url("../../images/icons_service/sidebar-slideup.png") no-repeat;
+}
+.main .sidebar-right-student-detail .content .student .student-info .student-birth .slide.down {
+    background: url("../../images/icons_service/sidebar-slidedown.png") no-repeat;
+}
+.main .sidebar-right-student-detail .content .student .student-info .detail {
+    margin: 0 12px;
+    height: 123px;
+    color: #959696;
+}
+.main .sidebar-right-student-detail .content .student .student-info .detail ul {
+    font-size: 12px;
+}
+.main .sidebar-right-student-detail .content .student .student-info .detail ul li:first-child {
+    margin-top: 5px;
+}
+.main .sidebar-right-student-detail .content .student .student-info .detail ul li {
+    height: 20px;
+    line-height: 20px;
+}
+.main .sidebar-right-student-detail .content .student .student-info .detail .icon-message {
+    display: block;
+    width: 29px;
+    height: 19px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background: url("../../images/icons_service/sidebar-sendmsg.png") no-repeat;
+}
+.main .sidebar-right-student-detail .content .student .student-info .detail .message {
+    color: #187FAD;
+    font-size: 12px;
+}
+.main .sidebar-right-student-detail .content .remark {
+    background: #FFFFFF;
+    margin: 10px 12px 0 12px;
+    height: 70px;
+}
+.main .sidebar-right-student-detail .content .remark h3 {
+    height: 40px;
+    line-height: 40px;
+    margin-left: 12px;
+}
+.main .sidebar-right-student-detail .content .remark h3 i {
+    float: right;
+    width: 14px;
+    height: 14px;
+    margin-top: 12px;
+    margin-right: 22px;
+    background: url("../../images/icons_service/sidebar-edit.png") no-repeat;
+}
+.main .sidebar-right-student-detail .content .remark .detail {
+    display: block;
+    margin-left: 12px;
+    height: 20px;
+    line-height: 20px;
+    color: #959696;
+    font-size: 12px;
+}
+.main .sidebar-right-student-detail .content .course .detail {
+    display: inline-block;
+    height: 100%;
+    width: 282px;
+}
+.main .sidebar-right-student-detail .content .course .detail .course-info {
+    float: left;
+    height: 100%;
+    width: 176px;
+}
+.main .sidebar-right-student-detail .content .course .detail .course-info a {
+    float: left;
+    height: 100%;
+    width: 120px;
+    text-decoration: none;
+    color: #959696;
+}
+.main .sidebar-right-student-detail .content .course .detail .course-info a .first {
+    display: block;
+    font-size: 12px;
+    height: 18px;
+    margin-top: 14px;
+}
+.main .sidebar-right-student-detail .content .course .detail .course-info a .second {
+    display: block;
+    color: #555452;
+}
+.main .sidebar-right-student-detail .content .course .detail .course-info i {
+    float: left;
+    width: 56px;
+    height: 100%;
+}
+.main .sidebar-right-student-detail .content .course .detail .course-info i:before {
+    background: url("../../images/icons_service/sidebar-forward.png") no-repeat;
+    width: 11px;
+    height: 14px;
+    margin-right: 8px;
+    margin-top: 26px;
+    float: right;
+    content: '';
+}
+.main .sidebar-right-student-detail .content .course .detail .btn-signin {
+    height: 66px;
+    float: right;
+    width: 106px;
+    text-align: center;
+    text-decoration: none;
+}
+.main .sidebar-right-student-detail .content .course .detail .btn-signin span {
+    display: inline-block;
+    color: #FFFFFF;
+    background: #555452;
+    height: 34px;
+    line-height: 34px;
+    width: 86px;
+    margin-top: 16px;
+}
+.main .sidebar-right-student-detail .content .course,.main .sidebar-right-student-detail .content .signin {
+    height: 66px;
+    background: #FFFFFF;
+    margin: 10px 12px 0 12px;
+}
+.main .sidebar-right-student-detail .content .course .icon,.main .sidebar-right-student-detail .content .signin .icon {
+    float: left;
+    height: 66px;
+    width: 66px;
+    line-height: 66px;
+}
+.main .sidebar-right-student-detail .content .course .icon:before,.main .sidebar-right-student-detail .content .signin .icon:before {
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    margin: 11px;
+    content: '';
+}
+.main .sidebar-right-student-detail .content .course .icon:before {
+    background: url("../../images/icons_service/sidebar-course.png") no-repeat;
+}
+.main .sidebar-right-student-detail .content .signin .icon:before {
+    background: url("../../images/icons_service/sidebar-signin.png") no-repeat;
+}
+.main .sidebar-right-student-detail .content .signin .detail a {
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+    height: 20px;
+    padding-top: 14px;
+    color: #959696;
+}
+.main .sidebar-right-student-detail .content .signin .detail .num {
+    float: right;
+    margin-right: 40px;
+}
+.main .sidebar-right-student-detail .content .btn-buy {
+    height: 66px;
+    line-height: 66px;
+    text-align: center;
+    background: #FFFFFF;
+    margin: 10px 12px 0 12px;
+}
+.main .sidebar-right-student-detail .content .btn-buy .btn {
+    text-decoration: none;
+    color: #555452;
+    background: #FFFFFF;
+}
+/*sidebar-right-student-detail --- END*/
+/*mask-delete --- BEGIN */
+.mask-delete {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-delete .dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 376px;
+    height: 264px;
+    margin-left: -188px;
+    margin-top: -160px;
+    background: #F6F6F6;
+}
+.mask-delete .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-delete .dialog h3 span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.mask-delete .dialog h3 i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-delete .dialog .warn {
+    width: 100%;
+    height: 154px;
+}
+.mask-delete .dialog .warn p {
+    text-align: center;
+    color: #444444;
+    height: 20px;
+    line-height: 20px;
+}
+.mask-delete .dialog .warn p:first-child {
+    margin-top: 60px;
+}
+.mask-delete .dialog .bar {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.mask-delete .dialog .bar .btn-cancel {
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    width: 50%;
+    color: #444444;
+    background: #DDDDDD;
+}
+.mask-delete .dialog .bar .btn-confirm {
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    width: 50%;
+    color: #FFFFFF;
+    background: #307EAC;
+}
+/*mask-delete --- END */
+/*mask-batch-import --- BEGIN */
+.mask-batch-import {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-batch-import .dialog {
+    position: absolute;
+    left: 50%;
+    width: 800px;
+    height: 100%;
+    margin-left: -400px;
+    background: #F6F6F6;
+}
+.mask-batch-import .dialog>h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-batch-import .dialog h3>span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.mask-batch-import .dialog h3>i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-batch-import .dialog .main {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.mask-batch-import .dialog .main .import {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #EEEEEE;
+}
+.mask-batch-import .dialog .main .import .border {
+    position: absolute;
+    background: url("../../images/icons_service/mask-import-border.png") no-repeat;
+    width: 167px;
+    height: 139px;
+    left: 50%;
+    top: 50%;
+    margin-left: -84px;
+    margin-top: -70px;
+}
+.mask-batch-import .dialog .main .import .border:before {
+    position: absolute;
+    background: url("../../images/icons_service/mask-import-add.png") no-repeat;
+    width: 30px;
+    left: 50%;
+    margin-top: 32px;
+    margin-left: -15px;
+    height: 30px;
+    content: '';
+}
+.mask-batch-import .dialog .main .import .border:after {
+    position: absolute;
+    content: attr(data-desc);
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 84px;
+    left: 50%;
+    margin-left: -50px;
+    color: #555452;
+    font-size: 16px;
+    font-weight: bold;
+}
+.mask-batch-import .dialog .main .import .border .file {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.mask-batch-import .dialog .main .import-desc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 16px;
+}
+.mask-batch-import .dialog .main .import-desc>h3 {
+    height: 42px;
+    line-height: 42px;
+    width: 100%;
+    border-bottom: 2px solid #555452;
+}
+.mask-batch-import .dialog .main .import-desc>h3:before {
+    position: absolute;
+    background: url("../../images/icons_service/mask-import-explain.png") no-repeat;
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+    margin-top: 10px;
+    content: '';
+}
+.mask-batch-import .dialog .main .import-desc>h3:after {
+    float: left;
+    margin-left: 42px;
+    font-size: 20px;
+    color: #444444;
+    content: attr(data-desc);
+}
+.mask-batch-import .dialog .main .import-desc .title {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #959696;
+    margin-left: 5px;
+}
+.mask-batch-import .dialog .main .import-desc .download {
+    display: block;
+    text-decoration: none;
+    width: 170px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    padding-right: 10px;
+    text-align: right;
+    color: #444444;
+    font-weight: bold;
+    border: 1px solid #555452;
+}
+.mask-batch-import .dialog .main .import-desc .download:before {
+    position: absolute;
+    background: url("../../images/icons_service/mask-import-download.png") no-repeat;
+    width: 17px;
+    height: 14px;
+    margin-top: 18px;
+    margin-left: -18px;
+    content: '';
+}
+.mask-batch-import .dialog .main .import-desc>p {
+    margin-top: 40px;
+    height: 34px;
+    line-height: 34px;
+    color: #444444;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-left: 5px;
+    border-bottom: 2px solid #CECECE;
+}
+.mask-batch-import .dialog .main .import-desc ul {
+}
+.mask-batch-import .dialog .main .import-desc ul li {
+    height: 48px;
+    line-height: 48px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    font-size: 12px;
+    border-bottom: 1px dashed #DDDDDD;
+}
+.mask-batch-import .dialog .main .import-desc ul li .left {
+    float: left;
+    width: 80px;
+    color: #555452;
+}
+.mask-batch-import .dialog .main .import-desc ul li .middle {
+    float: left;
+    width: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+.mask-batch-import .dialog .main .import-desc ul li .middle.need {
+    color: #187FAD;
+}
+.mask-batch-import .dialog .main .import-desc ul li .right {
+    float: left;
+    color: #959696;
+}
+/*mask-batch-import --- END */
+/*mask-batch-import-preview --- BEGIN */
+.mask-batch-import-preview {
+    z-index: 8;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-batch-import-preview .dialog {
+    position: absolute;
+    left: 50%;
+    width: 800px;
+    height: 100%;
+    margin-left: -400px;
+    background: #F6F6F6;
+}
+.mask-batch-import-preview .dialog>h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-batch-import-preview .dialog h3>span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.mask-batch-import-preview .dialog h3>i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-batch-import-preview .dialog .content {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #EEEEEE;
+}
+.mask-batch-import-preview .dialog .content .title {
+    margin-top: 14px;
+    height: 34px;
+    margin-left: 12px;
+    line-height: 34px;
+    color: #555452;
+}
+.mask-batch-import-preview .dialog .content .table {
+    width: 776px;
+    font-size: 12px;
+    border-collapse:separate;
+    border-spacing:0 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mask-batch-import-preview .dialog .content .table thead {
+    background: #CCCCCC;
+    height: 36px;
+    line-height: 36px;
+}
+.mask-batch-import-preview .dialog .content .table tbody tr{
+    background: #FFFFFF;
+    height: 36px;
+    line-height: 36px;
+}
+.mask-batch-import-preview .dialog .content .table tbody tr td {
+    text-align: center;
+}
+.mask-batch-import-preview .dialog .content .table tbody tr td.error {
+    color: #BA5050;
+}
+.mask-batch-import-preview .dialog .content .bar {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+}
+.mask-batch-import-preview .dialog .content .bar .left {
+    width: 50%;
+    height: 60px;
+    float: left;
+}
+.mask-batch-import-preview .dialog .content .bar .left .sum {
+    margin-left: 18px;
+    height: 24px;
+    line-height: 24px;
+    color: #555452;
+}
+.mask-batch-import-preview .dialog .content .bar .left .warn {
+    margin-left: 42px;
+    margin-top: 12px;
+    height: 24px;
+    line-height: 24px;
+    color: #555452;
+}
+.mask-batch-import-preview .dialog .content .bar .left .warn:before {
+    position: absolute;
+    background: #187FAD;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    margin-top: 4px;
+    margin-left: -24px;
+    content: '';
+}
+.mask-batch-import-preview .dialog .content .bar .right {
+    width: 50%;
+    height: 60px;
+    float: left;
+}
+.mask-batch-import-preview .dialog .content .bar .right .btn {
+    float: right;
+    text-decoration: none;
+    font-size: 24px;
+    height:  60px;
+    line-height: 60px;
+    width: 286px;
+    margin-right: 14px;
+    color: #FFFFFF;
+    background: #444444;
+    text-align: center;
+}
+.mask-batch-import-preview .dialog .content .bar .right .btn.active {
+    background: #187FAD;
+}
+/*mask-batch-import-preview --- END */
+/*mask-batch-import-result --- BEGIN */
+.mask-batch-import-result {
+    z-index: 8;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-batch-import-result .dialog {
+    position: absolute;
+    left: 50%;
+    width: 800px;
+    height: 100%;
+    margin-left: -400px;
+    background: #F6F6F6;
+}
+.mask-batch-import-result .dialog>h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-batch-import-result .dialog h3>span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.mask-batch-import-result .dialog h3>i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-batch-import-result .dialog .success {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 45px;
+    line-height: 45px;
+    color: #444444;
+    font-weight: bold;
+    border-bottom: 2px solid #444444;
+}
+.mask-batch-import-result .dialog .success:before {
+    position: absolute;
+    background: url("../../images/icons_service/mask-import-success.png") no-repeat;
+    width: 28px;
+    height: 28px;
+    margin-top: 9px;
+    content: '';
+}
+.mask-batch-import-result .dialog .success>label {
+    float: left;
+    width: 30%;
+    margin-left: 60px;
+}
+.mask-batch-import-result .dialog .success>span {
+    float: left;
+}
+.mask-batch-import-result .dialog .failure {
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 45px;
+    line-height: 45px;
+    color: #444444;
+    font-weight: bold;
+    border-bottom: 2px solid #444444;
+}
+.mask-batch-import-result .dialog .failure:before {
+    position: absolute;
+    background: url("../../images/icons_service/mask-import-failure.png") no-repeat;
+    width: 27px;
+    height: 27px;
+    margin-top: 9px;
+    content: '';
+}
+.mask-batch-import-result .dialog .failure>label {
+    float: left;
+    width: 30%;
+    margin-left: 60px;
+}
+.mask-batch-import-result .dialog .failure>span {
+    float: left;
+}
+.mask-batch-import-result .dialog ul.result {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.mask-batch-import-result .dialog ul.result li {
+    height: 45px;
+    line-height: 45px;
+    box-sizing: border-box;
+    padding-left: 60px;
+    color: #959696;
+    border-bottom: 1px dashed #797979;
+}
+.mask-batch-import-result .dialog .import-result-btn {
+    display: block;
+    text-decoration: none;
+    height: 60px;
+    line-height: 60px;
+    width: 340px;
+    position: absolute;
+    left: 50%;
+    margin-left: -170px;
+    bottom: 14px;
+    background: #187FAD;
+    color: #FFFFFF;
+    font-size: 24px;
+    text-align: center;
+}
+/*mask-batch-import-result --- END */

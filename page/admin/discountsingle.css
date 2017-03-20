@@ -1,0 +1,478 @@
+/*top --- BEGIN*/
+.top {
+    width: 100%;
+    height: 50px;
+    background: #444444;
+    text-align: center;
+}
+.top i.back {
+    position: absolute;
+    background: url("../../images/icons_admin/top-back-light.png") no-repeat;
+    width: 13px;
+    height: 18px;
+    top: 16px;
+    left: 50px;
+}
+.top span.title {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    color: #DDDDDD;
+}
+.top i.confirm {
+    position: absolute;
+    background: url("../../images/icons_admin/top-save-light.png") no-repeat;
+    width: 17px;
+    height: 19px;
+    top: 15px;
+    right: 50px;
+}
+/*top --- END*/
+/*main --- BEGIN*/
+.main {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    background: #EEEEEE;
+}
+.main .content {
+    width: 562px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -281px;
+    background: #FFFFFF;
+    color: #555452;
+    box-sizing: border-box;
+    padding: 12px 12px 0 12px;
+}
+.main .content input.title {
+    display: block;
+    box-sizing: border-box;
+    padding-left: 10px;
+    width: 100%;
+    height: 51px;
+    line-height: 51px;
+    border: 0;
+    font-size: 23px;
+    background: #CFF0FF;
+    border-bottom: 1px solid #CECECE;
+}
+.main .content>ul li.name {
+    height: 55px;
+    line-height: 55px;
+    padding-bottom: 5px;
+    font-size: 24px;
+    border-bottom: 2px solid #CECECE;
+}
+.main .content>ul li.name>label {
+    float: left;
+    width: 250px;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+.main .content>ul li.name>input {
+    border: 0;
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+.main .content>ul li.period {
+    height: 96px;
+}
+.main .content>ul li.period>label {
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    width: 120px;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+.main .content>ul li.period>input {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 418px;
+    height: 46px;
+    line-height: 46px;
+}
+.main .content>ul li.period>input.beginDate,
+.main .content>ul li.period>input.endDate{
+    margin-top: 2px ;
+    margin-bottom: 2px;
+}
+.main .content>ul li.period>input.endDate {
+    clear: both;
+    margin-left: 120px;
+}
+.main .content>ul li.title {
+    height: 40px;
+    line-height: 40px;
+    color: #187EAD;
+    border-bottom: 2px solid #187EAD;
+}
+.main .content>ul li.title>label {
+    float: left;
+    padding-left: 5px;
+}
+.main .content>ul li.condition {
+    height: 64px;
+}
+.main .content>ul li.condition>label {
+    float: left;
+    width: 250px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 5px;
+}
+.main .content>ul li.condition>input {
+    border: 0;
+    box-sizing: border-box;
+    float: left;
+    width: 288px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+.main .content>ul li.condition .msg {
+    margin-left: 260px;
+    color: #959696;
+    font-size: 12px;
+    line-height: 18px;
+}
+.main .content .course-list {
+    height: 82px;
+    margin-top: 30px;
+}
+.main .content .course-list p {
+    margin-top: 8px;
+    background: #E6E6E6;
+    color: #555452;
+    box-sizing: border-box;
+    padding-left: 8px;
+    line-height: 40px;
+    height: 40px;
+}
+.main .content .course-list p>i {
+    position: absolute;
+    background: url("../../images/icons_admin/sidebar-edit.png") no-repeat;
+    width: 14px;
+    height: 14px;
+    right: 26px;
+    margin-top: 13px;
+}
+.main .content .course-list a{
+    height: 40px;
+    line-height: 40px;
+    color: #555452;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border-bottom: 2px solid #CECECE;
+    display: block;
+}
+.main .content .course-list .operate {
+    color: #187FAD;
+    cursor: pointer;
+}
+/*main --- END*/
+/*bottom --- BEGIN*/
+.bottom {
+    position: absolute;
+    height: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #DDDDDD;
+}
+.bottom .bar {
+    position: absolute;
+    width: 562px;
+    left: 50%;
+    height: 100%;
+    margin-left: -281px;
+}
+.bottom .bar a {
+    float: left;
+    text-decoration: none;
+    line-height: 50px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+.bottom .bar a.confirm {
+    color: #EEEEEE;
+    background: #187EAD;
+}
+.bottom .bar a.confirm:before {
+    position: absolute;
+    background: url("../../images/icons_admin/top-save-light.png") no-repeat;
+    width: 17px;
+    height: 19px;
+    top: 16px;
+    margin-left: -25px;
+    content: '';
+}
+/*bottom --- END*/
+/*mask-course --- BEGIN*/
+.mask-course {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+.mask-course .dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 562px;
+    height: 500px;
+    margin-left: -281px;
+    margin-top: -250px;
+    background: #FFFFFF;
+    color: #555452;
+    box-sizing: border-box;
+}
+.mask-course .dialog .title {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #DDDDDD;
+    background: #444444;
+    font-weight: normal;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+.mask-course .dialog h3 i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-course .dialog p.add {
+    height: 72px;
+    line-height: 72px;
+    margin: 12px 12px 0 12px;
+    font-size: 24px;
+    background: #E6E6E6;
+    text-align: center;
+}
+.mask-course .dialog p.add:before {
+    position: absolute;
+    background: url("../../images/icons_admin/add.png") no-repeat;
+    width: 22px;
+    height: 22px;
+    margin-top: 26px;
+    margin-left: -26px;
+    content: '';
+}
+.mask-course .dialog .table {
+    width: 518px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+}
+.mask-course .dialog .table tr {
+    border-bottom: 1px solid #7F7F7F;
+}
+.mask-course .dialog .table th,
+.mask-course .dialog .table td {
+    text-align: center;
+    width: 33.33%;
+    height: 36px;
+    line-height: 36px;
+}
+.mask-course .dialog .table td input {
+    float: right;
+    width: 72px;
+    height: 24px;
+    line-height: 24px;
+    background: #E6E6E6;
+    text-align: center;
+}
+.mask-course .dialog .table td i {
+    float: right;
+    background: url("../../images/icons_admin/sidebar-right-exit.png") no-repeat;
+    width: 13px;
+    height: 13px;
+    margin-top: 6px;
+    margin-left: 12px;
+}
+.mask-course .dialog .table th:first-child,
+.mask-course .dialog .table td:first-child {
+    text-align: left;
+}
+.mask-course .dialog .table th:last-child,
+.mask-course .dialog .table td:last-child {
+    text-align: right;
+}
+.mask-course .dialog p.msg {
+    width: 300px;
+    text-align: center;
+    margin: 12px auto;
+    color: #969596;
+    font-size: 12px;
+}
+.mask-course .dialog .bar {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.mask-course .dialog .bar .btn-confirm {
+    display: block;
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    color: #FFFFFF;
+    background: #307EAC;
+}
+/*mask-course --- END*/
+/*mask-course-discount --- BEGIN */
+.mask-course-discount {
+    z-index: 7;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-course-discount .dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 476px;
+    height: 484px;
+    margin-left: -238px;
+    margin-top: -242px;
+    background: #F6F6F6;
+}
+.mask-course-discount .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-course-discount .dialog h3 span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.mask-course-discount .dialog h3 i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-course-discount .dialog .detail {
+    height: 380px;
+    overflow-y: auto;
+    padding: 0 15px;
+}
+.mask-course-discount .dialog .detail .selected {
+    display: block;
+    line-height: 32px;
+    color: #555452;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.mask-course-discount .dialog .detail .selected:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+.mask-course-discount .dialog .detail .selected>label {
+    float: left;
+    width: 120px;
+}
+.mask-course-discount .dialog .detail .selected>span {
+    float: left;
+    width: 300px;
+}
+.mask-course-discount .dialog .detail .course {
+    padding-left: 12px;
+    padding-right: 12px;
+    background: #DEDEDE;
+}
+.mask-course-discount .dialog .detail .table {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    overflow-y: auto;
+    border:0;
+    color: #555452;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.mask-course-discount .dialog .detail .table tr {
+    height: 36px;
+    line-height: 36px;
+    margin: 0;
+    padding: 0;
+}
+.mask-course-discount .dialog .detail .table tbody tr{
+    border-top: 1px solid #555452;
+}
+.mask-course-discount .dialog .detail .table th {
+    font-weight: normal;
+    text-align: center;
+    width: 100px;
+}
+.mask-course-discount .dialog .detail .table td {
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+}
+.mask-course-discount .dialog .detail .table td i {
+    float: right;
+    background: url("../../images/icons_admin/unchecked.png") no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+.mask-course-discount .dialog .detail .table td i.checked {
+    background: url("../../images/icons_admin/checked.png") no-repeat;
+}
+.mask-course-discount .dialog .bar {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.mask-course-discount .dialog .bar .btn-cancel {
+    float: left;
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    width: 50%;
+    color: #444444;
+    background: #DDDDDD;
+}
+.mask-course-discount .dialog .bar .btn-confirm {
+    float: left;
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    width: 50%;
+    color: #FFFFFF;
+    background: #307EAC;
+}
+/*mask-course-discount --- END */

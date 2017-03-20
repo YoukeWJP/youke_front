@@ -1,0 +1,291 @@
+/*nav --- BEGIN*/
+.body .nav {
+    float: left;
+    background: #CDCDCD;
+    height: 100%;
+    width: 234px;
+    color: #555452;
+}
+.body .nav>li>h3 {
+    height: 54px;
+    line-height: 54px;
+    box-sizing: border-box;
+    padding-left: 16px;
+    font-size: 20px;
+    border-bottom: 2px solid #9D9D9D;
+}
+.body .nav>li>ul>li {
+    box-sizing: border-box;
+    line-height: 50px;
+    padding-left: 50px;
+    border-bottom: 1px solid #9D9D9D;
+}
+.body .nav>li>ul>li.active {
+    background: #B6B6B6;
+}
+.body .nav>li>ul>li.admin-org:before,
+.body .nav>li>ul>li.admin-discount:before,
+.body .nav>li>ul>li.admin-employee:before,
+.body .nav>li>ul>li.admin-server:before,
+.body .nav>li>ul>li.admin-pay:before,
+.body .nav>li>ul>li.admin-student-service:before,
+.body .nav>li>ul>li.admin-about:before,
+.body .nav>li>ul>li.admin-switch-school:before{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: -40px;
+    content: '';
+}
+.body .nav>li>ul>li.admin-org:before {
+    background: url("../../images/icons_admin/admin-org.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-discount:before {
+    background: url("../../images/icons_admin/admin-discount.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-employee:before {
+    background: url("../../images/icons_admin/admin-employee.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-server:before {
+    background: url("../../images/icons_admin/admin-server.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-pay:before {
+    background: url("../../images/icons_admin/admin-pay.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-student-service:before {
+    background: url("../../images/icons_admin/admin-student-service.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-about:before {
+    background: url("../../images/icons_admin/admin-about.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-switch-school:before {
+    background: url("../../images/icons_admin/admin-about.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-discount h3 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.body .nav>li>ul>li.admin-discount .child {
+    width: 234px;
+    margin-left: -50px;
+}
+.body .nav>li>ul>li.admin-discount .child li {
+    height: 36px;
+    line-height: 36px;
+    background: #CDCDCD;
+    border-top: 1px solid #9D9D9D;
+}
+.body .nav>li>ul>li.admin-discount .child li.active {
+    background: #B6B6B6;
+}
+.body .nav>li>ul>li.admin-discount .child li span {
+    margin-left: 50px;
+}
+/*nav --- END*/
+/*content --- BEGIN*/
+.body .content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 234px;
+}
+.body .content h3.title {
+    height:54px;
+    line-height: 54px;
+    padding-left: 20px;
+    background: #B6B6B6;
+    color: #555452;
+    font-size: 20px;
+}
+.body .content h3.title i {
+    position: absolute;
+    background: url(../../images/icons_admin/admin-add.png) no-repeat;
+    height: 15px;
+    right: 50px;
+    width: 15px;
+    margin-top: 20px;
+}
+.body .content ul li {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 2px solid #E0E0E0;
+    color: #555452;
+}
+.body .content ul li.active {
+    background: #F6F6F6;
+}
+.body .content ul li:before {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    margin-top: 8px;
+    margin-left: 20px;
+    background: #187FAD;
+    content: '';
+}
+.body .content ul li .name {
+    float: left;
+    box-sizing: border-box;
+    width: 30%;
+    padding-left: 100px;
+}
+.body .content ul li .position {
+    float: left;
+    text-align: center;
+    width: 40%;
+}
+.body .content ul li .date {
+    float: left;
+    text-decoration: none;
+    text-align: right;
+    padding-right: 50px;
+    box-sizing: border-box;
+    color: #555452;
+    width: 30%;
+}
+.body .content ul li .date .time,
+.body .content ul li .date .desc {
+    float: right;
+    width: 120px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 20px;
+}
+.body .content ul li .date .desc {
+    clear: both;
+}
+.body .content ul li .date:after {
+    position: absolute;
+    background: url("../../images/icons_admin/admin-forward.png") no-repeat;
+    width: 10px;
+    height: 14px;
+    right: 50px;
+    margin-top: 23px;
+    content: '';
+}
+/*content --- END*/
+/*sidebar-right --- BEGIN*/
+.body .sidebar-right {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 372px;
+    background: #EEEEEE;
+}
+.body .sidebar-right>h3 {
+    height: 54px;
+    line-height: 54px;
+    background: #CCCCCC;
+    color: #555452;
+    padding-left: 36px;
+    box-sizing: border-box;
+}
+.body .sidebar-right>h3 .desc {
+    width: 80px;
+    display: inline-block;
+    cursor: pointer;
+}
+.body .sidebar-right>h3 .desc:before {
+    position: absolute;
+    background: url(../../images/icons_admin/top-back.png) no-repeat;
+    width: 14px;
+    height: 17px;
+    margin-top: 19px;
+    margin-left: -24px;
+    content: '';
+}
+.body .sidebar-right>h3 .delete {
+    width: 60px;
+    float: right;
+    margin-right: 20px;
+    text-align: right;
+    cursor: pointer;
+}
+.body .sidebar-right .student-detail {
+    width: 352px;
+    height: 354px;
+    margin: 16px auto 0;
+    background: #FFFFFF;
+}
+.body .sidebar-right .student-detail ul {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.body .sidebar-right .student-detail ul .info {
+    height: 148px;
+    color: #444444;
+}
+.body .sidebar-right .student-detail ul .info .first {
+    display: inline-block;
+    margin-left: 146px;
+    font-size: 20px;
+    height: 42px;
+    line-height: 42px;
+}
+.body .sidebar-right .student-detail ul .info .second {
+    display: inline-block;
+    margin-left: 146px;
+    height: 42px;
+    line-height: 42px;
+}
+.body .sidebar-right .student-detail ul .info .third {
+    display: inline-block;
+    margin-left: 146px;
+    height: 42px;
+    line-height: 42px;
+    margin-top: 20px;
+    color: #444444;
+}
+.body .sidebar-right .student-detail ul .info:before {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    margin-top: 9px;
+    background: #187EAD;
+    content: '';
+}
+.body .sidebar-right .student-detail ul .detail{
+    height: 36px;
+    line-height: 36px;
+    color: #444444;
+    border-top: 2px solid #9E9E9E;
+}
+.body .sidebar-right .student-detail ul .detail>label {
+    float: left;
+    text-align: left;
+}
+.body .sidebar-right .student-detail ul .detail>span{
+    float: right;
+    text-align: right;
+}
+.body .sidebar-right .student-detail ul .mobile:before {
+    position: absolute;
+    background: url("../../images/icons_admin/admin-mobile.png") no-repeat;
+    width: 10px;
+    height: 14px;
+    margin-top: 11px;
+    margin-left: -12px;
+    content: '';
+}
+.body .sidebar-right .student-detail ul .reset-pwd>a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    width: 170px;
+    float: right;
+    text-align: center;
+    color: #555452;
+    background: #C1C1C1;
+}
+.body .sidebar-right .student-detail ul .reset-pwd>a.active {
+    color: #FFFFFF;
+    background: #187EAD;
+}
+/*sidebar-right --- END*/

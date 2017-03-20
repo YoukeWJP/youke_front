@@ -1,0 +1,15 @@
+{
+  "code": 200,
+  "success": true,
+  "data": [{
+    "courseId" : 1,
+    "orgId" : 1,
+    "courseName" : "按总课时",
+    "courseType" : "by_course_hours"
+  },{
+    "courseId" : 2,
+    "orgId" : 1,
+    "courseName" : "按有效期",
+    "courseType" : "by_expiration"
+  }]
+}

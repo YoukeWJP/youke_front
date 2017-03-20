@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>学员管理</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_service.css">
+    <link rel="stylesheet" type="text/css" href="../../page/service/studentindex.css">
+    <script src="../common/script.js"></script>
+</head>
+
+<body>
+    <include src="../common/service-nav.html" class="dn"></include>
+    <header class="header">
+        <span>学员管理</span>
+    </header>
+    <article class="main">
+        <section class="body">
+            <!--学员概况 --- BEGIN-->
+            <div class="student-general" id="student-general">
+                <div class="student">
+                    <div class="content">
+                        <div class="top">
+                            <h3 class="title">本月新增学员</h3>
+                            <span class="num color-ba5050">+5</span>
+                        </div>
+                        <div class="bottom">
+                            <div class="desc">
+                                <a href="javascript:void(0);" class="last-month">
+                                    <label>上月新增：</label>
+                                    <span>0</span>
+                                </a>
+                                <a href="javascript:void(0);" class="last-year">
+                                    <label>去年同期新增：</label>
+                                    <span>0</span>
+                                </a>
+                            </div>
+                            <div class="percent">
+                                <span class="last-month-percent">0%</span>
+                                <span class="last-year-percent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="student">
+                    <div class="content">
+                        <div class="top">
+                            <h3 class="title">共有</h3>
+                            <span class="num">5</span>
+                            <span class="desc">个学员</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--学员概况 --- END-->
+        </section>
+        <!--右侧菜单栏列表 --- BEGIN -->
+        <aside class="sidebar-right-list" id="sidebar-right-list">
+            <ul>
+                <li class="first active">
+                    <a href="javascript:void(0);">
+                        <h3>概况</h3>
+                        <span>管理，分析学校学员</span>
+                    </a>
+                </li>
+                <li class="second">
+                    <a href="javascript:void(0);">
+                        <h3>学员管理</h3>
+                        <span>根据学员信息查询学员</span>
+                    </a>
+                </li>
+                <li class="third">
+                    <a href="javascript:void(0);">
+                        <h3>学员生日</h3>
+                        <span>查看学员生日列表</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!--右侧菜单栏列表 --- END -->
+    </article>
+    <include src="../common/service-footer.html" class="footer"></include>
+    <script src="../service/studentindex.js"></script>
+</body>
+
+</html>

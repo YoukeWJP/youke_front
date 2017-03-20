@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>机构资料</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/cropper.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_admin.css">
+    <link rel="stylesheet" type="text/css" href="../../page/admin/org.css">
+    <script src="../common/script.js"></script>
+    <script src="../../js/third-party/cropper.min.js"></script>
+</head>
+
+<body>
+    <include src="../common/admin-nav.html" class="sidebar"></include>
+    <article class="main">
+        <header class="top">
+            <span class="home">管理者主页</span>
+            <div class="school">
+                <i class="back"></i>
+                <span class="first">学校名称</span>
+                <span class="second">校区</span>
+            </div>
+        </header>
+        <section class="body">
+            <ul class="nav" id="nav">
+                <li>
+                    <h3>基础设置</h3>
+                    <ul>
+                        <li class="admin-org active" id="org">机构资料</li>
+                        <li class="admin-pay" id="pay">支付方式</li>
+                        <li class="admin-employee" id="employee">员工管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>服务设置</h3>
+                    <ul>
+                        <!--<li class="admin-server" id="server">服务端权限</li>-->
+                        <li class="admin-discount" id="discount">
+                            <h3>折扣与优惠</h3>
+                            <ul class="child dn">
+                                <li id="discountMgr"><span>折扣活动管理</span></li>
+                                <li id="discountList"><span>课程折扣列表</span></li>
+                            </ul>
+                        </li>
+                        <li class="admin-student-service" id="student-service">学员服务</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>管理员设置</h3>
+                    <ul>
+                        <li class="admin-switch-school" id="setting">切换校区</li>
+                    </ul>
+                </li>
+                <!--<li>-->
+                    <!--<h3>其他</h3>-->
+                    <!--<ul>-->
+                        <!--<li class="admin-about" id="about">关于有课互联</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            </ul>
+            <div class="content">
+                <h3 class="title"><i class="back"></i>机构资料<i class="edit"></i></h3>
+                <div class="info">
+                    <div class="img">
+                        <img id="orgLogo" src="">
+                    </div>
+                    <div class="detail">
+                        <h2>门店名称</h2>
+                        <p class="name">机构全称</p>
+                        <p class="time">
+                            <label>创建于：</label>
+                            <span>2016-09-01</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <label class="label">联系方式：</label>
+                    <div class="detail">
+                        <p>
+                            <label>网址：</label>
+                            <a href="http://www.youkeonline.cn" title="www.youkeonline.cn">www.youkeonline.cn</a>
+                        </p>
+                        <p>
+                            <label>电话：</label><a href="tel:12345678" title="12345678">12345678</a>
+                        </p>
+                        <p>
+                            <label>邮箱：</label><a href="mailto:zed@youkeonline.cn" title="zed@youkeonline.cn">zed@youkeonline.cn</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="desc">
+                    <label class="label">描述：</label>
+                    <div class="detail">
+                        我的酒窝没有酒，你却醉得像 条狗.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <!--上传图片 --- BEGIN -->
+    <section class="mask-upload-logo dn" id="mask-upload-logo">
+        <div class="dialog">
+            <h3><span>上传LOGO</span><i></i></h3>
+            <div class="upload">
+                <input type="file" class="file" id="file">
+            </div>
+        </div>
+    </section>
+    <!--上传图片 --- END -->
+    <!--裁剪图片 --- BEGIN -->
+    <section class="mask-modify-logo dn" id="mask-modify-logo">
+        <div class="dialog">
+            <h3><span>裁剪LOGO</span><i></i></h3>
+            <div class="modify">
+                <div class="left">
+                    <img src="" alt="">
+                </div>
+                <div class="right">
+                    <p class="normal img-preview" style="width: 120px; height: 120px;">
+                    </p>
+                    <span>中等尺寸</span>
+                    <p class="small img-preview" style="width: 44px; height: 44px;">
+                    </p>
+                    <span>小尺寸</span>
+                </div>
+            </div>
+            <div class="bar">
+                <a href="javascript:void(0);" class="cancel">取消</a>
+                <a href="javascript:void(0);" class="confirm">确定</a>
+            </div>
+        </div>
+    </section>
+    <!--裁剪图片 --- END -->
+    <script src="../admin/org.js"></script>
+</body>
+
+</html>

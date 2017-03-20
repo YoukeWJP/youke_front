@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>课程折扣列表</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_admin.css">
+    <link rel="stylesheet" type="text/css" href="../../page/admin/discountlist.css">
+    <script src="../../page/common/script.js"></script>
+</head>
+
+<body>
+    <include src="../common/admin-nav.html" class="sidebar"></include>
+    <div class="main">
+        <div class="top">
+            <span class="home">管理者主页</span>
+            <div class="school">
+                <i class="back"></i>
+                <span class="first">学校名称</span>
+                <span class="second">校区</span>
+            </div>
+        </div>
+        <article class="body">
+            <ul class="nav" id="nav">
+                <li>
+                    <h3>基础设置</h3>
+                    <ul>
+                        <li class="admin-org" id="org">机构资料</li>
+                        <li class="admin-pay" id="pay">支付方式</li>
+                        <li class="admin-employee" id="employee">员工管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>服务设置</h3>
+                    <ul>
+                        <!--<li class="admin-server" id="server">服务端权限</li>-->
+                        <li class="admin-discount active" id="discount">
+                            <h3>折扣与优惠</h3>
+                            <ul class="child">
+                                <li id="discountMgr"><span>折扣活动管理</span></li>
+                                <li id="discountList" class="active"><span>课程折扣列表</span></li>
+                            </ul>
+                        </li>
+                        <li class="admin-student-service" id="student-service">学员服务</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>管理员设置</h3>
+                    <ul>
+                        <li class="admin-switch-school" id="setting">切换校区</li>
+                    </ul>
+                </li>
+                <!--<li>-->
+                    <!--<h3>其他</h3>-->
+                    <!--<ul>-->
+                        <!--<li class="admin-about" id="about">关于有课互联</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            </ul>
+            <section class="content">
+                <!--学员生日 --- BEGIN -->
+                <div class="student-birthday">
+                    <div class="discount-nav" id="discount-nav">
+                        <i class="back"></i>
+                        <ul>
+                            <li class="active">全部</li>
+                            <li>产品分类一</li>
+                            <li>产品分类二</li>
+                            <li>产品分类三</li>
+                        </ul>
+                        <i class="forward"></i>
+                    </div>
+                    <ul class="discount-list" id="discount-list">
+                        <li>
+                            <div class="left">
+                                <label class="icon"></label>
+                                <h3>课程产品名称</h3>
+                                <span>课程类型</span>
+                            </div>
+                            <div class="middle">
+                                8折
+                            </div>
+                            <div class="right">
+                                <h3>进行中</h3>
+                                <span>折扣名称</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <label class="icon"></label>
+                                <h3>课程产品名称</h3>
+                                <span>课程类型</span>
+                            </div>
+                            <div class="middle">
+                                无折扣
+                            </div>
+                            <div class="right">
+                                <h3>进行中</h3>
+                                <span>折扣名称</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <label class="icon"></label>
+                                <h3>课程产品名称</h3>
+                                <span>课程类型</span>
+                            </div>
+                            <div class="middle">
+                                9折
+                            </div>
+                            <div class="right">
+                                <h3>进行中</h3>
+                                <span>折扣名称</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <label class="icon"></label>
+                                <h3>课程产品名称</h3>
+                                <span>课程类型</span>
+                            </div>
+                            <div class="middle">
+                                无折扣
+                            </div>
+                            <div class="right">
+                                <h3>进行中</h3>
+                                <span>折扣名称</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <label class="icon"></label>
+                                <h3>课程产品名称</h3>
+                                <span>课程类型</span>
+                            </div>
+                            <div class="middle">
+                                9折
+                            </div>
+                            <div class="right">
+                                <h3>进行中</h3>
+                                <span>折扣名称</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--学员生日 --- END -->
+            </section>
+            <aside class="sidebar-right" id="sidebar-right">
+                <ul>
+                    <li class="total">
+                        <a href="javascript:void(0);">
+                            <h3>创建整单折扣</h3>
+                            <span>整单满指定金额打折或返现</span>
+                        </a>
+                    </li>
+                    <li class="single">
+                        <a href="javascript:void(0);">
+                            <h3>创建单项课程折扣</h3>
+                            <span>针对单项的折扣</span>
+                        </a>
+                    </li>
+                    <li class="self-define">
+                        <a href="javascript:void(0);">
+                            <h3>创建自定义折扣</h3>
+                            <span>销售时前端可以应用的折扣</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <aside class="sidebar-right-detail dn" id="discount-detail">
+                <div class="detail">
+                    <h3>课程名称<i></i></h3>
+                    <a href="javascript:void(0);" class="title">
+                        <label>折扣名称</label>
+                        <span class="onsale">进行中</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <label>折扣名称：</label>
+                            <span>折扣名称</span>
+                        </li>
+                        <li>
+                            <label>折扣额度：</label>
+                            <span>9折</span>
+                        </li>
+                        <li>
+                            <label>期限：</label>
+                            <span>2016-10-10  至  永久</span>
+                        </li>
+                    </ul>
+                    <div class="bar">
+                        <a href="javascript:void(0);">
+                            <span class="edit"></span>
+                            <span class="delete"></span>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+            <aside class="sidebar-right-detail dn" id="discount-detail-none">
+                <div class="detail">
+                    <h3>课程名称<i></i></h3>
+                    <a href="javascript:void(0);" class="title">
+                        <label></label>
+                        <span class="onsale">无折扣</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <label>折扣名称：</label>
+                            <span>无</span>
+                        </li>
+                        <li>
+                            <label>折扣额度：</label>
+                            <span>无</span>
+                        </li>
+                        <li>
+                            <label>期限：</label>
+                            <span>无</span>
+                        </li>
+                    </ul>
+                    <div class="bar">
+                        <a href="javascript:void(0);">
+                            创建单品折扣
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </article>
+    </div>
+    <!--增加dn 编辑课程折扣 --- BEGIN-->
+    <div class="mask-confirm dn">
+        <div class="dialog">
+            <h3><span>编辑课程折扣</span><i></i></h3>
+            <p class="warn">编辑后，结果将更新到该课程所属的折扣活动中</p>
+            <p class="discount-num">
+                <label>%折扣系数：</label>
+                <input type="text" placeholder="0-100" maxlength="3" id="percent">
+            </p>
+            <p class="msg">0-100的整数有效，例如“88”代表88折</p>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-cancel">取消</a>
+                <a href="javascript:void(0);" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </div>
+    <!--编辑课程折扣 --- END-->
+    <script src="../admin/discountlist.js"></script>
+</body>
+
+</html>

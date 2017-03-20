@@ -1,0 +1,155 @@
+/*sidebar --- BEGIN*/
+.main .sidebar .title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #5A5A5A;
+    background: #CCCCCC;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.main .sidebar .content {
+    background: #EEEEEE;
+    position: absolute;
+    width: 372px;
+    top: 40px;
+    bottom: 0;
+    left: 0;
+}
+.main .sidebar .content input.student {
+    box-sizing: border-box;
+    width: 348px;
+    margin-top: 12px;
+    margin-left: 12px;
+    padding-left: 12px;
+    padding-right: 45px;
+    height: 44px;
+    line-height: 44px;
+    border: 0;
+}
+.main .sidebar .content i.search {
+    background: url("../../images/icons_service/sidebar-search.png") no-repeat;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    right: 24px;
+    top: 20px;
+}
+.main .sidebar .content .add-new {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -30px;
+}
+.main .sidebar .content .add-new i {
+    background: url("../../images/icons_service/sidebar-addnew.png") no-repeat;
+    display: block;
+    width: 69px;
+    height: 59px;
+    margin-left: 15px;
+}
+.main .sidebar .content .add-new span {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    color: #5A5A5A;
+}
+.main .sidebar .content ul.student-list {
+    width: 348px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main .sidebar .content ul li {
+    margin-top: 15px;
+    width: 100%;
+    height: 150px;
+    background: #FFFFFF;
+}
+.main .sidebar .content ul li .title{
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    background: #307EAC;
+    color: #FFFFFF;
+    text-align: left;
+    padding-left: 16px;
+}
+.main .sidebar .content ul li .info {
+    height: 120px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 18px;
+}
+.main .sidebar .content ul li .info .name {
+    padding-left: 16px;
+    height:32px;
+    color: #444444;
+    font-size: 23px;
+    font-weight: bold;
+}
+.main .sidebar .content ul li .info .sex {
+    color: #444444;
+    padding-left: 16px;
+    height: 22px;
+    line-height: 22px;
+    font-weight: bold;
+}
+.main .sidebar .content ul li .info .sex.man:after {
+    position: absolute;
+    background: url("../../images/icons_service/sidebar-man-gray.png") no-repeat;
+    width: 15px;
+    height: 23px;
+    left: 54px;
+    content: '';
+}
+.main .sidebar .content ul li .info .sex.woman:after {
+    position: absolute;
+    background: url("../../images/icons_service/sidebar-woman-gray.png") no-repeat;
+    width: 15px;
+    height: 23px;
+    left: 54px;
+    content: '';
+}
+.main .sidebar .content ul li .info .phone {
+    width: 240px;
+    margin-top: 10px;
+    margin-left: 16px;
+    height: 36px;
+    line-height: 36px;
+    color: #A4A4A4;
+    border-top: 2px solid #000000;
+}
+/*sidebar --- END*/
+/*body --- BEGIN*/
+.main .body {
+    background: #FFFFFF;
+    height: 100%;
+    margin-left: 372px;
+}
+.main .body .alert {
+    box-sizing: border-box;
+    position: absolute;
+    top: 48px;
+    left: 420px;
+    width: 310px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 30px;
+    color: #FFFFFF;
+    background: #000000;
+}
+.main .body .alert i {
+    position: absolute;
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    right: 16px;
+}
+/*body --- END*/

@@ -1,0 +1,101 @@
+html,body {
+    background: #E6E6E6;
+}
+.login-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 378px;
+    height: 304px;
+    margin-left: -179px;
+    margin-top: -152px;
+    background: #F6F6F6;
+}
+.login-box .title {
+    position: absolute;
+    top: -108px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 38px;
+    text-align: center;
+    color: #555452;
+    width: 100%;
+}
+.login-box .content {
+    margin: 32px 24px 0 24px;
+}
+.login-box .content .text {
+    display: block;
+    width: 100%;
+    color: #000000;
+    height: 42px;
+    line-height: 42px;
+    box-sizing: border-box;
+    border: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: #FFFFFF;
+    margin-bottom: 20px;
+}
+.login-box .content .error-msg {
+    position: absolute;
+    left: 365px;
+    margin-top: -56px;
+    background: #E9CFCF;
+    color: #B40700;
+    height: 28px;
+    line-height: 28px;
+    width: 128px;
+    border: 1px solid #C56E71;
+    border-radius: 2px;
+    font-size: 12px;
+    text-align: center;
+}
+.login-box .content .info {
+    width: 100%;
+    margin-top: -20px;
+    height: 56px;
+    line-height: 56px;
+}
+.login-box .content .info>i {
+    position: absolute;
+    float: left;
+    background: url("../../images/icons_service/login-unchecked.png") no-repeat;
+    width: 17px;
+    height: 17px;
+    margin-left: 2px;
+    margin-top: 20px;
+}
+.login-box .content .info>i.checked {
+    background: url("../../images/icons_service/login-checked.png") no-repeat;
+}
+.login-box .content .info>label {
+    float: left;
+    color: #959696;
+    font-size: 12px;
+    margin-left: 30px;
+}
+.login-box .content .info>span {
+    float: right;
+    color: #959696;
+    font-size: 12px;
+}
+.login-box .content .login-btn  {
+    display: block;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
+    background: #307FAC;
+}
+.login-box .content .warn {
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    color: #959696;
+    font-size: 16px;
+}

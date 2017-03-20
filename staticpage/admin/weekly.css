@@ -1,0 +1,282 @@
+/*content --- BEGIN*/
+.main .body .content .table {
+    clear: both;
+    border-collapse:collapse;
+    color: #555452;
+    width: 50%;
+    font-weight: bold;
+    border-spacing:0;
+    margin-left: 20px;
+    border-top: 1px solid #000000;
+}
+.main .body .content .table tr {
+    border-bottom: 1px solid #000000;
+    height: 42px;
+    line-height: 42px;
+}
+.main .body .content .table th,
+.main .body .content .table td {
+    text-align: center;
+    width: 33.33%;
+}
+.main .body .content {
+    position: absolute;
+    top:0;
+    right: 372px;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    background: #EEEEEE;
+    height: 100%;
+    overflow: auto;
+}
+.main .body .content .date {
+    background: #FFFFFF;
+    height: 40px;
+    width: 100%;
+}
+.main .body .content .date>span {
+    position: absolute;
+    left: 50%;
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
+    margin-left: -10px;
+    border-bottom: 1px solid #CCC;
+}
+#calendarTimeBegin {
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    left: 50%;
+    margin-left: -320px;
+    text-align: center;
+    border: 1px solid #CCC;
+    box-sizing: border-box;
+}
+.main .body .content .date:before {
+    position: absolute;
+    background: url("../../images/icons_admin/calendar.png") no-repeat;
+    width: 21px;
+    height: 15px;
+    left: 50%;
+    z-index: 1;
+    margin-left: -50px;
+    margin-top: 12px;
+    content: '';
+}
+.main .body .content .date:after {
+    position: absolute;
+    background: url("../../images/icons_admin/calendar.png") no-repeat;
+    width: 21px;
+    height: 15px;
+    left: 50%;
+    z-index: 1;
+    margin-left: 290px;
+    margin-top: 12px;
+    content: '';
+}
+#calendarTimeEnd {
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    left: 50%;
+    margin-left: 20px;
+    text-align: center;
+    border: 1px solid #CCC;
+    box-sizing: border-box;
+}
+.main .body .content .sales {
+    background: #FFFFFF;
+    height: 180px;
+    width: 100%;
+    margin-top: 10px;
+}
+.main .body .content .sales .info-total {
+    float: left;
+    height: 180px;
+    line-height: 180px;
+    width: calc(100% - 500px);
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+.main .body .content .sales .detail {
+    margin-right: 80px;
+    float: right;
+    width: 200px;
+}
+.main .body .content .sales .info-top,
+.main .body .content .sales .info-bottom {
+    margin-top: 20px;
+    color: #555452;
+}
+.main .body .content .sales .info-top {
+    height: 69px;
+    border-bottom: 1px solid #8A8988;
+}
+.main .body .content .sales .info-bottom {
+    clear: both;
+    height: 70px;
+}
+.main .body .content .sales .amount label,
+.main .body .content .sales .amount span {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+}
+.main .body .content .sales .percent {
+    color: #187FAD;
+    font-weight: bold;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+}
+.main .body .content .payment {
+    background: #FFFFFF;
+    height: 332px;
+    width: 100%;
+    margin-top: 10px;
+}
+.main .body .content .payment .table,
+.main .body .content .orders .table {
+    float: left;
+}
+.main .body .content .scatter {
+    position: absolute;
+    height: 180px;
+    width: 200px;
+    margin-left: 440px;
+}
+.main .body .content .wrap-chart {
+    width: calc(50% - 20px);
+    height: 100%;
+    float: right;
+    margin-top: -40px;
+}
+.main .body .content .chart {
+    width: 280px;
+    height: 280px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main .body .content .consumer {
+    height: 120px;
+    width: 100%;
+    margin-top: 10px;
+}
+.main .body .content .consumer .count {
+    width: calc(50% - 5px);
+    height: 100%;
+    float: left;
+    background: #FFFFFF;
+}
+.main .body .content .consumer .average {
+    width: calc(50% - 5px);
+    height: 100%;
+    float: right;
+    background: #FFFFFF;
+}
+.main .body .content .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555452;
+    height: 40px;
+    width: 180px;
+    line-height: 40px;
+    margin-left: 20px;
+    display: inline-block;
+    float: left;
+}
+.main .body .content .consumer p {
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.main .body .content .consumer p .num {
+    display: inline-block;
+    font-size: 32px;
+    color: #307FAC;
+}
+.main .body .content .consumer p .unit {
+    position: absolute;
+    color: #555452;
+    margin-left: 5px;
+}
+.main .body .content .orders {
+    background: #FFFFFF;
+    height: 332px;
+    width: 100%;
+    margin-top: 10px;
+}
+.main .body .content .amount-top {
+    background: #FFFFFF;
+    height: 332px;
+    width: 100%;
+    margin-top: 10px;
+}
+/*content --- END*/
+/*sidebar-right --- BEGIN*/
+.main .sidebar-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 372px;
+    background: #EEEEEE;
+}
+.main .sidebar-right ul {
+    width: 100%;
+    height: 100%;
+}
+.main .sidebar-right ul li {
+    height: 66px;
+}
+.main .sidebar-right ul li:before {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    margin-left: 13px;
+    margin-top: 13px;
+    background: #555452;
+    text-align: center;
+    color: #CBCBCB;
+    font-size: 22px;
+    content: '';
+}
+.main .sidebar-right ul li.daily:before {
+    content: '日';
+}
+.main .sidebar-right ul li.weekly:before {
+    content: '周';
+}
+.main .sidebar-right ul li.monthly:before {
+    content: '月';
+}
+.main .sidebar-right ul li a {
+    position: absolute;
+    text-align: left;
+    left: 66px;
+    height: 66px;
+    text-decoration: none;
+    color: #555453;
+}
+.main .sidebar-right ul li a h3 {
+    margin-top: 13px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.main .sidebar-right ul li a span {
+    color: #969696;
+    font-size: 12px;
+}
+.main .sidebar-right ul li.active {
+    background: #CCCCCC;
+}
+/*sidebar-right --- END*/

@@ -1,0 +1,12 @@
+{
+  "code": 200,
+  "success": true,
+  "data": {
+    "school" : "一师",
+    "org" : "湖南",
+    "url" : "http://www.jd.com",
+    "mobile" : "18512345678",
+    "email" : "wjp@youkeonline.cn",
+    "desc" : "一师是个好学校"
+  }
+}

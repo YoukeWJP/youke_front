@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>客户端主页</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_service.css">
+    <link rel="stylesheet" type="text/css" href="../../page/service/index.css">
+    <script src="../common/script.js"></script>
+</head>
+
+<body>
+    <include src="../common/service-nav.html" class="dn"></include>
+    <article class="main">
+        <div class="sidebar-student-list" id="sidebar-student-list">
+            <div class="title">选择学员</div>
+            <div class="content">
+                <input type="text" class="student" placeholder="学员名称或手机号" maxlength="16" id="condition">
+                <i class="search" id="btn-search"></i>
+                <div class="add-new" id="add-new">
+                    <i></i>
+                    <span>添加新学员</span>
+                </div>
+                <ul class="student-list dn" id="student-list">
+                    <li>
+                        <h3 class="title">
+                            ID&nbsp;:&nbsp;
+                            <span class="id">12345</span>
+                        </h3>
+                        <div class="info">
+                            <p class="name">学员名</p>
+                            <p class="sex woman">男</p>
+                            <p class="phone">
+                                <span>电话：</span>
+                                <span class="num">13800138000</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="title">
+                            ID&nbsp;:&nbsp;
+                            <span class="id">12345</span>
+                        </h3>
+                        <div class="info">
+                            <p class="name">学员名</p>
+                            <p class="sex woman">男</p>
+                            <p class="phone">
+                                <span>电话：</span>
+                                <span class="num">13800138000</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="title">
+                            ID&nbsp;:&nbsp;
+                            <span class="id">12345</span>
+                        </h3>
+                        <div class="info">
+                            <p class="name">学员名</p>
+                            <p class="sex woman">男</p>
+                            <p class="phone">
+                                <span>电话：</span>
+                                <span class="num">13800138000</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="title">
+                            ID&nbsp;:&nbsp;
+                            <span class="id">12345</span>
+                        </h3>
+                        <div class="info">
+                            <p class="name">学员名</p>
+                            <p class="sex woman">男</p>
+                            <p class="phone">
+                                <span>电话：</span>
+                                <span class="num">13800138000</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar-student-detail dn" id="sidebar-student-detail">
+            <div class="title">
+                <label>学员详情</label>
+                <span>重新选择</span>
+            </div>
+            <div class="content">
+                <div class="student">
+                    <h3>ID:123456</h3>
+                    <div class="name">学员名</div>
+                    <div class="student-info">
+                        <a href="javascript:void(0);" class="student-birth">
+                            <i class="icon man"></i><span class="sex">男</span><i class="icon-birth"></i><span class="birth">8月11,1995</span><i class="slide up"></i>
+                        </a>
+                        <div class="detail">
+                            <ul class="course">
+                                <li>
+                                    <label>移动电话：</label>
+                                    <span>13888888888</span>
+                                </li>
+                                <li>
+                                    <label>课程：</label>
+                                    <span>课程名称</span>
+                                </li>
+                                <li>
+                                    <label>备注：</label>
+                                    <span>你的酒窝没有酒，我却醉得像条狗。</span>
+                                </li>
+                            </ul>
+                            <i class="icon-message"></i>
+                            <span class="message">发送短信</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="remark">
+                    <h3>备注：<i></i></h3>
+                    <span class="detail">你的酒窝没有酒，我却醉得像条狗。</span>
+                </div>
+                <div class="course">
+                    <i class="icon"></i>
+                    <div class="detail">
+                        <div class="course-info">
+                            <a href="javascript:void(0);">
+                                <span class="first">课程名称：</span>
+                                <span class="second">剩余课时/总课时</span>
+                            </a>
+                            <i></i>
+                        </div>
+                        <a href="javascript:void(0);" class="btn-signin">
+                            <span class="active">签到</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="signin">
+                    <i class="icon"></i>
+                    <div class="detail">
+                        <a href="javascript:void(0);">最近签到：</a>
+                        <span class="time">2016-08-01 10：15</span>
+                        <span class="num">1课时</span>
+                    </div>
+                </div>
+                <div class="btn-buy">
+                    <a href="javascript:void(0);" class="btn">购买新课程</a>
+                </div>
+            </div>
+        </div>
+        <!--课程详情 --- BEGIN-->
+        <div class="course-detail dn" id="course-detail">
+            <div class="title">
+                <label><i></i>课程详情</label>
+            </div>
+            <div class="content">
+                <h3>课程操作：</h3>
+                <a href="javascript:void(0);" class="operate">
+                    <span class="first">续费</span>
+                    <span class="second">扣费</span>
+                    <span class="third">停课</span>
+                </a>
+                <h3>课程详情：</h3>
+                <p>课程名称</p>
+                <a href="javascript:void(0);" class="current">
+                    <label>当前状态：</label>
+                    <span>正常/冻结/停课</span>
+                </a>
+                <ul>
+                    <li>
+                        <label>课程类型：</label>
+                        <span>按课时</span>
+                    </li>
+                    <li>
+                        <label>总课时：</label>
+                        <span>40天</span>
+                    </li>
+                    <li>
+                        <label>有效期：</label>
+                        <span>70天</span>
+                    </li>
+                    <li>
+                        <label>剩余课时：</label>
+                        <span>20课时</span>
+                    </li>
+                    <li>
+                        <label>开课时间：</label>
+                        <span>2016年8月1日</span>
+                    </li>
+                    <li>
+                        <label>累计实收金额：</label>
+                        <span>3000000元</span>
+                    </li>
+                    <li>
+                        <label>支持场馆：</label>
+                        <span></span>
+                    </li>
+                    <li>
+                        <label>备注：</label>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--课程详情 --- END-->
+        <!--签到记录 --- BEGIN-->
+        <div class="signin-list dn" id="signin-list">
+            <div class="title">
+                <label><i></i>签到记录</label>
+            </div>
+            <div class="content">
+                <span>签到记录：</span>
+                <ul>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="info">
+                            <span class="time">2016-07-25 10:14</span>
+                            <span class="name">课程名</span>
+                        </span>
+                        <span class="num">1课时</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="info">
+                            <span class="time">2016-07-25 10:14</span>
+                            <span class="name">课程名</span>
+                        </span>
+                        <span class="num">1课时</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="info">
+                            <span class="time">2016-07-25 10:14</span>
+                            <span class="name">课程名</span>
+                        </span>
+                        <span class="num">1课时</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="info">
+                            <span class="time">2016-07-25 10:14</span>
+                            <span class="name">课程名</span>
+                        </span>
+                        <span class="num">1课时</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="info">
+                            <span class="time">2016-07-25 10:14</span>
+                            <span class="name">课程名</span>
+                        </span>
+                        <span class="num">1课时</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--签到记录 --- END-->
+        <section class="body">
+        </section>
+    </article>
+    <!--增加dn 课程签到 --- BEGIN-->
+    <section class="mask-course-signin dn" id="mask-course-signin">
+        <div class="dialog">
+            <h3><span>课程签到</span><i></i></h3>
+            <div class="detail">
+                <p class="name">课程名称</p>
+                <p class="status">当前状态：正常/冻结/停课</p>
+                <p class="current">剩余课时：剩余课时/总课时</p>
+            </div>
+            <ul>
+                <li>1课时</li>
+                <li>2课时</li>
+                <li>3课时</li>
+                <li>4课时</li>
+                <li class="self-define">自定义课时</li>
+            </ul>
+        </div>
+    </section>
+    <!--课程签到 --- END-->
+    <!--增加dn 课程扣费 --- BEGIN-->
+    <section class="mask-course-reduce dn" id="mask-course-reduce">
+        <div class="dialog">
+            <h3><span>课程扣费</span><i></i></h3>
+            <div class="detail">
+                <p class="name">课程名称</p>
+                <p class="status">当前状态：<span>正常/冻结/停课</span></p>
+                <p class="current">剩余课时：<span>剩余课时/总课时</span></p>
+                <p class="num">
+                    <label>减少：</label>
+                    <input type="text" placeholder="课时数" name="amount" />
+                </p>
+                <p class="reason">
+                    <label>说明：</label>
+                    <input type="text" placeholder="扣费说明" name="comment" />
+                </p>
+            </div>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </section>
+    <!--课程扣费 --- END-->
+    <!--增加dn 课程停课 --- BEGIN-->
+    <section class="mask-course-stop dn" id="mask-course-stop">
+        <div class="dialog">
+            <h3><span>课程停课</span><i></i></h3>
+            <div class="detail">
+                <p class="name">课程名称</p>
+                <p class="status">当前状态：<span>正常/冻结/停课</span></p>
+                <p class="current">剩余课时：<span>剩余课时/总课时</span></p>
+                <p class="num">
+                    <label>退款金额：</label>
+                    <input type="text" placeholder="金额" name="amount" />
+                </p>
+                <div class="pay">
+                    <label>支付方式：</label>
+                    <span>请选择支付方式</span>
+                    <ul class="dn">
+                        <li>现金</li>
+                        <li>微信</li>
+                        <li>支付宝</li>
+                    </ul>
+                </div>
+                <p class="reason">
+                    <label>说明：</label>
+                    <input type="text" placeholder="停课说明" name="comment" />
+                </p>
+            </div>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </section>
+    <!--课程停课 --- END-->
+    <include src="../common/service-footer.html" class="footer"></include>
+    <script src="../service/index.js"></script>
+</body>
+
+</html>

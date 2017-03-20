@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>折扣与优惠</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_admin.css">
+    <link rel="stylesheet" type="text/css" href="../../staticpage/admin/olddiscount.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <span class="home"></span>
+        <span class="setting"></span>
+        <span class="fullscreen"></span>
+        <span class="help"></span>
+        <span class="admin"></span>
+    </div>
+    <div class="main">
+        <div class="top">
+            <span class="home">管理者主页</span>
+            <div class="school">
+                <i class="back"></i>
+                <span class="first">学校名称</span>
+                <span class="second">校区</span>
+            </div>
+        </div>
+        <div class="body">
+            <ul class="nav">
+                <li>
+                    <h3>基础设置</h3>
+                    <ul>
+                        <li class="admin-org">机构资料</li>
+                        <li class="admin-pay">支付方式</li>
+                        <li class="admin-employee">员工管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>服务设置</h3>
+                    <ul>
+                        <li class="admin-server">服务端权限</li>
+                        <li class="admin-discount active">折扣与优惠</li>
+                        <li class="admin-student-service">学员服务</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>其他</h3>
+                    <ul>
+                        <li class="admin-about">关于有课互联</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="content">
+                <h3 class="title">折扣与优惠</h3>
+                <div class="discount">
+                    <p class="title">预定义折扣<i></i></p>
+                    <p class="desc">预定义折扣可以对校区希望使用的折扣方式进行预先设定。收银时由前台选择相应的折扣方式</p>
+                    <ul class="pre-discount">
+                        <li>
+                            <span>9折</span>
+                            <i></i>
+                        </li>
+                        <li>
+                            <span>满5000打8折</span>
+                            <i></i>
+                        </li>
+                    </ul>
+                    <p class="title">自定义折扣</p>
+                    <p class="desc">自定义折扣允许前台收银时输入任意金额的折扣（不超过订单价及限定的价格）</p>
+                    <div class="define-discount">
+                        <h3>是否允许自定义折扣<i class="checked"></i></h3>
+                        <ul>
+                            <li>不超过订单金额的20%</li>
+                            <li>不超过金额￥500</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--增加dn 设置自定义折扣金额 --- BEGIN-->
+    <div class="mask-define-discount dn">
+        <div class="dialog">
+            <h3><span>设置自定义折扣金额</span><i></i></h3>
+            <div class="detail">
+                <p class="money">
+                    <label>折扣不超过金额：</label>
+                    <input type="number" maxlength="10" min="0" max="1000000" placeholder="最大限额,不能为负数">
+                </p>
+                <p class="percent">
+                    <label>折扣不超过订单总额百分比：</label>
+                    <input type="number" maxlength="5" min="0" max="100" placeholder="0-100的百分比值">
+                </p>
+                <p class="desc">
+                    同时设置两项限额，则自定义折扣不能超过任意一项限额。不设 置则可输入任意金额的折扣（但不能超过订单总额）
+                </p>
+            </div>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-cancel">取消</a>
+                <a href="javascript:void(0);" class="btn-confirm">保存</a>
+            </div>
+        </div>
+    </div>
+    <!--设置自定义折扣金额 --- END-->
+
+    <!--增加dn 添加折扣设置 --- BEGIN-->
+    <div class="mask-set-discount dn">
+        <div class="dialog">
+            <h3><span>添加折扣设置</span><i></i></h3>
+            <div class="detail">
+                <p class="title">折扣方式</p>
+                <div class="percent">
+                    <p class="num">
+                        <label>￥折扣：</label>
+                        <input type="number" max="10" min="0" maxlength="4" placeholder="0-10">
+                        <span>折</span>
+                    </p>
+                    <p class="desc">0-10有效，例如“8”代表8折</p>
+                </div>
+                <p class="title">以下产品参与折扣</p>
+                <div class="product">
+                    <p class="desc">不参与折扣的产品在计算总金额时将被排除</p>
+                    <p class="involve">参与折扣的产品类型<i></i></p>
+                    <ul class="list">
+                        <li>类型一</li>
+                        <li>类型二</li>
+                        <li>类型三</li>
+                        <li>类型四</li>
+                    </ul>
+                    <p class="involve mt-10">参与折扣的课程<i></i></p>
+                    <ul class="list">
+                        <li>
+                            <label>课程一</label>
+                            <span>价格</span>
+                        </li>
+                        <li>
+                            <label>课程二</label>
+                            <span>价格</span>
+                        </li>
+                        <li>
+                            <label>课程三</label>
+                            <span>价格</span>
+                        </li>
+                        <li>
+                            <label>课程四</label>
+                            <span>价格</span>
+                        </li>
+                    </ul>
+                </div>
+                <p class="title">折扣名称</p>
+                <input type="text" class="discount-name" maxlength="16" placeholder="折扣名称">
+            </div>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-cancel">取消</a>
+                <a href="javascript:void(0);" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </div>
+    <!--增加dn 添加折扣设置 --- END-->
+
+    <!--增加dn 选择参与折扣的产品类型 --- BEGIN-->
+    <div class="mask-category-discount dn">
+        <div class="dialog">
+            <h3><span>选择参与折扣的产品类型</span><i></i></h3>
+            <div class="detail">
+                <a href="javascript:void(0);" class="selected">
+                    <label>已选产品类型：</label>
+                    <span>产品类型1、产品类型2、产品类型6、产品类型8</span>
+                </a>
+                <ul class="category-list">
+                    <li class="active">类型名称1</li>
+                    <li class="active">类型名称2</li>
+                    <li>类型名称3</li>
+                    <li>类型名称4</li>
+                    <li>类型名称5</li>
+                    <li class="active">类型名称6</li>
+                    <li>类型名称7</li>
+                    <li class="active">类型名称8</li>
+                    <li>类型名称9</li>
+                </ul>
+            </div>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-cancel">取消</a>
+                <a href="javascript:void(0);" class="btn-confirm">保存</a>
+            </div>
+        </div>
+    </div>
+    <!--增加dn 选择参与折扣的产品类型 --- END-->
+
+    <!--增加dn 选择参与折扣的产品课程 --- BEGIN-->
+    <div class="mask-course-discount">
+        <div class="dialog">
+            <h3><span>选择参与折扣的产品课程</span><i></i></h3>
+            <div class="detail">
+                <a href="javascript:void(0);" class="selected">
+                    <label>已选课程名称：</label>
+                    <span>课程名称1、课程名称2、课程名称3</span>
+                </a>
+                <table class="course">
+                    <thead>
+                        <tr>
+                            <th>课程名称</th>
+                            <th>价格</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>课程名称1</td>
+                        <td>￥3000.00</td>
+                        <td><i></i></td>
+                    </tr>
+                    <tr>
+                        <td>课程名称2</td>
+                        <td>￥3000.00</td>
+                        <td><i class="checked"></i></td>
+                    </tr>
+                    <tr>
+                        <td>课程名称3</td>
+                        <td>￥3000.00</td>
+                        <td><i class="checked"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-cancel">取消</a>
+                <a href="javascript:void(0);" class="btn-confirm">保存</a>
+            </div>
+        </div>
+    </div>
+    <!--增加dn 选择参与折扣的产品课程 --- END-->
+</body>
+
+</html>

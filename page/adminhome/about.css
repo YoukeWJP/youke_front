@@ -1,0 +1,61 @@
+/*header --- BEGIN*/
+.header {
+    height: 48px;
+    background: #DDDDDD;
+}
+.header>span {
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    margin-left: 48px;
+    font-weight: bold;
+    color: #555452;
+}
+.header:before {
+    position: absolute;
+    background: url("../../images/icons_service/top-back.png") no-repeat;
+    width: 14px;
+    height: 17px;
+    top: 16px;
+    left: 17px;
+    content: '';
+}
+/*header --- END*/
+/*main --- BEGIN*/
+.main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 234px;
+    min-width: 640px;
+}
+.main h3.title {
+    height:54px;
+    line-height: 54px;
+    padding-left: 20px;
+    background: #B6B6B6;
+    color: #555452;
+    font-size: 20px;
+}
+.main .content h3 {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 24px;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 24px;
+    color: #555452;
+    border-bottom: 2px solid #CECECE;
+}
+.main .content {
+    box-sizing: border-box;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 24px;
+    line-height: 36px;
+}
+.main .content P {
+    text-indent:2em;
+}
+/*main --- END*/

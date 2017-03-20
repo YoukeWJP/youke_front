@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>创建新课程产品</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_admin.css">
+    <link rel="stylesheet" type="text/css" href="../../page/admin/addcourse.css">
+    <script src="../common/script.js"></script>
+</head>
+
+<body>
+    <header class="top">
+        <i class="back"></i>
+        <span class="title">创建新课程产品</span>
+        <i class="confirm"></i>
+    </header>
+    <article class="main">
+        <div class="content">
+            <input id="courseName" type="text" class="title" placeholder="请输入产品名称" maxlength="16">
+            <ul>
+                <li class="first">
+                    <div class="product" id="category">
+                        <label>产品类型：</label>
+                        <span>请选择</span>
+                        <ul class="dn">
+                        </ul>
+                    </div>
+                    <div class="course" id="course">
+                        <label>课程类型：</label>
+                        <span>请选择</span>
+                        <ul class="dn">
+                            <li class="active" data-coursetype="by_course_hours">按总课时</li>
+                            <li data-coursetype="by_expiration">按有效期</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="second">
+                    <label>课程信息</label>
+                </li>
+                <!--如果课程类型是按课时数的话，则显示：价格、总课时、有效期、单课消耗-->
+                <!--如果课程类型是按有效期的话，则显示：价格、有效期、单课消耗，这时有效期未必填项-->
+                <li class="detail">
+                    <label>价格：</label>
+                    <input id="price" type="number" placeholder="销售价格" maxlength="8" max="1000000" min="0">
+                </li>
+                <li class="detail">
+                    <label>总课时：</label>
+                    <input id="totalHours" type="number" placeholder="课程总课时" maxlength="8" max="10000" min="0">
+                </li>
+                <li class="detail">
+                    <label>有效期：</label>
+                    <input id="expirationDate" type="number" placeholder="有效天数（没有则可不填）" maxlength="8" max="10000" min="0">
+                </li>
+                <li class="detail">
+                    <label>单课消耗：</label>
+                    <input id="hoursPerClass" type="number" placeholder="单节课消费课时" maxlength="8" max="10000" min="0">
+                </li>
+                <li class="seventh">
+                    <label>描述</label>
+                </li>
+                <li class="eighth">
+                    <textarea id="comment" cols="30" rows="10" placeholder="描述" maxlength="200"></textarea>
+                </li>
+            </ul>
+        </div>
+    </article>
+    <footer class="bottom">
+        <div class="bar">
+            <a href="javascript:void(0);" class="cancel">保存后继续添加</a>
+            <a href="javascript:void(0);" class="confirm"><i></i>保存</a>
+        </div>
+    </footer>
+    <script src="../admin/addcourse.js"></script>
+</body>
+
+</html>

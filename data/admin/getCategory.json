@@ -1,0 +1,53 @@
+{
+  "code": 200,
+  "success": true,
+  "data": [{
+    "categoryId" : 1,
+    "orgId" : 1,
+    "categoryName" : "分类一",
+    "comment" : "这是分类一",
+    "created" : "2016-09-14 14:28:51",
+    "updated" : "2016-09-14 15:37:41",
+    "bgcolor" : "#FFBB50"
+  },{
+    "categoryId" : 2,
+    "orgId" : 1,
+    "categoryName" : "分类二",
+    "comment" : "这是分类二",
+    "created" : "2016-09-14 14:28:52",
+    "updated" : "2016-09-14 15:37:42",
+    "bgcolor" : "#FF9E50"
+  },{
+    "categoryId" : 3,
+    "orgId" : 1,
+    "categoryName" : "分类三",
+    "comment" : "这是分类三",
+    "created" : "2016-09-14 14:28:53",
+    "updated" : "2016-09-14 15:37:43",
+    "bgcolor" : "#187EAD"
+  },{
+    "categoryId" : 4,
+    "orgId" : 1,
+    "categoryName" : "分类四",
+    "comment" : "这是分类四",
+    "created" : "2016-09-14 14:28:54",
+    "updated" : "2016-09-14 15:37:44",
+    "bgcolor" : "#660E7A"
+  },{
+    "categoryId" : 5,
+    "orgId" : 1,
+    "categoryName" : "分类五",
+    "comment" : "这是分类五",
+    "created" : "2016-09-14 14:28:55",
+    "updated" : "2016-09-14 15:37:45",
+    "bgcolor" : "#E21010"
+  },{
+    "categoryId" : 6,
+    "orgId" : 1,
+    "categoryName" : "分类六",
+    "comment" : "这是分类六",
+    "created" : "2016-09-14 14:28:54",
+    "updated" : "2016-09-14 15:37:44",
+    "bgcolor" : "#660E7A"
+  }]
+}

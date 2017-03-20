@@ -1,0 +1,372 @@
+/*nav --- BEGIN*/
+.body .nav {
+    float: left;
+    background: #CDCDCD;
+    height: 100%;
+    width: 234px;
+    color: #555452;
+}
+.body .nav>li>h3 {
+    height: 54px;
+    line-height: 54px;
+    box-sizing: border-box;
+    padding-left: 16px;
+    font-size: 20px;
+    border-bottom: 2px solid #9D9D9D;
+}
+.body .nav>li>ul>li {
+    box-sizing: border-box;
+    line-height: 50px;
+    padding-left: 50px;
+    border-bottom: 1px solid #9D9D9D;
+}
+.body .nav>li>ul>li.active {
+    background: #B6B6B6;
+}
+.body .nav>li>ul>li.admin-org:before,
+.body .nav>li>ul>li.admin-discount:before,
+.body .nav>li>ul>li.admin-employee:before,
+.body .nav>li>ul>li.admin-server:before,
+.body .nav>li>ul>li.admin-pay:before,
+.body .nav>li>ul>li.admin-student-service:before,
+.body .nav>li>ul>li.admin-about:before,
+.body .nav>li>ul>li.admin-switch-school:before{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: -40px;
+    content: '';
+}
+.body .nav>li>ul>li.admin-org:before {
+    background: url("../../images/icons_admin/admin-org.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-discount:before {
+    background: url("../../images/icons_admin/admin-discount.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-employee:before {
+    background: url("../../images/icons_admin/admin-employee.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-server:before {
+    background: url("../../images/icons_admin/admin-server.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-pay:before {
+    background: url("../../images/icons_admin/admin-pay.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-student-service:before {
+    background: url("../../images/icons_admin/admin-student-service.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-about:before {
+    background: url("../../images/icons_admin/admin-about.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-switch-school:before {
+    background: url("../../images/icons_admin/admin-about.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-discount h3 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.body .nav>li>ul>li.admin-discount .child {
+    width: 234px;
+    margin-left: -50px;
+}
+.body .nav>li>ul>li.admin-discount .child li {
+    height: 36px;
+    line-height: 36px;
+    background: #CDCDCD;
+    border-top: 1px solid #9D9D9D;
+}
+.body .nav>li>ul>li.admin-discount .child li.active {
+    background: #B6B6B6;
+}
+.body .nav>li>ul>li.admin-discount .child li span {
+    margin-left: 50px;
+}
+/*nav --- END*/
+/*content --- BEGIN*/
+.body .content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 234px;
+}
+.body .content h3.title {
+    height:54px;
+    line-height: 54px;
+    padding-left: 20px;
+    background: #B6B6B6;
+    color: #555452;
+    font-size: 20px;
+}
+.body .content .left {
+    position: absolute;
+    left: 0;
+    top: 54px;
+    bottom: 0;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    border-right: 1px solid #959696;
+}
+.body .content .left .item {
+    height: 70px;
+    border-top: 1px solid #B6B7B7;
+}
+.body .content .left .item .tips {
+    height: 70px;
+}
+.body .content .left .item .tips label {
+    color: #187FAD;
+    margin-top: 10px;
+    height: 24px;
+    line-height: 24px;
+}
+.body .content .left .item .tips span {
+    color: #555452;
+    margin-top: 2px;
+}
+.body .content .left .item .btn-msg {
+    float: right;
+    margin-right: 20px;
+    height: 28px;
+    width: 56px;
+    margin-top: 21px;
+    border-radius: 5px;
+    border: 1px solid #A2A3A3;
+}
+.body .content .left .item .btn-msg .open {
+    width: 28px;
+    height: 28px;
+}
+.body .content .left .item .btn-msg .open.active:before {
+    position: absolute;
+    text-align: center;
+    line-height: 28px;
+    width: 28px;
+    color: #FFFFFF;
+    background: #187FAD;
+    content: '开';
+}
+.body .content .left .item .btn-msg .close {
+    width: 28px;
+    height: 28px;
+}
+.body .content .left .item .btn-msg .close.active:before {
+    position: absolute;
+    text-align: center;
+    line-height: 28px;
+    width: 28px;
+    color: #FFFFFF;
+    background: #187FAD;
+    content: '关';
+}
+.body .content .left .item:last-child {
+    border-bottom: 1px solid #A2A3A3;
+}
+.body .content .left .middle {
+    height: 106px;
+    border-top: 1px dashed #D7D7D7;
+}
+.body .content .left .middle label {
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 10px;
+    color: #555452;
+}
+.body .content .left .middle span {
+    position: absolute;
+    min-width: 300px;
+    color: #959696;
+    line-height: 28px;
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: calc(50% - 250px);
+}
+.body .content .left .middle i {
+    position: absolute;
+    background: url(../../images/icons_admin/sidebar-right-edit-light.png) no-repeat;
+    width: 27px;
+    height: 27px;
+    margin-top: 60px;
+    right: 0;
+    margin-right: 70px;
+}
+.body .content .right {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    box-sizing: border-box;
+    padding: 0 12px 12px 12px;
+}
+.body .content .right .title {
+    height: 44px;
+    color: #555452;
+    line-height: 44px;
+    padding-left: 36px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #B6B7B7;
+}
+.body .content .right .title:before {
+    position: absolute;
+    background: url("../../images/icons_admin/settings-info-email.png") no-repeat;
+    width: 17px;
+    height: 12px;
+    margin-top: 18px;
+    margin-left: -27px;
+    content: '';
+}
+.body .content .right .middle {
+    height: 44px;
+    line-height: 44px;
+    color: #555452;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+.body .content .right .middle label {
+    width: 100px;
+}
+.body .content .right .middle .rest {
+    width: 100px;
+    color: #187FAD;
+    text-align: center;
+}
+.body .content .right .middle .recharge {
+    width: 100px;
+    text-align: right;
+    cursor: pointer;
+}
+.body .content .right .middle .recharge:before {
+    position: absolute;
+    background: url(../../images/icons_admin/settings-recharge.png) no-repeat;
+    width: 22px;
+    height: 17px;
+    margin-top: 14px;
+    margin-left: -30px;
+    content: '';
+}
+.body .content .right .head {
+    box-sizing: border-box;
+    padding-left: 10px;
+    height: 41px;
+    line-height: 41px;
+    color: #555452;
+    border-bottom: 1px solid #B6B7B7;
+}
+.body .content .right .summary {
+    box-sizing: border-box;
+    padding-left: 10px;
+    height: 42px;
+    line-height: 42px;
+    color: #555452;
+}
+.body .content .right .summary label {
+    width: 60px;
+}
+.body .content .right .summary .date {
+    width: 100px;
+}
+.body .content .right .summary .total {
+    margin-right: 10%;
+}
+.body .content .right .summary .total i {
+    font-style: normal;
+}
+.body .content .right .table {
+    clear: both;
+    border-collapse:collapse;
+    color: #555452;
+    border-spacing:0;
+    width: 100%;
+}
+.main .body .content .table tr {
+    border-bottom: 1px dashed #D7D7D7;
+    height: 42px;
+    line-height: 42px;
+}
+.main .body .content .table th,
+.main .body .content .table td {
+    text-align: center;
+    width: 33.33%;
+}
+/*content --- END*/
+/*mask-edit-msg --- BEGIN */
+.mask-edit-msg {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-edit-msg .dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 372px;
+    height: 266px;
+    margin-left: -186px;
+    margin-top: -133px;
+    background: #F6F6F6;
+}
+.mask-edit-msg .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-edit-msg .dialog h3 span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.mask-edit-msg .dialog h3 i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-edit-msg .dialog .textarea {
+    width: 344px;
+    height: 128px;
+    margin-top: 17px;
+    resize: none;
+    margin-left: 13px;
+    border-style: none;
+    box-sizing: border-box;
+    padding: 12px;
+    color: #555452;
+    line-height: 24px;
+}
+.mask-edit-msg .dialog .bar {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.mask-edit-msg .dialog .bar .btn-cancel {
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    height: 54px;
+    line-height: 54px;
+    width: 50%;
+    color: #444444;
+    background: #DDDDDD;
+}
+.mask-edit-msg .dialog .bar .btn-confirm {
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    height: 54px;
+    line-height: 54px;
+    width: 50%;
+    color: #FFFFFF;
+    background: #307EAC;
+}
+/*mask-edit-msg --- END */

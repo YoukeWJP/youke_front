@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>主页</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_admin.css">
+    <link rel="stylesheet" type="text/css" href="../../page/admin/mgrcategory.css">
+    <script src="../common/script.js"></script>
+</head>
+
+<body>
+    <include src="../common/admin-nav.html" class="sidebar"></include>
+    <article class="main">
+        <header class="top">
+            <span class="home">管理者主页</span>
+            <div class="school">
+                <i class="back"></i>
+                <span class="first">学校名称</span>
+                <span class="second">校区</span>
+            </div>
+        </header>
+        <section class="content">
+            <ul id="categoryList">
+                <!--<li class="color-ffbb50">分类名</li>-->
+                <!--<li class="color-ff9e50">分类名</li>-->
+                <!--<li class="color-187fad">分类名</li>-->
+            </ul>
+        </section>
+        <aside class="sidebar-right">
+            <ul>
+                <li class="add active">
+                    <a href="javascript:void(0);">
+                        <h3>添加课程产品分类</h3>
+                        <span>添加一个产品分类项</span>
+                    </a>
+                </li>
+                <li class="back">
+                    <a href="javascript:void(0);">
+                        <h3>返回</h3>
+                        <span>返回到课程产品管理</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </article>
+    <section class="mask-add-category dn" id="mask-add-category">
+        <div class="dialog">
+            <h3 class="add"><span>新建产品分类</span><i></i></h3>
+            <input type="text" class="category-name" placeholder="分类名称" maxlength="16">
+            <a href="javascript:void(0);" class="product-type">
+                <label>排序顺序：</label>
+                <input type="number" class="rank" placeholder="-10000到10000，从小到大依次排序" min="-10000" max="10000" />
+            </a>
+            <h3 class="flag">分类颜色标识</h3>
+            <span class="text">
+                <label>标识色在产品购买按钮显示,可以更有效的从视觉上进行产品分组</label>
+                <i style="background: #187FAD;"></i>
+            </span>
+            <ul class="color">
+                <li style="background: #ff7676;"></li>
+                <li style="background: #ff9e50;"></li>
+                <li style="background: #ffbb50;"></li>
+                <li style="background: #abd46e;"></li>
+                <li style="background: #8bffff;"></li>
+                <li style="background: #187fad;"></li>
+                <li style="background: #6a509b;"></li>
+            </ul>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-cancel">取消</a>
+                <a href="javascript:void(0);" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </section>
+    <section class="mask-edit-category dn" id="mask-edit-category">
+        <div class="dialog">
+            <h3 class="edit"><span>编辑产品分类</span><i></i></h3>
+            <input type="text" class="category-name" placeholder="分类名称" maxlength="16">
+            <a href="javascript:void(0);" class="product-type">
+                <label>排序顺序：</label>
+                <input type="number" class="rank" placeholder="-10000到10000，从小到大依次排序" min="-10000" max="10000" />
+            </a>
+            <h3 class="flag">分类颜色标识</h3>
+            <span class="text">
+                <label>标识色在产品购买按钮显示,可以更有效的从视觉上进行产品分组</label>
+                <i style="background: #187FAD;"></i>
+            </span>
+            <ul class="color">
+                <li style="background: #ff7676;"></li>
+                <li style="background: #ff9e50;"></li>
+                <li style="background: #ffbb50;"></li>
+                <li style="background: #abd46e;"></li>
+                <li style="background: #8bffff;"></li>
+                <li style="background: #187fad;"></li>
+                <li style="background: #6a509b;"></li>
+            </ul>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-cancel">取消</a>
+                <a href="javascript:void(0);" class="btn-delete">删除</a>
+                <a href="javascript:void(0);" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </section>
+    <script src="../admin/mgrcategory.js"></script>
+</body>
+
+</html>

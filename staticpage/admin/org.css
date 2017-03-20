@@ -1,0 +1,384 @@
+/*nav --- BEGIN*/
+.body .nav {
+    float: left;
+    background: #CDCDCD;
+    height: 100%;
+    width: 234px;
+    color: #555452;
+}
+.body .nav>li>h3 {
+    height: 54px;
+    line-height: 54px;
+    box-sizing: border-box;
+    padding-left: 16px;
+    font-size: 20px;
+    border-bottom: 2px solid #9D9D9D;
+}
+.body .nav>li>ul>li {
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 50px;
+    border-bottom: 1px solid #9D9D9D;
+}
+.body .nav>li>ul>li.active {
+    background: #B6B6B6;
+}
+.body .nav>li>ul>li.admin-org:before,
+.body .nav>li>ul>li.admin-discount:before,
+.body .nav>li>ul>li.admin-employee:before,
+.body .nav>li>ul>li.admin-server:before,
+.body .nav>li>ul>li.admin-pay:before,
+.body .nav>li>ul>li.admin-student-service:before,
+.body .nav>li>ul>li.admin-about:before{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: -40px;
+    content: '';
+}
+.body .nav>li>ul>li.admin-org:before {
+    background: url("../../images/icons_admin/admin-org.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-discount:before {
+    background: url("../../images/icons_admin/admin-discount.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-employee:before {
+    background: url("../../images/icons_admin/admin-employee.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-server:before {
+    background: url("../../images/icons_admin/admin-server.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-pay:before {
+    background: url("../../images/icons_admin/admin-pay.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-student-service:before {
+    background: url("../../images/icons_admin/admin-student-service.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-about:before {
+    background: url("../../images/icons_admin/admin-about.png") no-repeat;
+}
+/*nav --- END*/
+/*content --- BEGIN*/
+.body .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 234px;
+    width: 372px;
+    background: #EEEEEE;
+    border-left: 1px solid #959696;
+    box-sizing: border-box;
+    color: #444444;
+}
+.body .content h3.title {
+    height:40px;
+    line-height: 40px;
+    padding-left: 32px;
+    background: #CCCCCC;
+    color: #555452;
+    font-size: 16px;
+}
+.body .content h3.title .back {
+    position: absolute;
+    background: url(../../images/icons_admin/sidebar-back.png) no-repeat;
+    height: 14px;
+    width: 11px;
+    margin-top: 13px;
+    margin-left: -20px;
+}
+.body .content h3.title .edit {
+    position: absolute;
+    background: url(../../images/icons_admin/sidebar-edit.png) no-repeat;
+    height: 14px;
+    width: 14px;
+    margin-top: 13px;
+    right: 24px;
+}
+.body .content .info {
+    height: 180px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.body .content .info .img {
+    float: left;
+    width: 150px;
+}
+.body .content .info .img img {
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
+}
+.body .content .info .detail {
+    float: left;
+    width: 180px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+.body .content .info .detail h2 {
+    font-size: 24px;
+    height: 30px;
+    line-height: 30px;
+}
+.body .content .info .detail .name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 24px;
+    height: 48px;
+    display: -webkit-box !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.body .content .info .detail .time {
+    margin-top: 40px;
+}
+.body .content .contact {
+    height: 100px;
+    box-sizing: border-box;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+.body .content .contact .detail,
+.body .content .desc .detail{
+    float: left;
+    width: 230px;
+    line-height: 24px;
+}
+.body .content .contact .detail label {
+    float: left;
+    width: 48px;
+    height: 24px;
+    line-height: 24px;
+}
+.body .content .contact .detail a {
+    float: left;
+    color: #444444;
+    width: 180px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.body .content .desc {
+    box-sizing: border-box;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 15px;
+}
+.body .content .contact>label,
+.body .content .desc>label {
+    float: left;
+    width: 100px;
+    height: 30px;
+}
+/*content --- END*/
+/*mask-upload-logo --- BEGIN*/
+.mask-upload-logo {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-upload-logo .dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 376px;
+    height: 400px;
+    margin-left: -188px;
+    margin-top: -200px;
+    background: #F6F6F6;
+}
+.mask-upload-logo .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-upload-logo .dialog h3 span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.mask-upload-logo .dialog h3 i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-upload-logo .dialog .upload {
+    width: 100%;
+    height: 350px;
+}
+.mask-upload-logo .dialog .upload .file {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.mask-upload-logo .dialog .upload:before {
+    position: absolute;
+    background: url("../../images/icons_admin/image-store.png") no-repeat;
+    width: 108px;
+    height: 74px;
+    left: 50%;
+    top: 50%;
+    margin-left: -54px;
+    margin-top: -47px;
+    content: '';
+}
+.mask-upload-logo .dialog .upload:after {
+    position: absolute;
+    color: #444444;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    left: 50%;
+    top: 50%;
+    margin-left: -60px;
+    margin-top: 30px;
+    text-align: center;
+    content: '上传LOGO图片';
+}
+/*mask-upload-logo --- END*/
+/*mask-modify-logo --- BEGIN*/
+.mask-modify-logo {
+    z-index: 7;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-modify-logo .dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 376px;
+    height: 344px;
+    margin-left: -188px;
+    margin-top: -172px;
+    background: #F6F6F6;
+}
+.mask-modify-logo .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-modify-logo .dialog h3 span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.mask-modify-logo .dialog h3 i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-modify-logo .dialog .bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+}
+.mask-modify-logo .modify {
+    background: #F5F2F2;
+    height: 244px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.mask-modify-logo .modify .left {
+    float: left;
+    width: 216px;
+    height: 100%;
+    background: #FFFFFF;
+}
+.mask-modify-logo .modify .left img {
+    width: 120px;
+    height: 180px;
+    border: 0;
+    margin-left: 47px;
+    margin-top: 22px;
+}
+.mask-modify-logo .modify .left .border {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    box-sizing: border-box;
+    border: 1px solid;
+    margin-left: 47px;
+    top: 90px;
+    border: 1px solid #C0C0C0;
+}
+.mask-modify-logo .modify .right {
+    float: left;
+    width: 120px;
+    margin-left: 20px;
+}
+.mask-modify-logo .modify .right .normal img {
+    width: 120px;
+    height: 120px;
+    border: 0;
+}
+.mask-modify-logo .modify .right .normal span {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+}
+.mask-modify-logo .modify .right .small {
+    margin-top: 16px;
+}
+.mask-modify-logo .modify .right .small img {
+    width: 44px;
+    height: 44px;
+    border: 0;
+    margin-left: 38px;
+}
+.mask-modify-logo .modify .right .small span {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+}
+.mask-modify-logo .bar .cancel {
+    float: left;
+    width: 50%;
+    background: #DDDDDD;
+    text-align: center;
+    color: #444444;
+}
+.mask-modify-logo .bar .confirm {
+    float: left;
+    width: 50%;
+    background: #187EAD;
+    color: #FFFFFF;
+    text-align: center;
+}
+/*mask-modify-logo --- END*/

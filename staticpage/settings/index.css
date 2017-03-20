@@ -1,0 +1,96 @@
+/*header --- BEGIN*/
+.header {
+    height: 48px;
+    background: #DDDDDD;
+}
+.header>span {
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    margin-left: 48px;
+    font-weight: bold;
+    color: #555452;
+}
+.header:before {
+    position: absolute;
+    background: url("../../images/icons_service/top-back.png") no-repeat;
+    width: 14px;
+    height: 17px;
+    top: 16px;
+    left: 17px;
+    content: '';
+}
+/*header --- END*/
+/*main --- BEGIN*/
+.main {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    bottom: 55px;
+    left: 0;
+    box-sizing: border-box;
+    padding: 8px;
+    background: #FFFFFF;
+}
+.main ul li {
+    float: left;
+    height: 92px;
+    box-sizing: border-box;
+    border: 8px solid #FFFFFF;
+    background: #F3F3F3;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .main ul li {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+    .main ul li {
+        width: 50%;
+    }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .main ul li {
+        width: 33.33%;
+    }
+}
+@media (min-width: 1920px) {
+    .main ul li {
+        width: 25%;
+    }
+}
+.main ul li.common:before {
+    position: absolute;
+    background: url("../../images/icons_service/settings-common.png") no-repeat;
+    width: 22px;
+    height: 23px;
+    margin-top: 27px;
+    margin-left: 27px;
+    content: '';
+}
+.main ul li .title {
+    margin-left: 76px;
+    margin-top: 14px;
+    height: 25px;
+    line-height: 25px;
+    color: #555452;
+    font-weight: bold;
+}
+.main ul li .desc {
+    margin-left: 76px;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    color: #A3A3A3;
+}
+.main ul li.about:before {
+    position: absolute;
+    background: url("../../images/icons_service/settings-about.png") no-repeat;
+    width: 7px;
+    height: 28px;
+    margin-top: 24px;
+    margin-left: 34px;
+    content: '';
+}
+/*main --- END*/

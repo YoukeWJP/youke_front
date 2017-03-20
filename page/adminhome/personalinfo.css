@@ -1,0 +1,331 @@
+/*header --- BEGIN*/
+.header {
+    height: 48px;
+    background: #DDDDDD;
+}
+.header>span {
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    margin-left: 48px;
+    font-weight: bold;
+    color: #555452;
+}
+.header:before {
+    position: absolute;
+    background: url("../../images/icons_service/top-back.png") no-repeat;
+    width: 14px;
+    height: 17px;
+    top: 16px;
+    left: 17px;
+    content: '';
+}
+/*header --- END*/
+/*main --- BEGIN*/
+.main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 234px;
+    min-width: 640px;
+}
+.main h3.title {
+    height:54px;
+    line-height: 54px;
+    padding-left: 20px;
+    background: #B6B6B6;
+    color: #555452;
+    font-size: 20px;
+}
+.main .time {
+    margin-left: 16px;
+    margin-right: 16px;
+    height: 130px;
+    border-bottom: 2px solid #CECECE;
+}
+.main .time .left {
+    width: 200px;
+    float: left;
+    height: 100%;
+}
+.main .time .left>.file,
+.main .time .left>img {
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    margin-top: 23px;
+    margin-left: 16px;
+}
+.main .time .left>.file {
+    opacity: 0;
+}
+.main .login {
+    margin-left: 16px;
+    margin-right: 16px;
+    height: 90px;
+    border-bottom: 2px solid #CECECE;
+}
+.main .login .left,
+.main .contact .left {
+    float: left;
+    padding-top: 16px;
+    padding-left: 16px;
+    width: 200px;
+    color: #555452;
+    height: 100%;
+    box-sizing: border-box;
+}
+.main .contact {
+    margin-left: 16px;
+    margin-right: 16px;
+    height: 90px;
+    border-bottom: 2px solid #CECECE;
+}
+.main .time .right,
+.main .login .right,
+.main .contact .right {
+    float: left;
+    height: 100%;
+}
+.main .time .right .first {
+    height: 60px;
+    line-height: 60px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #555452;
+}
+.main .time .right .second {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 20px;
+    color: #555452;
+}
+.main .time .right .second:before,
+.main .time .right .second.man:before {
+    position: absolute;
+    background: url("../../images/icons_service/settings-info-man.png") no-repeat;
+    width: 8px;
+    height: 13px;
+    margin-top: 9px;
+    margin-left: -15px;
+    content: '';
+}
+.main .time .right .third {
+    height: 40px;
+    line-height: 40px;
+    color: #555452;
+}
+.main .login .right .first {
+    height: 35px;
+    line-height: 35px;
+    color: #555452;
+}
+.main .login .right .second {
+    height: 45px;
+    width: 400px;
+    line-height: 45px;
+    text-align: center;
+    background: #DDDDDD;
+    color: #555452;
+    cursor: pointer;
+}
+.main .contact .right .first,
+.main .contact .right .second {
+    height: 45px;
+    line-height: 45px;
+    margin-left: 24px;
+    color: #555452;
+}
+.main .contact .right .first:before {
+    position: absolute;
+    background: url("../../images/icons_service/settings-info-email.png") no-repeat;
+    width: 17px;
+    height: 12px;
+    margin-top: 18px;
+    margin-left: -20px;
+    content: '';
+}
+.main .contact .right .second:before {
+    position: absolute;
+    background: url("../../images/icons_service/settings-info-mobile.png") no-repeat;
+    width: 9px;
+    height: 13px;
+    margin-top: 16px;
+    margin-left: -16px;
+    content: '';
+}
+/*main --- END*/
+/*modify-pwd --- BEGIN*/
+.modify-pwd {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.modify-pwd .dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 376px;
+    height: 336px;
+    margin-left: -188px;
+    margin-top: -196px;
+    background: #F6F6F6;
+}
+.modify-pwd .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.modify-pwd .dialog h3 span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.modify-pwd .dialog h3 i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.modify-pwd .dialog>ul li {
+    height: 50px;
+    line-height: 50px;
+    width: 342px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    color: #555452;
+}
+.modify-pwd .dialog>ul li>label {
+    float: left;
+    width: 100px;
+    text-align: right;
+}
+.modify-pwd .dialog>ul li>input {
+    float: left;
+    width: 240px;
+    border: 0;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.modify-pwd .bar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.modify-pwd .bar .btn-confirm {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #FFFFFF;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    background: #187EAD;
+}
+/*modify-pwd --- END*/
+/*modify-logo --- BEGIN*/
+.modify-logo {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.modify-logo .dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 376px;
+    height: 416px;
+    margin-left: -188px;
+    margin-top: -236px;
+    background: #F6F6F6;
+}
+.modify-logo .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.modify-logo .dialog h3 span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.modify-logo .dialog h3 i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.modify-logo .dialog .pic-storage {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+}
+.modify-logo .dialog .pic-storage .pic {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.modify-logo .dialog .pic-storage:before {
+    position: absolute;
+    background: url("../../images/icons_service/setting-info-pic-storage.png") no-repeat;
+    width: 82px;
+    height: 56px;
+    left: 50%;
+    top: 50%;
+    margin-left: -41px;
+    margin-top: -40px;
+    content: '';
+}
+.modify-logo .dialog .pic-storage:after {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: 30px;
+    text-align: center;
+    color: #555452;
+    font-weight: bold;
+    content: attr(data-desc);
+}
+.modify-logo .bar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.modify-logo .bar .btn-confirm {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #FFFFFF;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    background: #187EAD;
+}
+/*modify-logo --- END*/

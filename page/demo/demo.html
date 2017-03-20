@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_service.css">
+    <link rel="stylesheet" type="text/css" href="../../css/themes/test.css">
+    <link rel="stylesheet" type="text/css" href="../../page/demo/demo.css">
+    <script src="../../page/common/script.js"></script>
+</head>
+
+<body>
+    <include src="../../page/common/header.html"></include>
+    <input type="text" value="testEvent1" v-on="click|testEvent1Click.stop,keypress|testEvent1Keypress" />
+    <input type="text" value="testEvent2" v-on="click|testEvent2Click,keypress|testEvent2Keypress" />
+    <input type="text" v-data="X.A[0].B">
+    <input type="text" v-data="Y|W|J|P|X">
+    <span v-data="M" id="span"></span>
+    <img class="img-test" v-class="cls" v-data="Z.a" src="../../images/themes/summer.jpg" alt="图片加载失败">
+    <include src="../../page/common/footer.html"></include>
+    <script src="../../page/demo/demo.js" charset="utf-8"></script>
+</body>
+</head>
+
+</html>

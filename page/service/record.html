@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>记录</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_service.css">
+    <link rel="stylesheet" type="text/css" href="../../page/service/record.css">
+    <script src="../common/script.js"></script>
+</head>
+
+<body>
+    <include src="../common/service-nav.html" class="dn"></include>
+    <header class="header"><span>记录</span></header>
+    <article class="main">
+        <div class="body">
+            <!--查询记录 --- BEGIN -->
+            <div class="search-bar dn">
+                <input type="text" class="search" placeholder="输入学员ID或手机号">
+            </div>
+            <!--查询记录 --- END -->
+            <!--签到记录 --- BEGIN -->
+            <div class="signin" id="signin">
+                <div class="nav">
+                    <ul>
+                        <li class="active">全部</li>
+                        <li>已签到</li>
+                        <li>已取消</li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <span class="icon"></span>
+                            <div class="time">
+                                <h3>10:00</h3>
+                                <span>08/01,2016</span>
+                            </div>
+                            <div class="middle">
+                                <h3>学员名称</h3>
+                                <span>课程名称     剩余课时/总课时</span>
+                            </div>
+                            <span class="right">-1课时</span>
+                        </li>
+                        <li>
+                            <span class="icon"></span>
+                            <div class="time">
+                                <h3>10:00</h3>
+                                <span>08/01,2016</span>
+                            </div>
+                            <div class="middle">
+                                <h3>学员名称</h3>
+                                <span>课程名称     剩余课时/总课时</span>
+                            </div>
+                            <span class="right">+1课时</span>
+                        </li>
+                        <li>
+                            <span class="icon down"></span>
+                            <div class="time">
+                                <h3>10:00</h3>
+                                <span>08/01,2016</span>
+                            </div>
+                            <div class="middle">
+                                <h3>学员名称</h3>
+                                <span>课程名称     剩余课时/总课时</span>
+                            </div>
+                            <span class="right cancel">已取消</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--签到记录 --- END -->
+        </div>
+        <!--右侧菜单栏 --- BEGIN -->
+        <section class="sidebar-right" id="sidebar-right">
+            <ul>
+                <li class="first active">
+                    <a href="javascript:void(0);">
+                        <h3>今日签到</h3>
+                        <span>今日在本地签到的学员</span>
+                    </a>
+                </li>
+                <li class="second">
+                    <a href="javascript:void(0);">
+                        <h3>今日支付结算</h3>
+                        <span>今日在本地的支付结算</span>
+                    </a>
+                </li>
+                <li class="third">
+                    <a href="javascript:void(0);">
+                        <h3>查询记录</h3>
+                        <span>查询历史记录</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!--右侧菜单栏 --- END -->
+        <!--全部下的取消签到详情 --- BEGIN-->
+        <section class="cancel-detail dn" id="cancel-detail">
+            <h3>ID:12345<i></i></h3>
+            <ul>
+                <li class="name">学员名</li>
+                <li class="info">
+                    <a href="javascript:void(0);">
+                        <label>取消人：</label>
+                        <span>取消人名字</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>取消时间：</label>
+                        <span>2016/08/01 10：00</span>
+                    </a>
+                </li>
+                <li class="reason">
+                    <label>取消原因：</label>
+                    <span>操作错误</span>
+                </li>
+                <li class="status">
+                    <label>签到明细：</label>
+                    <span>已取消</span>
+                </li>
+                <li class="detail">
+                    <a href="javascript:void(0);">
+                        <label>课程：</label>
+                        <span>课程名称</span>
+                    </a>
+                    <a href="javascript:void(0);" class="color-bb5050">
+                        <label>费用：</label>
+                        <span>+1课时</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>剩余课时：</label>
+                        <span>20</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!--全部下的取消签到详情 --- END-->
+        <!--已签到列表 --- BEGIN-->
+        <section class="signin-detail dn" id="signin-detail">
+            <h3>ID:12345<i></i></h3>
+            <ul>
+                <li class="name">学员名</li>
+                <li class="info">
+                    <a href="javascript:void(0);">
+                        <label>签到人：</label>
+                        <span>签到人名字</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>签到时间：</label>
+                        <span>2016/08/01 10：00</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>签到短信：</label>
+                        <span>已发送</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>签到场馆：</label>
+                        <span>场馆1</span>
+                    </a>
+                </li>
+                <li class="status">
+                    <label>签到明细</label>
+                </li>
+                <li class="detail">
+                    <a href="javascript:void(0);">
+                        <label>课程：</label>
+                        <span>课程名称</span>
+                    </a>
+                    <a href="javascript:void(0);" class="color-bb5050">
+                        <label>费用：</label>
+                        <span>-1课时</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>剩余课时：</label>
+                        <span>20</span>
+                    </a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="signin-btn active">取消签到</a>
+        </section>
+        <!--已签到列表 --- END-->
+        <!--增加dn 取消签到 --- BEGIN-->
+        <section class="mask-course-signin-cancel dn" id="mask-course-signin-cancel">
+            <div class="dialog cancel-info">
+                <h3><span>取消签到</span><i></i></h3>
+                <div class="detail">
+                    <div class="info">
+                        <p>
+                            <label>签到时间：</label>
+                            <span>2016/08/01 10:00</span>
+                        </p>
+                        <p>
+                            <label>签到场馆：</label>
+                            <span>场馆一</span>
+                        </p>
+                        <p>
+                            <label>课程：</label>
+                            <span>课程名称</span>
+                        </p>
+                        <p>
+                            <label>退额：</label>
+                            <span>1课时</span>
+                        </p>
+                    </div>
+                    <p class="btn-cancel-reason">取消原因：</p>
+                </div>
+                <div class="bar">
+                    <a href="javascript:void(0);" class="btn-cancel">课时退回</a>
+                </div>
+            </div>
+            <!--取消签到原因 --- BEGIN-->
+            <div class="dialog dn cancel-reason">
+                <h3><span>取消签到</span><i></i></h3>
+                <textarea class="detail-reason" placeholder="输入取消原因..."></textarea>
+                <div class="bar">
+                    <a href="javascript:void(0);" class="btn-cancel">确认</a>
+                </div>
+            </div>
+            <!--取消签到原因 --- END-->
+        </section>
+        <!--取消签到 --- END-->
+    </article>
+    <include src="../common/service-footer.html" class="footer"></include>
+    <script src="../service/record.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>学员服务</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_admin.css">
+    <link rel="stylesheet" type="text/css" href="../../page/admin/studentservice.css">
+    <script src="../common/script.js"></script>
+</head>
+
+<body>
+    <include src="../common/admin-nav.html" class="sidebar"></include>
+    <article class="main">
+        <header class="top">
+            <span class="home">管理者主页</span>
+            <div class="school">
+                <i class="back"></i>
+                <span class="first">学校名称</span>
+                <span class="second">校区</span>
+            </div>
+        </header>
+        <section class="body">
+            <ul class="nav" id="nav">
+                <li>
+                    <h3>基础设置</h3>
+                    <ul>
+                        <li class="admin-org" id="org">机构资料</li>
+                        <li class="admin-pay" id="pay">支付方式</li>
+                        <li class="admin-employee" id="employee">员工管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>服务设置</h3>
+                    <ul>
+                        <!--<li class="admin-server" id="server">服务端权限</li>-->
+                        <li class="admin-discount" id="discount">
+                            <h3>折扣与优惠</h3>
+                            <ul class="child dn">
+                                <li id="discountMgr"><span>折扣活动管理</span></li>
+                                <li id="discountList"><span>课程折扣列表</span></li>
+                            </ul>
+                        </li>
+                        <li class="admin-student-service active" id="student-service">学员服务</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>管理员设置</h3>
+                    <ul>
+                        <li class="admin-switch-school" id="setting">切换校区</li>
+                    </ul>
+                </li>
+                <!--<li>-->
+                <!--<h3>其他</h3>-->
+                <!--<ul>-->
+                <!--<li class="admin-about" id="about">关于有课互联</li>-->
+                <!--</ul>-->
+                <!--</li>-->
+            </ul>
+            <div class="content">
+                <h3 class="title">学员服务</h3>
+                <div class="left">
+                    <div class="item">
+                        <a href="javascript:void(0);" class="tips l">
+                            <label class="l">新学员短信</label>
+                            <span class="l cb">创建新学员时给学员手机发送欢迎短信</span>
+                        </a>
+                        <a href="javascript:void(0);" class="btn-msg" id="new-msg">
+                            <span class="l open active"></span>
+                            <span class="l close"></span>
+                        </a>
+                    </div>
+                    <div class="middle" id="middle">
+                        <label class="l">短信内容：</label>
+                        <span class="l">【姓名】，您已正式加入【机构名称】， 学员ID12345678，请在下次上课时提供 姓名或手机号</span>
+                        <i class="r"></i>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0);" class="tips l">
+                            <label class="l">学员课时变化通知短信</label>
+                            <span class="l cb">学员结算课时，消费时给学员手机发送短信</span>
+                        </a>
+                        <a href="javascript:void(0);" class="btn-msg" id="change-msg">
+                            <span class="l open active"></span>
+                            <span class="l close"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                    <p class="title">短信余额</p>
+                    <p class="middle">
+                        <label class="l">当前余额</label>
+                        <span class="l rest">0</span>
+                        <span class="l recharge">充值</span>
+                    </p>
+                    <p class="head">短信账单</p>
+                    <p class="summary">
+                        <label class="l">时间</label>
+                        <span class="l date">2016年11月</span>
+                        <span class="r total">共使用<i>2</i>条</span>
+                    </p>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>2016-11-11 10:00</td>
+                                <td>接收方手机号</td>
+                                <td>欢迎短信</td>
+                            </tr>
+                            <tr>
+                                <td>2016-11-11 10:00</td>
+                                <td>接收方手机号</td>
+                                <td>课时变化</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <!--增加dn 自定义短信内容 --- BEGIN-->
+    <section class="mask-edit-msg dn" id="mask-edit-msg">
+        <div class="dialog">
+            <h3><span>自定义短信内容</span><i></i></h3>
+            <textarea class="textarea" id="textarea">【姓名】，您已正式加入【机构名称】，学员I D12345678，请在下次上课时提供姓名或手机号</textarea>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-cancel">取消</a>
+                <a href="javascript:void(0);" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </section>
+    <!--自定义短信内容 --- END-->
+    <script src="../admin/studentservice.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+/*nav-left --- BEGIN*/
+.body .nav-left {
+    width: 188px;
+    background: #EEEEEE;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    font-weight: bold;
+}
+.body .nav-left .logo {
+    width: 88px;
+    height: 88px;
+    border-radius: 44px;
+    margin-left: 50px;
+    margin-top: 32px;
+    background: #187EAD;
+    display: inline-block;
+}
+.body .nav-left .logo img {
+    width: 88px;
+    height: 88px;
+    border-radius: 44px;
+    border: 0;
+}
+.body .nav-left .logo .name {
+    height: 48px;
+    line-height: 48px;
+    color: #555452;
+    text-align: center;
+    cursor: pointer;
+}
+.body .nav-left .account {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #AFAFAF;
+    height: 47px;
+    line-height: 47px;
+    bottom: 48px;
+    color: #555452;
+    text-align: center;
+    cursor: pointer;
+}
+.body .nav-left .account:before {
+    position: absolute;
+    background: url("../../images/icons_admin/org-account.png") no-repeat;
+    width: 28px;
+    height: 24px;
+    margin-top: 12px;
+    margin-left: -30px;
+    content: '';
+}
+.body .nav-left .setting {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #AFAFAF;
+    height: 47px;
+    line-height: 47px;
+    bottom: 0;
+    color: #555452;
+    text-align: center;
+    cursor: pointer;
+}
+.body .nav-left .setting:before {
+    position: absolute;
+    background: url("../../images/icons_admin/org-setting.png") no-repeat;
+    width: 21px;
+    height: 21px;
+    margin-top: 13px;
+    margin-left: -26px;
+    content: '';
+}
+/*nav-left --- END*/
+/*content --- BEGIN*/
+.content {
+    box-sizing: border-box;
+    padding: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 188px;
+}
+.content .business-daily {
+    width: 100%;
+    height: 100px;
+    background: #EEEEEE;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.content .account-sales,
+.content .mgr-student,
+.content .mgr-course {
+    float: left;
+    height: 100px;
+    background: #EEEEEE;
+    width: calc(33.33% - 8px);
+    cursor: pointer;
+}
+.content .account-sales,
+.content .mgr-student {
+    margin-right: 12px;
+}
+.content .business-daily .logo:before{
+    position: absolute;
+    background: url("../../images/icons_admin/business-daily.png") no-repeat;
+    width: 32px;
+    height: 31px;
+    margin-top: 17px;
+    content: '';
+}
+.content .account-sales .logo:before{
+    position: absolute;
+    background: url("../../images/icons_admin/account-sales.png") no-repeat;
+    width: 34px;
+    height: 34px;
+    margin-top: 14px;
+    content: '';
+}
+.content .mgr-student .logo:before{
+    position: absolute;
+    background: url("../../images/icons_admin/mgr-student.png") no-repeat;
+    width: 23px;
+    height: 30px;
+    margin-top: 18px;
+    content: '';
+}
+.content .mgr-course .logo:before{
+    position: absolute;
+    background: url("../../images/icons_admin/mgr-course.png") no-repeat;
+    width: 33px;
+    height: 32px;
+    margin-top: 16px;
+    content: '';
+}
+.content .left {
+    float: left;
+    margin-left: 12px;
+    color: #555452;
+}
+.content .left .title {
+    height: 36px;
+    line-height: 36px;
+}
+.content .right {
+    margin-right: 20px;
+    float: right;
+    color: #555452;
+}
+.content .right .num {
+    color: #000000;
+    font-size: 38px;
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+}
+.content .right .desc {
+    text-align: right;
+    height: 24px;
+    line-height: 24px;
+}
+/*content --- END*/

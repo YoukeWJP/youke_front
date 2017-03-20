@@ -1,0 +1,813 @@
+/*sidebar BEGIN*/
+.main .sidebar .title h3 {
+    background: #CCCCCC;
+    color: #5A5A5A;
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+}
+.main .sidebar .title i {
+    background: url("../../images/icons_service/sidebar-back.png") no-repeat;
+    height: 14px;
+    width: 11px;
+    float: right;
+    margin-top: 12px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.main .sidebar .content .student{
+	width: 348px;
+	height: 90px;
+	margin-top: 13px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #FFFFFF;
+}
+.main .sidebar .content .student h3 {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 12px;
+	background: #187FAD;
+	color: #FFFFFF;
+}
+.main .sidebar .content .student .name {
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+    font-weight: bold;
+	padding-left: 12px;
+}
+.main .sidebar .content .course {
+    margin-top: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 348px;
+}
+.main .sidebar .content .course .box {
+    padding: 0 12px;
+    background: #FFFFFF;
+    margin-top: 12px;
+}
+.main .sidebar .content .course .name {
+    height: 39px;
+    line-height: 39px;
+    color: #5A5A5A;
+    border-bottom: 1px dashed #7E7E7E;
+}
+.main .sidebar .content .course .name .price{
+    float: right;
+    height: 39px;
+    line-height: 39px;
+}
+.main .sidebar .content .course .detail {
+    height: 39px;
+    line-height: 39px;
+    color: #969595;
+}
+.main .sidebar .content .course .detail i{
+    float: right;
+    background: url("../../images/icons_service/sidebar-delete.png") no-repeat;
+    width: 21px;
+    height: 20px;
+    margin-top: 8px;
+}
+.main .sidebar .total-price {
+    width: 348px;
+    height: 96px;
+    position: absolute;
+    margin-left: 12px;
+    border-top : 1px solid #7E7E7E;
+    bottom: 0;
+}
+.main .sidebar .total-price .btn {
+    display: block;
+    margin-top: 21px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    background: #969595;
+    color: #444444;
+    font-weight: bold;
+}
+.main .sidebar .total-price .btn.active {
+    color: #FFFFFF;
+    background: #317FAF;
+}
+/*sidebar --- END*/
+/*main --- BEGIN*/
+.main .body {
+    background: #FFFFFF;
+    height: 100%;
+    margin-left: 372px;
+}
+.main .body .nav {
+    height: 46px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background: #FFFFFF;
+    border-bottom: 2px solid #626262;
+}
+.main .body .nav .left{
+    height: 46px;
+    width: 46px;
+    float: left;
+}
+.main .body .nav .left:before{
+    background: url("../../images/icons_service/body-left.png") no-repeat;
+    float: left;
+    width: 12px;
+    height: 14px;
+    margin-left: 17px;
+    margin-top: 16px;
+    content: '';
+}
+.main .body .nav .center{
+    height: 46px;
+    margin: 0 46px;
+}
+.main .body .nav .center li{
+    float: left;
+    width: 16.66%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    cursor: pointer;
+}
+.main .body .nav .center li.active:after{
+    background: #187FAD;
+    width: 100%;
+    height: 5px;
+    display: block;
+    position: relative;
+    bottom: 3px;
+    content: '';
+}
+.main .body .nav .right{
+    height: 46px;
+    width: 46px;
+    float: right;
+}
+.main .body .nav .right:before{
+    background: url("../../images/icons_service/body-right.png") no-repeat;
+    float: right;
+    width: 12px;
+    height: 14px;
+    margin-right: 17px;
+    margin-top: 16px;
+    content: '';
+}
+.main .body .content {
+    bottom: 0;
+    padding-right: 18px;
+    padding-left: 18px;
+    height: calc(100% - 48px);
+}
+.main .body .content ul {
+    height: 100%;
+}
+.main .body .content ul li{
+    width: 16.6%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+}
+.main .body .content ul li .wrap {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    background: #307FAC;
+}
+.main .body .content ul li.active:before {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    left: 5px;
+    top: 5px;
+    background: #BA5050;
+    border-radius: 11px;
+    content: '1';
+    z-index: 1;
+    color: #FFFFFF;
+}
+.main .body .content ul li:after {
+    display: inline-block;
+    padding-bottom: 100%;
+    width: .1px;
+    vertical-align: middle;
+    content: "";
+}
+.main .body .content ul li .course-box {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 50%;
+    margin-top: -30px;
+    color: #FFFFFF;
+}
+.main .body .content ul li .course-box label {
+    display: inline-block;
+    width: 100%;
+
+}
+.main .body .content ul li .course-box span {
+    display: inline-block;
+    width: 100%;
+}
+.main .body .content ul li .price {
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 0;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    background: #1C4C68;
+    display: block;
+}
+/*main --- END*/
+/*mask-settle --- BEGIN*/
+.mask-settle {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-settle .dialog{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 800px;
+    height: 560px;
+    margin-left: -400px;
+    margin-top: -308px;
+    background: #F6F6F6;
+}
+.mask-settle .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-settle .dialog h3 span {
+    margin-left: 12px;
+    font-weight: normal;
+}
+.mask-settle .dialog h3 i{
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-settle .dialog .content {
+    width: 100%;
+    height: 510px;
+}
+.mask-settle .dialog .content .settle {
+    height: 100%;
+    width: 420px;
+    float: left;
+    background: #FFFFFF;
+}
+.mask-settle .dialog .content .settle .text{
+    width: 382px;
+    height: 46px;
+    line-height: 46px;
+    background: #EEEEEE;
+    padding-left: 10px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mask-settle .dialog .content .settle .student{
+    border-bottom: 2px dashed #7E7E7E;
+}
+.mask-settle .dialog .content .settle .student i {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 19px;
+    margin-top: 18px;
+    margin-left: 10px;
+}
+.mask-settle .dialog .content .settle .student i.man {
+    background: url("../../images/icons_service/mask-settle-man.png") no-repeat;
+}
+.mask-settle .dialog .content .settle .student i.woman {
+    background: url("../../images/icons_service/mask-settle-woman.png") no-repeat;
+}
+.mask-settle .dialog .content .settle .student .first {
+    float: left;
+    font-size: 20px;
+    margin-left: 35px;
+}
+.mask-settle .dialog .content .settle .student .second {
+    float: left;
+    font-size: 20px;
+}
+.mask-settle .dialog .content .settle .student .third {
+    float: left;
+    font-size: 20px;
+}
+.mask-settle .dialog .content .settle .student {
+    height: 54px;
+    line-height: 54px;
+    width: 392px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mask-settle .dialog .content .settle ul{
+    width: 392px;
+    height: 81px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mask-settle .dialog .content .settle ul label {
+    display: inline-block;
+    height: 27px;
+    line-height: 27px;
+    width: 60px;
+    text-align: center;
+}
+.mask-settle .dialog .content .settle ul span {
+    float: right;
+    height: 27px;
+    line-height: 27px;
+}
+.mask-settle .dialog .content .settle ul .second {
+    color: #B55050;
+}
+.mask-settle .dialog .content .settle .money-text {
+    width: 382px;
+    height: 46px;
+    line-height: 46px;
+    background: #EEEEEE;
+    padding-left: 10px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mask-settle .dialog .content .settle .money {
+    font-size: 30px;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    font-weight: bold;
+}
+.mask-settle .dialog .content .settle .discount-text {
+    width: 382px;
+    height: 46px;
+    line-height: 46px;
+    background: #EEEEEE;
+    padding-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mask-settle .dialog .content .settle .discount-name {
+    width: 382px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px dashed #B9B9B9;
+}
+.mask-settle .dialog .content .settle .discount-name i {
+    float: right;
+    background: url("../../images/icons_service/mask-cancel.png") no-repeat;
+    width: 13px;
+    height: 13px;
+    margin-top: 14px;
+    margin-right: 6px;
+    content: '';
+}
+.mask-settle .dialog .content .settle .discount-name span {
+    float: right;
+    color: #B44F4E;
+    margin-right: 13px;
+}
+.mask-settle .dialog .content .settle .remark {
+    width: 392px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+.mask-settle .dialog .content .settle .remark .btn-remark {
+    color: #959696;
+    display: block;
+    text-align: center;
+    height: 40px;
+    margin-top: 32px;
+    border-top: 1px solid #B9B9B9;
+    border-bottom: 1px solid #B9B9B9;
+}
+.mask-settle .dialog .content .settle .remark .btn-remark span {
+    display: inline-block;
+    line-height: 42px;
+    height: 42px;
+    width: 40px;
+    margin-left: -20px;
+}
+.mask-settle .dialog .content .settle .remark .btn-remark i {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    margin-top: 10px;
+    margin-left: 12px;
+    background: url("../../images/icons_service/mask-remark.png") no-repeat;
+}
+.mask-settle .dialog .content .pay {
+    height: 100%;
+    width: 380px;
+    float: left;
+    background: #EEEEEE;
+}
+.mask-settle .dialog .content .pay .way {
+    margin-top: 12px;
+    width: 350px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #EEEEEE;
+    font-size: 24px;
+}
+.mask-settle .dialog .content .pay .way .way1 {
+    float: left;
+    width: 168px;
+    height: 80px;
+    line-height: 80px;
+    background: #FFFFFF;
+    text-align: center;
+}
+.mask-settle .dialog .content .pay .way .way2 {
+    float: right;
+    width: 168px;
+    height: 80px;
+    line-height: 80px;
+    background: #FFFFFF;
+    text-align: center;
+}
+.mask-settle .dialog .content .pay .way .way3 {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background: #FFFFFF;
+    text-align: center;
+}
+.mask-settle .dialog .content .pay .way .way1.active,
+.mask-settle .dialog .content .pay .way .way2.active,
+.mask-settle .dialog .content .pay .way .way3.active {
+    background: #317FAF;
+    color: #FFFFFF;
+}
+.mask-settle .dialog .content .pay .summary {
+    width: 346px;
+    height: 90px;
+    line-height: 90px;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #7B7A79;
+}
+/*mask-settle --- END*/
+/*mask-remark --- BEGIN*/
+.mask-remark {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-remark .dialog{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 378px;
+    height: 264px;
+    margin-left: -189px;
+    margin-top: -160px;
+    background: #F6F6F6;
+}
+.mask-remark .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-remark .dialog h3 span {
+    margin-left: 12px;
+    font-weight: normal;
+}
+.mask-remark .dialog h3 i{
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-remark .dialog .textarea {
+    display: block;
+    background: #FFFFFF;
+    height: 154px;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border: 0;
+    resize:none;
+    box-sizing: border-box;
+}
+.mask-remark .dialog .bar {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.mask-remark .dialog .bar .btn-cancel {
+    float: left;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    width: 50%;
+    color: #444444;
+    background: #DDDDDD;
+}
+.mask-remark .dialog .bar .btn-confirm {
+    float: left;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    width: 50%;
+    color: #FFFFFF;
+    background: #307EAC;
+}
+/*mask-remark --- END*/
+/*mask-favorable --- BEGIN*/
+.mask-favorable {
+    z-index: 7;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-favorable .dialog{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 376px;
+    height: 484px;
+    margin-left: -188px;
+    margin-top: -280px;
+    background: #F6F6F6;
+}
+.mask-favorable .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-favorable .dialog h3 span {
+    margin-left: 12px;
+    font-weight: normal;
+}
+.mask-favorable .dialog h3 i{
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-favorable .dialog p.title {
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #959696;
+    font-weight: bold;
+}
+.mask-favorable .dialog ul.content {
+    height: 64px;
+}
+.mask-favorable .dialog li {
+    float: left;
+    height: 48px;
+    width: 100px;
+    line-height: 48px;
+    margin-top: 8px;
+    background: #DDDDDD;
+    color: #444444;
+    font-weight: bold;
+    margin-left: 19px;
+    text-align: center;
+}
+.mask-favorable .dialog li.active {
+    color: #FFFFFF;
+    background: #317FAF;
+}
+.mask-favorable .dialog p.other {
+    height: 38px;
+    line-height: 38px;
+    position: absolute;
+    bottom: 80px;
+    left: 12px;
+    right: 12px;
+    border-top: 1px solid #7B7B7B;
+    border-bottom: 1px solid #7B7B7B;
+    text-align: center;
+    color: #959696;
+}
+.mask-favorable .dialog p.other:after {
+    position: absolute;
+    background: url("../../images/icons_service/body-right.png") no-repeat;
+    width: 12px;
+    height: 15px;
+    margin-left: 10px;
+    top: 12px;
+    content: '';
+}
+.mask-favorable .dialog .sum {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80px;
+}
+.mask-favorable .dialog .sum .money,
+.mask-favorable .dialog .sum .btn {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.mask-favorable .dialog .sum .money>label {
+    display: block;
+    margin-left: 12px;
+    height: 36px;
+    line-height: 36px;
+    color: #959696;
+}
+.mask-favorable .dialog .sum .money>b {
+    display: block;
+    margin-left: 12px;
+    color: #000000;
+}
+.mask-favorable .dialog .sum .btn>a {
+    display: block;
+    width: 176px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 16px;
+    background: #B44F4E;
+    color: #FFFFFF;
+    text-align: center;
+}
+/*mask-favorable --- END*/
+/*mask-favorable-input --- BEGIN*/
+.mask-favorable-input {
+    z-index: 8;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-favorable-input .dialog{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 376px;
+    height: 484px;
+    margin-left: -188px;
+    margin-top: -280px;
+    background: #F6F6F6;
+}
+.mask-favorable-input .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-favorable-input .dialog h3 span {
+    margin-left: 12px;
+    font-weight: normal;
+}
+.mask-favorable-input .dialog h3 i{
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-favorable-input .dialog .content {
+    position: absolute;
+    top: 62px;
+    bottom: 80px;
+    left: 12px;
+    right: 12px;
+    border-bottom: 1px solid #7B7B7B;
+}
+.mask-favorable-input .dialog .content .money {
+    display: block;
+    height: 64px;
+    line-height: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 314px;
+    border: 1px solid #A5A5A4;
+    text-align: right;
+    font-size: 31px;
+    box-sizing: border-box;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.mask-favorable-input .dialog ul {
+    height: 256px;
+    width: 316px;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mask-favorable-input .dialog ul li {
+    float: left;
+    width: 33.33%;
+    height: 64px;
+    line-height: 64px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 31px;
+    border: 1px solid #7B7B7B;
+}
+.mask-favorable-input .dialog ul li.active {
+    background: #D2F0FF;
+}
+.mask-favorable-input .dialog ul li.last:after {
+    background: url("../../images/icons_service/calculate-delete.png") no-repeat;
+    display: inline-block;
+    width: 37px;
+    height: 28px;
+    margin-top: 17px;
+    margin-right: auto;
+    margin-left: auto;
+    content: '';
+}
+.mask-favorable-input .dialog .sum {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80px;
+}
+.mask-favorable-input .dialog .sum .money,
+.mask-favorable-input .dialog .sum .btn {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.mask-favorable-input .dialog .sum .money>label {
+    display: block;
+    margin-left: 12px;
+    height: 36px;
+    line-height: 36px;
+    color: #959696;
+}
+.mask-favorable-input .dialog .sum .money>b {
+    display: block;
+    margin-left: 12px;
+    color: #000000;
+}
+.mask-favorable-input .dialog .sum .btn>a {
+    display: block;
+    width: 176px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 16px;
+    background: #B44F4E;
+    color: #FFFFFF;
+    text-align: center;
+}
+/*mask-favorable-input --- END*/

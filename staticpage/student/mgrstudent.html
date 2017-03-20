@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>学员管理</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_service.css">
+    <link rel="stylesheet" type="text/css" href="../../staticpage/student/mgrstudent.css">
+</head>
+
+<body>
+<div class="header">
+    <span>学员管理</span>
+</div>
+<div class="main">
+    <div class="body">
+        <!--学员生日 --- BEGIN -->
+        <div class="student-info">
+            <div class="search-bar">
+                <span class="left"></span>
+                <input type="text" placeholder="学员名或手机号">
+                <span class="right"></span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>
+                        <span class="icon"></span>
+                        <div class="left">
+                            <h3>学员名</h3>
+                            <span>学员ID 男</span>
+                        </div>
+                        <div class="right">
+                            <h3>2016-08-25</h3>
+                            <span>13812345678</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <div class="left">
+                            <h3>学员名</h3>
+                            <span>学员ID 男</span>
+                        </div>
+                        <div class="right">
+                            <h3>2016-08-25</h3>
+                            <span>13812345678</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <div class="left">
+                            <h3>学员名</h3>
+                            <span>学员ID 男</span>
+                        </div>
+                        <div class="right">
+                            <h3>2016-08-25</h3>
+                            <span>13812345678</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--学员生日 --- END -->
+    </div>
+    <!--右侧菜单栏列表 --- BEGIN -->
+    <div class="sidebar-right-list">
+        <ul>
+            <li class="first active">
+                <a href="javascript:void(0);">
+                    <h3>返回</h3>
+                    <span>返回到会员首页</span>
+                </a>
+            </li>
+            <li class="second">
+                <a href="javascript:void(0);">
+                    <h3>新学员</h3>
+                    <span>根据学员信息查询学员</span>
+                </a>
+            </li>
+            <li class="third">
+                <a href="javascript:void(0);">
+                    <h3>批量导入</h3>
+                    <span>批量导入学员</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--右侧菜单栏列表 --- END -->
+    <!--右侧菜单栏学员生日详情 --- BEGIN -->
+    <div class="sidebar-right-student-detail dn">
+        <div class="title">
+            <label>学员详情</label>
+        </div>
+        <div class="content">
+            <div class="student">
+                <h3>ID:123456</h3>
+                <div class="name">学员名</div>
+                <div class="student-info">
+                    <a href="javascript:void(0);" class="student-birth">
+                        <i class="icon man"></i><span class="sex">男</span><i class="icon-birth"></i><span class="birth">8月11,1995</span><i class="slide up"></i>
+                    </a>
+                    <div class="detail">
+                        <ul class="course">
+                            <li>
+                                <label>移动电话：</label><span>13888888888</span></li>
+                            <li>
+                                <label>课程：</label><span>课程名称</span></li>
+                            <li>
+                                <label>备注：</label><span>你的酒窝没有酒，我却醉得像条狗。</span></li>
+                        </ul>
+                        <i class="icon-message"></i>
+                        <span class="message">发送短信</span>
+                    </div>
+                </div>
+            </div>
+            <div class="remark">
+                <h3>备注：<i></i></h3>
+                <span class="detail">你的酒窝没有酒，我却醉得像条狗。</span>
+            </div>
+            <div class="course">
+                <i class="icon"></i>
+                <div class="detail">
+                    <div class="course-info">
+                        <a href="javascript:void(0);">
+                            <span class="first">课程名称：</span>
+                            <span class="second">剩余课时/总课时</span>
+                        </a>
+                        <i></i>
+                    </div>
+                    <a href="javascript:void(0);" class="btn-signin"><span>签到</span></a>
+                </div>
+            </div>
+            <div class="signin">
+                <i class="icon"></i>
+                <div class="detail">
+                    <a href="javascript:void(0);">最近签到：</a>
+                    <span class="time">2016-08-01 10：15</span>
+                    <span class="num">1课时</span>
+                </div>
+            </div>
+            <div class="btn-buy">
+                <a href="javascript:void(0);" class="btn">购买新课程</a>
+            </div>
+        </div>
+    </div>
+    <!--右侧菜单栏学员生日详情 --- END -->
+</div>
+
+<!--增加dn 确认删除 --- BEGIN-->
+<div class="mask-delete">
+    <div class="dialog">
+        <h3><span>确认删除</span><i></i></h3>
+        <div class="warn">
+            <p>确认退出学员：</p>
+            <p>学员名（8888888888）</p>
+        </div>
+        <div class="bar">
+            <a href="javascript:void(0);" class="btn-cancel">取消</a>
+            <a href="javascript:void(0);" class="btn-confirm">确定</a>
+        </div>
+    </div>
+</div>
+<!--确认删除 --- END-->
+
+<!--增加dn 学员批量导入 --- BEGIN-->
+<div class="mask-batch-import dn">
+    <div class="dialog">
+        <h3><span>学员导入</span><i></i></h3>
+        <div class="main">
+            <div class="import">
+                <div class="border" data-desc="选择导入文件">
+                    <input type="file" class="file">
+                </div>
+            </div>
+            <div class="import-desc">
+                <h3 data-desc="导入说明"></h3>
+                <span class="title">使用学员导入系统,可以快速导入正式学员</span>
+                <a href="javascript:void(0);" class="download">下载导入文件模版</a>
+                <p>可导入的数据列</p>
+                <ul>
+                    <li>
+                        <label class="left">学员姓名</label>
+                        <span class="middle need">必填</span>
+                        <span class="right">学员真实姓名</span>
+                    </li>
+                    <li>
+                        <label class="left">学员ID</label>
+                        <span class="middle need">必填</span>
+                        <span class="right">学员唯一识别号,与IC卡绑定</span>
+                    </li>
+                    <li>
+                        <label class="left">电话</label>
+                        <span class="middle need">必填</span>
+                        <span class="right">移动电话</span>
+                    </li>
+                    <li>
+                        <label class="left">性别</label>
+                        <span class="middle need">选填</span>
+                        <span class="right">性别</span>
+                    </li>
+                    <li>
+                        <label class="left">注册场馆</label>
+                        <span class="middle">选填</span>
+                        <span class="right">学员注册地</span>
+                    </li>
+                    <li>
+                        <label class="left">课程名称</label>
+                        <span class="middle">选填</span>
+                        <span class="right">课程完整名称</span>
+                    </li>
+                    <li>
+                        <label class="left">课程余额</label>
+                        <span class="middle">选填</span>
+                        <span class="right">课程剩余课时</span>
+                    </li>
+                    <li>
+                        <label class="left">开始时间</label>
+                        <span class="middle">选填</span>
+                        <span class="right">课程开始时间</span>
+                    </li>
+                    <li>
+                        <label class="left">结束时间</label>
+                        <span class="middle">选填</span>
+                        <span class="right">课程截至日期</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--学员批量导入 --- END-->
+
+<!--增加dn 学员批量导入预览 --- BEGIN-->
+<div class="mask-batch-import-preview">
+    <div class="dialog">
+        <h3><span>导入预览</span><i></i></h3>
+        <div class="content">
+            <p class="title">上传文件中分析出如下学员信息：</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>学员名称</th>
+                        <th>学员ID</th>
+                        <th>电话</th>
+                        <th>性别</th>
+                        <th>注册场馆</th>
+                        <th>课程名称</th>
+                        <th>课程余额</th>
+                        <th>开始时间</th>
+                        <th>结束时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td>18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td>18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td>18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td>18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td>18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td>18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td>18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td>18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td>18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td>18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td>18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                    <tr>
+                        <td>学员名</td>
+                        <td>学员ID</td>
+                        <td class="error">18512345678</td>
+                        <td>男</td>
+                        <td>场馆1</td>
+                        <td>课程名称</td>
+                        <td>200课时</td>
+                        <td>2016/06/01</td>
+                        <td>2026/06/01</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="bar">
+                <div class="left">
+                    <p class="sum">共12条数据</p>
+                    <p class="warn">若ID或手机存在则覆盖原有数据</p>
+                </div>
+                <div class="right">
+                    <a href="javascript:void(0);" class="btn active">开始导入</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--学员批量导入预览 --- END-->
+
+<!--增加dn 学员批量导入结果 --- BEGIN-->
+<div class="mask-batch-import-result dn">
+    <div class="dialog">
+        <h3><span>学员导入</span><i></i></h3>
+        <p class="status">
+            <label>导入成功</label>
+            <span>新增12条数据</span>
+        </p>
+        <p class="failure">
+            <label>导入失败</label>
+            <span>2条数据</span>
+        </p>
+        <ul class="result">
+            <li>#2 手机号填写不正确</li>
+            <li>#3 课程不存在</li>
+        </ul>
+        <a href="javascript:void(0);" class="import-result-btn">完成</a>
+    </div>
+</div>
+<!--学员批量导入结果 --- END-->
+
+<div class="footer">
+    <div class="menu"><i></i></div>
+    <div class="detail">
+        <div class="item first">
+            <a href="javascript:void(0);"><span>签到</span></a>
+        </div>
+        <div class="item second active">
+            <a href="javascript:void(0);"><span>学员管理</span></a>
+        </div>
+        <div class="item third">
+            <a href="javascript:void(0);"><span>记录</span></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

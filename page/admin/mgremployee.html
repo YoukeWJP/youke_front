@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>员工管理</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_admin.css">
+    <link rel="stylesheet" type="text/css" href="../../page/admin/mgremployee.css">
+    <script src="../common/script.js"></script>
+</head>
+
+<body>
+    <include src="../common/admin-nav.html" class="sidebar"></include>
+    <article class="main">
+        <header class="top">
+            <span class="home">管理者主页</span>
+            <div class="school">
+                <i class="back"></i>
+                <span class="first">学校名称</span>
+                <span class="second">校区</span>
+            </div>
+        </header>
+        <section class="body">
+            <ul class="nav" id="nav">
+                <li>
+                    <h3>基础设置</h3>
+                    <ul>
+                        <li class="admin-org" id="org">机构资料</li>
+                        <li class="admin-pay" id="pay">支付方式</li>
+                        <li class="admin-employee active" id="employee">员工管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>服务设置</h3>
+                    <ul>
+                        <!--<li class="admin-server" id="server">服务端权限</li>-->
+                        <li class="admin-discount" id="discount">
+                            <h3>折扣与优惠</h3>
+                            <ul class="child dn">
+                                <li id="discountMgr"><span>折扣活动管理</span></li>
+                                <li id="discountList"><span>课程折扣列表</span></li>
+                            </ul>
+                        </li>
+                        <li class="admin-student-service" id="student-service">学员服务</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>管理员设置</h3>
+                    <ul>
+                        <li class="admin-switch-school" id="setting">切换校区</li>
+                    </ul>
+                </li>
+                <!--<li>-->
+                    <!--<h3>其他</h3>-->
+                    <!--<ul>-->
+                        <!--<li class="admin-about" id="about">关于有课互联</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            </ul>
+            <article class="content">
+                <h3 class="title">员工管理<i></i></h3>
+                <ul>
+                    <li>
+                        <span class="name">员工名</span>
+                        <span class="position">客户服务</span>
+                        <a href="javascript:void(0);" class="date">
+                            <span class="time">2016-09-01</span>
+                            <span class="desc">加入</span>
+                            <i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="name">员工名</span>
+                        <span class="position">校区管理</span>
+                        <a href="javascript:void(0);" class="date">
+                            <span class="time">2016-09-01</span>
+                            <span class="desc">加入</span>
+                            <i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="name">员工名</span>
+                        <span class="position">校长</span>
+                        <a href="javascript:void(0);" class="date">
+                            <span class="time">2016-09-01</span>
+                            <span class="desc">加入</span>
+                            <i></i>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <aside class="sidebar-right dn">
+                <h3><span class="desc">学员详情</span><span class="delete">删除</span></h3>
+                <div class="student-detail">
+                    <ul>
+                        <li class="info">
+                            <span class="first">员工名</span>
+                            <span class="second">男</span>
+                            <a href="javascript:void(0);" class="third">
+                                <label>加入时间：</label>
+                                <span>2016-09-01</span>
+                            </a>
+                        </li>
+                        <li class="detail">
+                            <label>岗位权限：</label>
+                            <span>校区管理</span>
+                        </li>
+                        <li class="detail">
+                            <label>用户信息：</label>
+                            <span class="mobile">13888888888</span>
+                            <li class="detail">
+                                <label>登录密码：</label>
+                                <span>重置该员工账户现有密码</span>
+                            </li>
+                            <li class="reset-pwd">
+                                <a href="javascript:void(0);" class="active">重置帐号登录密码</a>
+                            </li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+    </article>
+    <script src="../admin/mgremployee.js"></script>
+</body>
+
+</html>

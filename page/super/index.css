@@ -1,0 +1,75 @@
+.ml-20 {
+    margin-left: 20px;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+.l {
+    float: left;
+}
+.r {
+    float: right;
+}
+.dn {
+    display: none;
+}
+.db {
+    display: block;
+}
+.dib {
+    display: inline-block;
+}
+.cb {
+    clear: both;
+}
+input {
+    box-shadow: none;
+    border-style: none;
+}
+input:focus {
+    background: #CFF0FF;
+}
+input.error,
+input.error:focus {
+    background: #FFE8EC;
+}
+textarea.error,
+textarea.error:focus {
+    background: #FFE8EC;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+i {
+    cursor: pointer;
+}
+.mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.7);
+}
+.mask .dialog {
+    position: absolute;
+    width: 500px;
+    height: 280px;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -140px;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+.mask .dialog h3 {
+    position: absolute;
+    font-size: 18px;
+    right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}

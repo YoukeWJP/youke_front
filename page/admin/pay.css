@@ -1,0 +1,140 @@
+/*nav --- BEGIN*/
+.body .nav {
+    float: left;
+    background: #CDCDCD;
+    height: 100%;
+    width: 234px;
+    color: #555452;
+}
+.body .nav>li>h3 {
+    height: 54px;
+    line-height: 54px;
+    box-sizing: border-box;
+    padding-left: 16px;
+    font-size: 20px;
+    border-bottom: 2px solid #9D9D9D;
+}
+.body .nav>li>ul>li {
+    box-sizing: border-box;
+    line-height: 50px;
+    padding-left: 50px;
+    border-bottom: 1px solid #9D9D9D;
+}
+.body .nav>li>ul>li.active {
+    background: #B6B6B6;
+}
+.body .nav>li>ul>li.admin-org:before,
+.body .nav>li>ul>li.admin-discount:before,
+.body .nav>li>ul>li.admin-employee:before,
+.body .nav>li>ul>li.admin-server:before,
+.body .nav>li>ul>li.admin-pay:before,
+.body .nav>li>ul>li.admin-student-service:before,
+.body .nav>li>ul>li.admin-about:before,
+.body .nav>li>ul>li.admin-switch-school:before{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: -40px;
+    content: '';
+}
+.body .nav>li>ul>li.admin-org:before {
+    background: url("../../images/icons_admin/admin-org.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-discount:before {
+    background: url("../../images/icons_admin/admin-discount.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-employee:before {
+    background: url("../../images/icons_admin/admin-employee.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-server:before {
+    background: url("../../images/icons_admin/admin-server.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-pay:before {
+    background: url("../../images/icons_admin/admin-pay.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-student-service:before {
+    background: url("../../images/icons_admin/admin-student-service.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-about:before {
+    background: url("../../images/icons_admin/admin-about.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-switch-school:before {
+    background: url("../../images/icons_admin/admin-about.png") no-repeat;
+}
+.body .nav>li>ul>li.admin-discount h3 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.body .nav>li>ul>li.admin-discount .child {
+    width: 234px;
+    margin-left: -50px;
+}
+.body .nav>li>ul>li.admin-discount .child li {
+    height: 36px;
+    line-height: 36px;
+    background: #CDCDCD;
+    border-top: 1px solid #9D9D9D;
+}
+.body .nav>li>ul>li.admin-discount .child li.active {
+    background: #B6B6B6;
+}
+.body .nav>li>ul>li.admin-discount .child li span {
+    margin-left: 50px;
+}
+/*nav --- END*/
+/*content --- BEGIN*/
+.body .content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 234px;
+}
+.body .content h3.title {
+    height:54px;
+    line-height: 54px;
+    padding-left: 20px;
+    background: #B6B6B6;
+    color: #555452;
+    font-size: 20px;
+}
+.body .content ul li {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 2px solid #E0E0E0;
+    color: #555452;
+}
+.body .content ul li.active {
+    background: #F6F6F6;
+}
+.body .content ul li:before {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    margin-top: 8px;
+    margin-left: 20px;
+    background: #187FAD;
+    content: '';
+}
+.body .content ul li .type {
+    float: left;
+    box-sizing: border-box;
+    width: 60%;
+    padding-left: 100px;
+}
+.body .content ul li .type.close:after {
+    color: #BA5050;
+    content: '（已关闭）';
+}
+.body .content ul li .status {
+    float: right;
+    padding-right: 50px;
+    box-sizing: border-box;
+    text-align: right;
+    width: 20%;
+    cursor: pointer;
+}
+/*content --- END*/

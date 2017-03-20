@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>个人资料</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_admin.css">
+    <link rel="stylesheet" type="text/css" href="../../page/adminhome/personalinfo.css">
+    <script src="../common/script.js"></script>
+    <script src="../../js/third-party/ajaxfileupload.min.js"></script>
+</head>
+
+<body>
+    <!--左侧个人资料菜单栏 --- BEGIN -->
+    <nav id="person-info">
+        <ul>
+            <li class="person-pic">
+                <div class="image">
+                    <img />
+                </div>
+                <span class="name">员工姓名</span>
+            </li>
+            <li class="name-position">
+                <p class="name">员工姓名</p>
+                <p class="position">职位</p>
+            </li>
+            <li class="info active">个人资料</li>
+            <li class="recharge">账户充值</li>
+            <li class="store">门店管理</li>
+            <li class="about">关于</li>
+            <li class="exit">退出</li>
+        </ul>
+        <div class="home">返回</div>
+    </nav>
+    <!--左侧个人资料菜单栏 --- END -->
+    <!--个人资料 --- BEGIN -->
+    <article class="main">
+        <header class="top">
+            <div class="school">
+                <i class="back"></i>
+                <span class="first">学校名称</span>
+                <span class="second">校区</span>
+            </div>
+        </header>
+        <h3 class="title">个人资料</h3>
+        <div class="time">
+            <div class="left">
+                <img alt="">
+                <input type="file" id="uploadfile" class="file" />
+            </div>
+            <div class="right">
+                <p class="first">员工名</p>
+                <p class="second man">男</p>
+                <p class="third">
+                    <label>注册时间：</label><span>2016-08-01</span>
+                </p>
+            </div>
+        </div>
+        <div class="login">
+            <div class="left">登录</div>
+            <div class="right">
+                <p class="first">使用手机号码登录</p>
+                <p class="second">修改密码</p>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="left">联系</div>
+            <div class="right">
+                <a href="mailto:wjp@youkeonline.cn" class="first db">wjp@youkeonline.cn</a>
+                <a href="tel:18512345678" class="second db">18512345678</a>
+            </div>
+        </div>
+    </article>
+    <!--个人资料 --- END -->
+    <!--增加dn 修改密码 --- BEGIN-->
+    <section class="modify-pwd dn">
+        <div class="dialog">
+            <h3><span>修改密码</span><i></i></h3>
+            <ul>
+                <li>
+                    <label>原始密码：</label>
+                    <input type="password" placeholder="原始密码" maxlength="16" id="oldPassword" v-on="input|checkOldPassword">
+                </li>
+                <li>
+                    <label>新密码：</label>
+                    <input type="password" placeholder="新密码" maxlength="16" id="newPassword" v-on="input|checkNewPassword">
+                </li>
+                <li>
+                    <label>确认新密码：</label>
+                    <input type="password" placeholder="确认新密码" maxlength="16" id="newConfirmPassword" v-on="input|checkNewConfirmPassword">
+                </li>
+            </ul>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </section>
+    <!--修改密码 --- END-->
+    <!--增加dn 修改个人图片LOGO --- BEGIN-->
+    <section class="modify-logo dn">
+        <div class="dialog">
+            <h3><span>选择图片</span><i></i></h3>
+            <div class="pic-storage" data-desc="图库">
+                <input type="file" class="pic">
+            </div>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </section>
+    <!--修改个人图片LOGO --- END-->
+    <script src="../adminhome/personalinfo.js"></script>
+</body>
+
+</html>

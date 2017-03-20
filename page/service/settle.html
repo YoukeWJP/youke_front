@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>结算</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_service.css">
+    <link rel="stylesheet" type="text/css" href="../../page/service/settle.css">
+    <script src="../common/script.js"></script>
+</head>
+
+<body>
+    <include src="../common/service-nav.html" class="dn"></include>
+    <header class="header"><span>结算</span></header>
+    <article class="main">
+        <div class="body">
+            <!--查询记录 --- BEGIN -->
+            <div class="search-bar dn">
+                <input type="text" class="search" placeholder="输入学员ID或手机号">
+            </div>
+            <!--查询记录 --- END -->
+            <!--今日支付结算 --- BEGIN -->
+            <div class="settle" id="settle">
+                <div class="nav">
+                    <i class="back"></i>
+                    <ul>
+                        <li class="active">全部</li>
+                        <li>收入</li>
+                        <li>退款</li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <span class="icon"></span>
+                            <div class="time">
+                                <h3>10:00</h3>
+                                <span>08/01,2016</span>
+                            </div>
+                            <div class="middle">
+                                <h3>学员名称</h3>
+                                <span>课程名称&nbsp;&nbsp;教材</span>
+                            </div>
+                            <span class="right">￥200000.00</span>
+                        </li>
+                        <li>
+                            <span class="icon"></span>
+                            <div class="time">
+                                <h3>10:00</h3>
+                                <span>08/01,2016</span>
+                            </div>
+                            <div class="middle">
+                                <h3>学员名称</h3>
+                                <span>课程名称&nbsp;&nbsp;教材</span>
+                            </div>
+                            <span class="right">￥200000.00</span>
+                        </li>
+                        <li>
+                            <span class="icon down"></span>
+                            <div class="time">
+                                <h3>10:00</h3>
+                                <span>08/01,2016</span>
+                            </div>
+                            <div class="middle">
+                                <h3>学员名称</h3>
+                                <span>课程名称&nbsp;&nbsp;教材</span>
+                            </div>
+                            <span class="right cancel">已退款</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--今日支付结算 --- END -->
+        </div>
+        <!--右侧菜单栏 --- BEGIN -->
+        <section class="sidebar-right" id="sidebar-right">
+            <ul>
+                <li class="first">
+                    <a href="javascript:void(0);">
+                        <h3>今日签到</h3>
+                        <span>今日在本地签到的学员</span>
+                    </a>
+                </li>
+                <li class="second active">
+                    <a href="javascript:void(0);">
+                        <h3>今日支付结算</h3>
+                        <span>今日在本地的支付结算</span>
+                    </a>
+                </li>
+                <li class="third">
+                    <a href="javascript:void(0);">
+                        <h3>查询记录</h3>
+                        <span>查询历史记录</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!--右侧菜单栏 --- END -->
+        <!--全部下的退款详情 --- BEGIN-->
+        <section class="refund-detail dn" id="refund-detail">
+            <h3>ID:12345<i></i></h3>
+            <ul>
+                <li class="name">学员名</li>
+                <li class="info">
+                    <a href="javascript:void(0);">
+                        <label>取消人：</label>
+                        <span>取消人名字</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>取消时间：</label>
+                        <span>2016/08/01 10：00</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>支付场馆：</label>
+                        <span>场馆1</span>
+                    </a>
+                </li>
+                <li class="reason">
+                    <label>取消原因：</label>
+                    <span>操作错误</span>
+                </li>
+                <li class="status">
+                    <label>退款明细：</label>
+                    <span>已取消</span>
+                </li>
+                <li class="detail">
+                    <a href="javascript:void(0);">
+                        <label>课程名称，总课时数/有效期</label>
+                        <span>-￥200000.00</span>
+                    </a>
+                    <a href="javascript:void(0);" class="color-555452">
+                        <label>课程名称，总课时数/有效期</label>
+                        <span>-￥200000.00</span>
+                    </a>
+                    <a href="javascript:void(0);" class="total">
+                        <label>合计：</label>
+                        <span>-￥400000.00</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!--全部下的退款详情 --- END-->
+        <!--收入退款 --- BEGIN-->
+        <section class="income-refund dn" id="income-refund">
+            <h3>ID:12345<i></i></h3>
+            <ul>
+                <li class="name">学员名</li>
+                <li class="info">
+                    <a href="javascript:void(0);">
+                        <label>收款：</label>
+                        <span>收款人名字</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>支付时间：</label>
+                        <span>2016/08/01 10：00</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>支付场馆：</label>
+                        <span>场馆1</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>支付方式：</label>
+                        <span>在线支付</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>备注：</label>
+                        <span>我想摸你的头发只是简单的试探阿</span>
+                    </a>
+                </li>
+                <li class="status">
+                    <label>支付明细</label>
+                </li>
+                <li class="detail">
+                    <a href="javascript:void(0);" class="course-info">
+                        <label>课程名称，总课时数/有效期</label>
+                        <span>￥200000.00</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>合计：</label>
+                        <span>￥200000.00</span>
+                    </a>
+                    <a href="javascript:void(0);" class="color-bb5050">
+                        <label>折扣：</label>
+                        <span>￥5.00</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <label>实收：</label>
+                        <span>￥199995.00</span>
+                    </a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="refund-btn active">￥退款</a>
+        </section>
+        <!--收入退款 --- END-->
+        <!--增加dn 退款 --- BEGIN-->
+        <section class="mask-refund-cancel dn" id="mask-refund-cancel">
+            <div class="dialog cancel-info">
+                <h3><span>退款</span><i></i></h3>
+                <div class="detail">
+                    <div class="info">
+                        <p>
+                            <a href="javascript:void(0);">
+                                <label>支付时间：</label>
+                                <span>2016/08/01 10:00</span>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0);">
+                                <label>支付场馆：</label>
+                                <span>场馆一</span>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0);">
+                                <label>金额：</label>
+                                <span>￥200000.00</span>
+                            </a>
+                            <a href="javascript:void(0);" class="discount">
+                                <label>折扣：</label>
+                                <span>-￥5.00</span>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0);">
+                                <label>可退金额：</label>
+                                <span>￥200000.00</span>
+                            </a>
+                        </p>
+                    </div>
+                    <p class="selected">请选择要退款的项：</p>
+                    <ul class="selected-list">
+                        <li class="active">
+                            <a href="javascript:void(0);">
+                                <label>课程名称 总课时数/有效期</label>
+                                <span>￥200000.00</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <label>课程名称 总课时数/有效期</label>
+                                <span>￥200000.00</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="btn-cancel-reason">取消原因：</p>
+                </div>
+                <div class="bar">
+                    <a href="javascript:void(0);" class="btn-cancel">支付退回</a>
+                </div>
+            </div>
+            <!--退款原因 --- BEGIN-->
+            <div class="dialog cancel-reason dn">
+                <h3><span>退款原因</span><i></i></h3>
+                <textarea class="detail-reason" placeholder="输入退款原因..."></textarea>
+                <a href="javascript:void(0);" class="type-reason">
+                    <span class="active">操作错误</span>
+                    <span class="ml16">课程不满意</span>
+                </a>
+                <div class="bar">
+                    <a href="javascript:void(0);" class="btn-cancel">确认</a>
+                </div>
+            </div>
+            <!--退款原因 --- END-->
+        </section>
+        <!--增加dn 退款  --- END-->
+    </article>
+    <include src="../common/service-footer.html" class="footer"></include>
+    <script src="../service/settle.js"></script>
+</body>
+
+</html>

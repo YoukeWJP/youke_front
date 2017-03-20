@@ -1,0 +1,151 @@
+/*comm --- BEGIN*/
+.mt-10 {
+    margin-top: 10px;
+}
+/*comm --- END*/
+/*sidebar --- BEGIN*/
+.sidebar {
+    width: 48px;
+    background: #1C1D1F;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.sidebar li {
+    height: 48px;
+    width: 100%;
+}
+.sidebar .home {
+    margin-top: 48px;
+    border-top: 2px solid #000000;
+}
+.sidebar .home:before {
+    background: url("../images/icons_admin/sidebar-home-light.png") no-repeat;
+    display: inline-block;
+    width: 25px;
+    height: 19px;
+    margin-left: 11px;
+    margin-top: 15px;
+    content: '';
+}
+.sidebar .setting {
+    border-top: 2px solid #000000;
+}
+.sidebar .setting:before {
+    background: url("../images/icons_admin/sidebar-setting.png") no-repeat;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-left: 13px;
+    margin-top: 13px;
+    content: '';
+}
+.sidebar .fullscreen {
+    border-top: 2px solid #000000;
+}
+.sidebar .fullscreen:before {
+    background: url("../images/icons_admin/sidebar-fullscreen.png") no-repeat;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-left: 13px;
+    margin-top: 13px;
+    content: '';
+}
+.sidebar .fullscreen.exit:before {
+    background: url("../images/icons_admin/sidebar-exitfullscreen.png") no-repeat;
+}
+.sidebar .help {
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+.sidebar .help:before {
+    background: url("../images/icons_admin/sidebar-help.png") no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 24px;
+    margin-left: 16px;
+    margin-top: 12px;
+    content: '';
+}
+.sidebar .admin {
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    bottom: 0;
+}
+.sidebar .admin:before {
+    background: url("../images/icons_admin/sidebar-admin.png") no-repeat;
+    display: inline-block;
+    width: 18px;
+    height: 23px;
+    margin-left: 15px;
+    margin-top: 12px;
+    content: '';
+}
+/*sidebar --- BEGIN*/
+.main {
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 48px;
+    background: #FFFFFF;
+}
+/*top --- BEGIN*/
+.main .top{
+    background: #DDDDDD;
+    height: 48px;
+    line-height: 48px;
+    color: #555452;
+}
+.main .top .home {
+    margin-left: 16px;
+    position: absolute;
+}
+.main .top .school {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    height: 48px;
+}
+.main .top .school .back {
+    background: url("../images/icons_admin/top-back.png") no-repeat;
+    position: absolute;
+    right: 280px;
+    top: 16px;
+    width: 14px;
+    height: 17px;
+}
+.main .top .school .first {
+    position: absolute;
+    right: 148px;
+    width: 100px;
+    text-align: right;
+}
+.main .top .school .first:before {
+    position: absolute;
+    background: url("../images/icons_admin/sidebar-home.png") no-repeat;
+    width: 26px;
+    height: 21px;
+    top: 14px;
+    left: 5px;
+    content: '';
+}
+.main .top .school .second {
+    position: absolute;
+    right: 48px;
+    width: 100px;
+    text-align: right;
+}
+/*top --- END*/
+/*main --- BEGIN*/
+.main .body {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+/*main --- END*/

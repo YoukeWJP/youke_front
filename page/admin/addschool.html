@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>添加新校区</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_admin.css">
+    <link rel="stylesheet" type="text/css" href="../../page/admin/addschool.css">
+    <script src="../common/script.js"></script>
+</head>
+
+<body>
+    <header class="top">
+        <i class="back"></i>
+        <span class="title">添加新校区</span>
+        <i class="confirm"></i>
+    </header>
+    <article class="main">
+        <div class="content">
+            <ul>
+                <li class="title">
+                    <label>基本信息：</label>
+                </li>
+                <li class="detail">
+                    <label>校区名称：</label>
+                    <input id="schoolName" type="text" placeholder="请输入校区名称" maxlength="48">
+                </li>
+                <li class="detail">
+                    <label>校区全称：</label>
+                    <input id="schoolFullName" type="text" placeholder="请输入校区全称" maxlength="128" minlength="6">
+                </li>
+                <li class="title">
+                    <label>基本信息：</label>
+                </li>
+                <li class="detail">
+                    <label>网址：</label>
+                    <input id="url" type="text" placeholder="请输入网址" maxlength="128">
+                </li>
+                <li class="detail">
+                    <label>电话：</label>
+                    <input id="phone" type="text" placeholder="请输入电话号码" maxlength="13">
+                </li>
+                <li class="detail">
+                    <label>邮箱：</label>
+                    <input id="email" type="text" placeholder="请输入邮箱地址" maxlength="48">
+                </li>
+                <li class="detail">
+                    <textarea id="comment" cols="30" rows="10" placeholder="校区的简介" maxlength="200"></textarea>
+                </li>
+            </ul>
+        </div>
+    </article>
+    <footer class="bottom">
+        <div class="bar">
+            <a href="javascript:void(0);" class="cancel">保存后继续添加</a>
+            <a href="javascript:void(0);" class="confirm">保存</a>
+        </div>
+    </footer>
+    <script src="../admin/addschool.js"></script>
+</body>
+
+</html>

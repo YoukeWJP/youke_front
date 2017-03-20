@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>经营月报</title>
+    <meta name="keywords" content="youke">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/comm_admin.css">
+    <link rel="stylesheet" type="text/css" href="../../css/third-party/mobiscroll.custom.css">
+    <link rel="stylesheet" type="text/css" href="../../page/admin/monthly.css">
+    <!--echarts中重新定义了require和define，因此echartsjs需要写在requirejs前面-->
+    <script src="../../js/third-party/echarts.min.js"></script>
+    <script src="../../page/common/script.js"></script>
+    <!-- 破解方法链接：http://blog.csdn.net/cdnight/article/details/49306957 -->
+    <script src="../../js/third-party/mobiscroll.custom.min.js"></script>
+</head>
+
+<body>
+    <include src="../common/admin-nav.html" class="sidebar"></include>
+    <article class="main">
+        <header class="top">
+            <span class="home">管理者主页</span>
+            <div class="school">
+                <i class="back"></i>
+                <span class="first">学校名称</span>
+                <span class="second">校区</span>
+            </div>
+        </header>
+        <section class="body">
+            <article class="content">
+                <div class="date">
+                    <input type="text" id="calendarTime" readonly>
+                </div>
+                <div class="sales">
+                    <h3 class="title">销售收入</h3>
+                    <div class="info-total">
+                        ￥500000
+                    </div>
+                    <div class="detail">
+                        <div class="info-top">
+                            <p class="amount">
+                                <label>上月：</label><span>￥100000</span></p>
+                            <p class="percent">+100%</p>
+                        </div>
+                        <div class="info-bottom">
+                            <p class="amount">
+                                <label>去年同期：</label><span class="amount">￥500000</span></p>
+                            <p class="percent">+0%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment">
+                    <h3 class="title">支付方式</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>类型</th>
+                                <th>金额</th>
+                                <th>单数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>现金</td>
+                                <td>￥60000</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>银行卡</td>
+                                <td>￥25000</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>支付宝</td>
+                                <td>￥25000</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>微信</td>
+                                <td>￥25000</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>合计</td>
+                                <td>￥135000</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="wrap-chart">
+                        <div class="chart" id="payPie"></div>
+                    </div>
+                </div>
+                <div class="consumer">
+                    <div class="count">
+                        <h3 class="title">消费人次</h3>
+                        <p class="cb">
+                            <span class="num">4</span>
+                            <span class="unit">单</span>
+                        </p>
+                    </div>
+                    <div class="average">
+                        <h3 class="title">每人平均消费</h3>
+                        <p class="cb">
+                            <span class="num">3</span>
+                            <span class="unit">单</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="orders">
+                    <h3 class="title">订单统计</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>类型</th>
+                                <th>金额</th>
+                                <th>单数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>销售</td>
+                                <td>￥60000</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>退单</td>
+                                <td>￥-25000</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="wrap-chart">
+                        <div class="chart" id="orderPie"></div>
+                    </div>
+                </div>
+                <div class="amount-top">
+                    <h3 class="title">消费金额排名（TOP5）</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>类型</th>
+                                <th>金额</th>
+                                <th>单数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>课程名称1</td>
+                                <td>￥60000</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>课程名称2</td>
+                                <td>￥25000</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>课程名称3</td>
+                                <td>￥25000</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>课程名称4</td>
+                                <td>￥25000</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>课程名称5</td>
+                                <td>￥15000</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+            <aside class="sidebar-right">
+                <ul>
+                    <li class="daily">
+                        <a href="javascript:void(0);">
+                            <h3>经营日报</h3>
+                            <span>按日分析经营状况</span>
+                        </a>
+                    </li>
+                    <li class="weekly">
+                        <a href="javascript:void(0);">
+                            <h3>经营周报</h3>
+                            <span>按周分析经营状况</span>
+                        </a>
+                    </li>
+                    <li class="monthly active">
+                        <a href="javascript:void(0);">
+                            <h3>经营月报</h3>
+                            <span>按月分析经营状况</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+    </article>
+    <script src="../admin/monthly.js"></script>
+</body>
+
+</html>

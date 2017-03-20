@@ -1,0 +1,110 @@
+/*footer -- BEGIN*/
+.footer {
+    width: 100%;
+    height: 55px;
+    background: #333333;
+    position: absolute;
+    bottom: 0;
+}
+.footer .menu {
+    float: left;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+.footer .menu i{
+    background: url("../images/icons_service/bottom-menu.png") no-repeat;
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 14px;
+    width: 27px;
+    height: 21px;
+}
+.footer .detail {
+	margin-left: 55px;
+}
+.footer .item {
+    float: left;
+	width: 33.33%;
+	height: 55px;
+	color : #C1C1C1;
+	line-height: 55px;
+	text-align: center;
+}
+.footer .item a{
+    color: #C1C1C1;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    display: inline-block;
+}
+.footer .first a:before {
+    background: url("../images/icons_service/bottom-signin.png") no-repeat;
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin-top: 17px;
+    margin-left: 65px;
+    content: '';
+}
+.footer .first a span {
+    margin-left: -55px;
+    line-height: 55px;
+    display: inline-block;
+}
+.footer .second a:before {
+    background: url("../images/icons_service/bottom-student.png") no-repeat;
+    float: left;
+    width: 29px;
+    height: 26px;
+    margin-top: 15px;
+    margin-left: 25px;
+    content: '';
+}
+.footer .second a span {
+    margin-left: -35px;
+    line-height: 55px;
+    display: inline-block;
+}
+.footer .third a:before {
+    background: url("../images/icons_service/bottom-record.png") no-repeat;
+    float: left;
+    width: 27px;
+    height: 26px;
+    margin-top: 15px;
+    margin-left: 35px;
+    content: '';
+}
+.footer .third a span {
+    margin-left: -75px;
+    line-height: 55px;
+    display: inline-block;
+}
+.footer .item.active {
+	background: #000;
+	color : #FFFFFF;
+}
+/*footer -- END*/
+/*main -- BEGIN*/
+.main {
+	background: #FFFFFF;
+	position: absolute;
+	width: 100%;
+	top : 0;
+	bottom: 55px;
+    overflow: auto;
+}
+.main .sidebar{
+	float: left;
+	width: 372px;
+	height: 100%;
+	background: #EEEEEE;
+}
+.main .sidebar .title{
+	width: 100%;
+	height: 40px;
+	background: #CCCCCC;
+	color: #5A5A5A;
+}
+/*main -- END*/
