@@ -133,6 +133,7 @@
 .body .content .info .img img {
     width: 150px;
     height: 150px;
+    display: block;
     margin-top: 15px;
 }
 .body .content .info .detail {

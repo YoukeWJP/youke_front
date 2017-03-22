@@ -88,11 +88,12 @@
 /*footer -- END*/
 /*main -- BEGIN*/
 .main {
-	background: #FFFFFF;
-	position: absolute;
-	width: 100%;
-	top : 0;
-	bottom: 55px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 55px;
+    right: 0;
+    left: 0;
     overflow: auto;
 }
 .main .sidebar{

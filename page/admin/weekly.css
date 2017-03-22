@@ -27,12 +27,13 @@
     left: 0;
     box-sizing: border-box;
     padding: 10px 12px;
-    background: #EEEEEE;
+    background: #FFF;
+    /*background: #EEE;*/
     height: 100%;
     overflow: auto;
 }
 .main .body .content .date {
-    background: #FFFFFF;
+    background: #FFF;
     height: 40px;
     width: 100%;
 }

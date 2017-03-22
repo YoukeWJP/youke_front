@@ -27,7 +27,8 @@ require(['YOUKE.Util', 'YOUKE.Services', 'YOUKE.Widget.Alert'], function() {
     //nav-left相关操作 --- END
     //content相关操作 --- BEGIN
     .on('click', '.body .content .business-daily', function() {
-        $core.nextPage('Admin-Daily');
+        // $core.nextPage('Admin-Daily');
+        $core.nextPage('Admin-Weekly');
     })
     .on('click', '.body .content .account-sales', function() {
         $core.nextPage('Admin-SalesDetail');

@@ -56,7 +56,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], fu
         $core.nextPage('Admin-ModifyOrg');
     })
     .on('click', '#orgLogo', function() {
-        $('.mask-upload-logo').removeClass('dn');
+        // $('.mask-upload-logo').removeClass('dn');
     })
     .on('click', '.mask-upload-logo h3 i', function() {
         $('.mask-upload-logo').addClass('dn');

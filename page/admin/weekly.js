@@ -32,75 +32,75 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], fu
     //右侧菜单栏相关操作 --- END
     ;
 
-    //http://echarts.baidu.com/option.html#series
-    //支付方式pie图
-    var payPie = echarts.init(document.getElementById('payPie'));
-    var payPieOption = {
-        tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
-        },
-        legend: {
-            orient: 'vertical',
-            left: 'left'
-        },
-        series: [{
-            name: '支付金额',
-            type: 'pie',
-            radius: '55%',
-            data: [{
-                value: 60000,
-                name: '现金'
-            }, {
-                value: 25000,
-                name: '银行卡'
-            }, {
-                value: 25000,
-                name: '支付宝'
-            }, {
-                value: 25000,
-                name: '微信'
-            }],
-            itemStyle: {
-                emphasis: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }]
-    };
-    //订单统计pie图
-    var orderPie = echarts.init(document.getElementById('orderPie'));
-    var orderPieOption = {
-        tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
-        },
-        legend: {
-            orient: 'vertical',
-            left: 'left'
-        },
-        series: [{
-            name: '订单金额',
-            type: 'pie',
-            radius: '55%',
-            data: [{
-                value: 60000,
-                name: '销售'
-            }, {
-                value: -25000,
-                name: '退单'
-            }],
-            itemStyle: {
-                emphasis: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }]
-    };
+    // //http://echarts.baidu.com/option.html#series
+    // //支付方式pie图
+    // var payPie = echarts.init(document.getElementById('payPie'));
+    // var payPieOption = {
+    //     tooltip: {
+    //         trigger: 'item',
+    //         formatter: "{a} <br/>{b} : {c} ({d}%)"
+    //     },
+    //     legend: {
+    //         orient: 'vertical',
+    //         left: 'left'
+    //     },
+    //     series: [{
+    //         name: '支付金额',
+    //         type: 'pie',
+    //         radius: '55%',
+    //         data: [{
+    //             value: 60000,
+    //             name: '现金'
+    //         }, {
+    //             value: 25000,
+    //             name: '银行卡'
+    //         }, {
+    //             value: 25000,
+    //             name: '支付宝'
+    //         }, {
+    //             value: 25000,
+    //             name: '微信'
+    //         }],
+    //         itemStyle: {
+    //             emphasis: {
+    //                 shadowBlur: 10,
+    //                 shadowOffsetX: 0,
+    //                 shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //             }
+    //         }
+    //     }]
+    // };
+    // //订单统计pie图
+    // var orderPie = echarts.init(document.getElementById('orderPie'));
+    // var orderPieOption = {
+    //     tooltip: {
+    //         trigger: 'item',
+    //         formatter: "{a} <br/>{b} : {c} ({d}%)"
+    //     },
+    //     legend: {
+    //         orient: 'vertical',
+    //         left: 'left'
+    //     },
+    //     series: [{
+    //         name: '订单金额',
+    //         type: 'pie',
+    //         radius: '55%',
+    //         data: [{
+    //             value: 60000,
+    //             name: '销售'
+    //         }, {
+    //             value: -25000,
+    //             name: '退单'
+    //         }],
+    //         itemStyle: {
+    //             emphasis: {
+    //                 shadowBlur: 10,
+    //                 shadowOffsetX: 0,
+    //                 shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //             }
+    //         }
+    //     }]
+    // };
 
     //初始化日期控件
     function calendarBasicInitBegin() {
@@ -160,7 +160,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], fu
         }));
         calendarBasicInitBegin();
         calendarBasicInitEnd();
-        payPie.setOption(payPieOption);
-        orderPie.setOption(orderPieOption);
+        // payPie.setOption(payPieOption);
+        // orderPie.setOption(orderPieOption);
     });
 });
