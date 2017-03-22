@@ -310,9 +310,10 @@
     background: url("../../images/icons_service/sidebar-slidedown.png") no-repeat;
 }
 .main .sidebar-right-student-detail .content .student .student-info .detail {
-    margin: 0 12px;
-    height: 123px;
+    padding: 0 12px 8px 12px;
+    min-height: 70px;
     color: #959696;
+    box-sizing: border-box;
 }
 .main .sidebar-right-student-detail .content .student .student-info .detail ul {
     font-size: 12px;
