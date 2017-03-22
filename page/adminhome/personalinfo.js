@@ -85,6 +85,12 @@ require(['YOUKE.Util', 'YOUKE.Parse', 'YOUKE.Services', 'YOUKE.Widget.Alert'], f
     .on('click', '#person-info li.about', function() {
         $core.nextPage('Admin-Home-About');
     })
+    .on('click', '#person-info li.exit', function() {
+        Alert.showConfirm('确认退出', '确认退出账号：<br/>员工名(18512345678)', function() {
+            //TODO
+            $core.nextPage('Login-Login');
+        });
+    })
     //左侧菜单相关操作 --- END
     //中间部分相关操作 --- BEGIN
     .on('click', '.main .login .second', function() {

@@ -4,9 +4,10 @@
  * Date: 2016/11/3
  * Time: 11:23
  */
-require([], function() {
+require(['YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
-        $scope = YOUKE.Scope;
+        $scope = YOUKE.Scope,
+        Alert = YOUKE.Widget.Alert;
 
     $(document)
     //顶部菜单栏相关操作 --- BEGIN
@@ -24,6 +25,12 @@ require([], function() {
     .on('click', '#person-info li.info', function() {
         $core.nextPage('Admin-Home-PersonalInfo');
     })
+    .on('click', '#person-info li.exit', function() {
+        Alert.showConfirm('确认退出', '确认退出账号：<br/>员工名(18512345678)', function() {
+            //TODO
+            $core.nextPage('Login-Login');
+        });
+    });
     //左侧菜单相关操作 --- END
 
     $core.Ready(function() {
