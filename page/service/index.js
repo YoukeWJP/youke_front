@@ -136,8 +136,8 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], fu
     .on('click', '#sidebar-student-detail .content .remark i', function() {
         var $selector = $(this).closest('h3').siblings('.detail');
         var remark = $selector.text();
-        Alert.showText(remark, function (msg) {
-            $selector.text(msg)
+        Alert.showText(remark, function(msg) {
+            $selector.text(msg);
             $('#sidebar-student-detail .student-info [data-type="remark"] span').text(msg);
         });
     })

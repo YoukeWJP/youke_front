@@ -10,6 +10,7 @@ require(['YOUKE.Util', 'YOUKE.Services', 'YOUKE.Widget.Alert'], function() {
         $util = YOUKE.Util,
         Alert = YOUKE.Widget.Alert,
         $http = YOUKE.Services;
+
     $(document)
     //顶部菜单栏相关操作 --- BEGIN
     .on('click', '.top .back', function() {
