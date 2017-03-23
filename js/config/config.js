@@ -4,7 +4,7 @@ YOUKE.Core.config({
     },
     services: {
         dev: '',
-        test: '',
+        test: 'http://youke.auauu.com/',
         release: ''
     },
     loadConfig: {
@@ -32,8 +32,8 @@ YOUKE.Core.config({
     headers: {
         'Accept'                             :           '*/*',
         'Accept-Language'                    :           'en;q=1, fr;q=0.9, de;q=0.8, zh-Hans;q=0.7, zh-Hant;q=0.6, ja;q=0.5',
-        // 'Content-Type'                       :           'application/x-www-form-urlencoded'
-        'Content-Type'                       :           'application/json'
+        'Content-Type'                       :           'application/x-www-form-urlencoded'
+        // 'Content-Type'                       :           'application/json'
     },
     apiConfig: {
         'category/update'                    :           '../../data/admin/success.json',

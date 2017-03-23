@@ -7,7 +7,9 @@
 define(function() {
     var $Comm = {
         HttpStatus: {
-            OK                  :           200             //成功
+            'OK'                :           200,             //成功
+            'unlogin'           :           40015,           //未登录
+            'noauth'            :           40016,           //无权限
         },
         Role: {
             'student'           :           'student',      //学生

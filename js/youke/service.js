@@ -1,6 +1,8 @@
-define(['YOUKE.Adapter', 'YOUKE.Util'], function() {
+define(['YOUKE.Adapter', 'YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $adapter = YOUKE.Adapter,
+        Alert = YOUKE.Widget.Alert,
+        $comm = YOUKE.Comm,
         $util = YOUKE.Util;
     var apiConfig = $core.getApiConfig(),
         defaultHeaders = $.extend(true, {}, {
@@ -39,7 +41,13 @@ define(['YOUKE.Adapter', 'YOUKE.Util'], function() {
         if ($util.isFunction(resultFn)) {
             var tmpFn = $.extend(true, {}, obj);
             obj.success = function(data) {
-                tmpFn.success(resultFn(data));
+                if (data.code === $comm.HttpStatus.unlogin) {
+                    $core.nextPage('Login-Login');
+                } else if (data.code === $comm.HttpStatus.noauth) {
+                    Alert.showError(data.message || '无权限');
+                } else {
+                    tmpFn.success(resultFn(data));
+                }
             };
         }
         $.ajax(obj);

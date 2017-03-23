@@ -59,15 +59,14 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Services', 'YO
                 return;
             }
         }
-        login(function(role) {
-            if (!role) {
-                Alert.showError('无法获取用户权限');
-            } else if (role === $comm.Role.superuser) {     //超级管理员
-                $core.nextPage('Super-Index');
-            } else if (role === $comm.Role.principal || role === $comm.Role.admin) {    //校长或管理员
+        login(function(data) {
+            var role = data.role;
+            if (role === $comm.Role.principal || role === $comm.Role.admin) { //校长或管理员
                 $core.nextPage('Admin-Index');
-            } else if (role === $comm.Role.instructor) {    //教员，前台小妹
+            } else if (role === $comm.Role.instructor) { //教员，前台小妹
                 $core.nextPage('Service-Index');
+            } else {
+                Alert.showError(data.message || '无法获取用户权限');
             }
         });
     };
@@ -78,16 +77,13 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Services', 'YO
     //登录功能
     function login(cb) {
         $http.post({
-            url: 'auth/login',
+            url: 'api/auth/login',
             data: {
                 username: $.trim($('#loginName').val()),
                 password: $('#password').val()
             },
             success: function(data) {
                 if (data.code === $comm.HttpStatus.OK) {
-                    localStorage.setItem('_ykLoginObject', JSON.stringify({
-                        expire: new Date().getTime() + 86400000
-                    }));
                     $util.isFunction(cb) && cb(data.data);
                 } else {
                     Alert.showError(data.message || '登录失败');
