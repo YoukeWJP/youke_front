@@ -414,6 +414,9 @@
     width: 86px;
     margin-top: 16px;
 }
+.main .sidebar-right-student-detail .content .course .detail .btn-signin span.active {
+    background: #187FAD;
+}
 .main .sidebar-right-student-detail .content .course,.main .sidebar-right-student-detail .content .signin {
     height: 66px;
     background: #FFFFFF;
@@ -463,8 +466,217 @@
     background: #FFFFFF;
 }
 /*sidebar-right-student-detail --- END*/
-/*mask-delete --- BEGIN */
-.mask-delete {
+/*course-detail --- BEGIN*/
+.main .course-detail {
+    height: 100%;
+    position: absolute;
+    right: 372px;
+    background: #EEEEEE;
+    width: 371px;
+    border-right: 1px solid #444444;
+}
+.main .course-detail .title{
+    width: 100%;
+    height: 40px;
+    background: #CCCCCC;
+    color: #5A5A5A;
+}
+.main .course-detail .title i {
+    position: absolute;
+    background: url("../../images/icons_service/sidebar-back.png") no-repeat;
+    width: 11px;
+    height: 14px;
+    top: 13px;
+    left: 12px;
+    content: '';
+}
+.main .course-detail .title label {
+    background: #CCCCCC;
+    color: #5A5A5A;
+    margin-left: 32px;
+    height: 40px;
+    line-height: 40px;
+}
+.main .course-detail .content {
+    width: 344px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main .course-detail .content h3 {
+    line-height: 40px;
+    height: 40px;
+    font-weight: normal;
+    font-size: 16px;
+}
+.main .course-detail .content .operate {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #444444;
+}
+.main .course-detail .content .operate .first {
+    float: left;
+    width: 100px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    margin-left: 2px;
+    background: #FFFFFF;
+}
+.main .course-detail .content .operate .second {
+    float: left;
+    width: 100px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    margin-left: 14px;
+    margin-right: 0;
+    background: #FFFFFF;
+}
+.main .course-detail .content .operate .third {
+    float: left;
+    width: 100px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    margin-left: 20px;
+    background: #FFFFFF;
+}
+.main .course-detail .content .operate span.active {
+    background: #197FAF;
+    color: #FFFFFF;
+}
+.main .course-detail .content p {
+    font-size: 20px;
+    height: 36px;
+    line-height: 36px;
+    font-weight: bold;
+}
+.main .course-detail .content .current {
+    text-decoration: none;
+    color: #444444;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    width: 100%;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #444444;
+}
+.main .course-detail .content ul {
+    width: 100%;
+    margin-top: 10px;
+}
+.main .course-detail .content ul li {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #959696;
+}
+/*course-detail --- END*/
+/*signin-list --- BEGIN*/
+.main .signin-list {
+    height: 100%;
+    position: absolute;
+    right: 372px;
+    background: #EEEEEE;
+    width: 371px;
+    border-right: 1px solid #444444;
+}
+.main .signin-list .title{
+    width: 100%;
+    height: 40px;
+    background: #CCCCCC;
+    color: #5A5A5A;
+}
+.main .signin-list .title i {
+    position: absolute;
+    background: url("../../images/icons_service/sidebar-back.png") no-repeat;
+    width: 11px;
+    height: 14px;
+    top: 13px;
+    left: 12px;
+    content: '';
+}
+.main .signin-list .title label {
+    background: #CCCCCC;
+    color: #5A5A5A;
+    margin-left: 32px;
+    height: 40px;
+    line-height: 40px;
+}
+.main .signin-list .content {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    left: 0;
+    bottom: 0;
+    background: #EEEEEE;
+}
+.main .signin-list .content>span {
+    display: block;
+    color: #444444;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 16px;
+}
+.main .signin-list .content ul {
+    background: #FFFFFF;
+    position: absolute;
+    left: 15px;
+    right: 16px;
+    bottom: 0;
+    top: 48px;
+}
+.main .signin-list .content ul li {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #EEEEEE;
+    background: #FFFFFF;
+}
+.main .signin-list .content ul li span.icon {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+.main .signin-list .content ul li span.icon:before {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background: #307FAC;
+    margin-top: 8px;
+    margin-left: 8px;
+    content: '';
+}
+.main .signin-list .content ul li span.info {
+    float: left;
+    height: 60px;
+}
+.main .signin-list .content ul li span.info .time {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    color: #555452;
+}
+.main .signin-list .content ul li span.info .name {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #959696;
+}
+.main .signin-list .content ul li span.num {
+    float: right;
+    color: #555452;
+    width: 80px;
+    text-align: center;
+    line-height: 60px;
+}
+/*signin-list --- END*/
+/*mask-course-signin --- BEGIN */
+.mask-course-signin {
     z-index: 5;
     position: fixed;
     top: 0;
@@ -473,28 +685,28 @@
     left: 0;
     background: rgba(0,0,0,0.4);
 }
-.mask-delete .dialog {
+.mask-course-signin .dialog {
     position: absolute;
     left: 50%;
     top: 50%;
     width: 376px;
-    height: 264px;
+    height: 488px;
     margin-left: -188px;
-    margin-top: -160px;
+    margin-top: -272px;
     background: #F6F6F6;
 }
-.mask-delete .dialog h3 {
+.mask-course-signin .dialog h3 {
     width: 100%;
     height: 50px;
     line-height: 50px;
     background: #444444;
     color: #FFFFFF;
 }
-.mask-delete .dialog h3 span {
+.mask-course-signin .dialog h3 span {
     margin-left: 15px;
     font-weight: normal;
 }
-.mask-delete .dialog h3 i {
+.mask-course-signin .dialog h3 i {
     background: url("../../images/icons_service/exit-white.png") no-repeat;
     float: right;
     width: 16px;
@@ -502,45 +714,360 @@
     margin-right: 12px;
     margin-top: 17px;
 }
-.mask-delete .dialog .warn {
+.mask-course-signin .dialog .detail {
+    background: #F6F6F6;
     width: 100%;
-    height: 154px;
 }
-.mask-delete .dialog .warn p {
-    text-align: center;
+.mask-course-signin .dialog .detail .name {
+    height: 28px;
+    margin-left: 18px;
+    padding-top: 14px;
     color: #444444;
-    height: 20px;
-    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
 }
-.mask-delete .dialog .warn p:first-child {
-    margin-top: 60px;
+.mask-course-signin .dialog .detail .status {
+    height: 32px;
+    line-height: 32px;
+    margin-left: 18px;
+    margin-right: 18px;
+    color: #444444;
+    border-bottom: 2px solid #444444;
 }
-.mask-delete .dialog .bar {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+.mask-course-signin .dialog .detail .current {
+    height: 36px;
+    line-height: 36px;
+    margin-left: 18px;
+    margin-right: 18px;
+    color: #959696;
 }
-.mask-delete .dialog .bar .btn-cancel {
-    float: left;
-    text-decoration: none;
+.mask-course-signin .dialog ul li {
     text-align: center;
-    height: 60px;
-    line-height: 60px;
-    width: 50%;
+    font-size: 20px;
+    height: 48px;
+    width: 336px;
+    line-height: 48px;
     color: #444444;
     background: #DDDDDD;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
 }
-.mask-delete .dialog .bar .btn-confirm {
-    float: left;
+.mask-course-signin .dialog ul li.active {
+    background: #187EAD;
+    color: #FFFFFF;
+}
+/*mask-course-signin --- END */
+/*mask-course-reduce --- BEGIN */
+.mask-course-reduce {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-course-reduce .dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 376px;
+    height: 390px;
+    margin-left: -188px;
+    margin-top: -223px;
+    background: #F6F6F6;
+}
+.mask-course-reduce .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-course-reduce .dialog h3 span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.mask-course-reduce .dialog h3 i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-course-reduce .dialog .detail {
+    height: 240px;
+    background: #F6F6F6;
+    width: 100%;
+}
+.mask-course-reduce .dialog .detail .name {
+    height: 28px;
+    margin-left: 18px;
+    padding-top: 14px;
+    color: #444444;
+    font-size: 20px;
+    font-weight: bold;
+}
+.mask-course-reduce .dialog .detail .status {
+    height: 32px;
+    line-height: 32px;
+    margin-left: 18px;
+    margin-right: 18px;
+    color: #444444;
+    border-bottom: 2px solid #444444;
+}
+.mask-course-reduce .dialog .detail .current {
+    height: 36px;
+    line-height: 36px;
+    margin-left: 18px;
+    margin-right: 18px;
+    color: #959696;
+}
+.mask-course-reduce .dialog .detail .num {
+    height: 48px;
+    line-height: 48px;
+    margin-left: 23px;
+    margin-top: 10px;
+}
+.mask-course-reduce .dialog .detail .num input {
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 5px;
+    height: 36px;
+    line-height: 36px;
+    width: 265px;
+    background: #FFFFFF;
+    border: 0;
+}
+.mask-course-reduce .dialog .detail .num input.active {
+    background: #D2F0FF;
+}
+.mask-course-reduce .dialog .detail .reason {
+    height: 48px;
+    line-height: 48px;
+    margin-left: 23px;
+    margin-top: 10px;
+}
+.mask-course-reduce .dialog .detail .reason input {
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 5px;
+    height: 36px;
+    line-height: 36px;
+    width: 265px;
+    background: #FFFFFF;
+    border: 0;
+}
+.mask-course-reduce .dialog .detail .reason input.active {
+    background: #D2F0FF;
+}
+.mask-course-reduce .dialog .bar {
+    position: absolute;
+    background: #F6F6F6;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+}
+.mask-course-reduce .dialog .bar .btn-confirm {
+    display: block;
     text-decoration: none;
     text-align: center;
-    height: 60px;
-    line-height: 60px;
-    width: 50%;
+    height: 48px;
+    line-height: 48px;
+    width: 332px;
+    margin: 10px auto 42px auto;
     color: #FFFFFF;
-    background: #307EAC;
+    background: #B44F4E;
 }
-/*mask-delete --- END */
+/*mask-course-reduce --- END */
+/*mask-course-stop --- BEGIN */
+.mask-course-stop {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.mask-course-stop .dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 376px;
+    height: 400px;
+    margin-left: -188px;
+    margin-top: -228px;
+    background: #F6F6F6;
+}
+.mask-course-stop .dialog h3 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #444444;
+    color: #FFFFFF;
+}
+.mask-course-stop .dialog h3 span {
+    margin-left: 15px;
+    font-weight: normal;
+}
+.mask-course-stop .dialog h3 i {
+    background: url("../../images/icons_service/exit-white.png") no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 17px;
+}
+.mask-course-stop .dialog .detail {
+    height: 276px;
+    background: #F6F6F6;
+    width: 100%;
+}
+.mask-course-stop .dialog .detail .name {
+    height: 28px;
+    margin-left: 18px;
+    padding-top: 14px;
+    color: #444444;
+    font-size: 20px;
+    font-weight: bold;
+}
+.mask-course-stop .dialog .detail .status {
+    height: 32px;
+    line-height: 32px;
+    margin-left: 18px;
+    margin-right: 18px;
+    color: #444444;
+    border-bottom: 2px solid #444444;
+}
+.mask-course-stop .dialog .detail .current {
+    height: 36px;
+    line-height: 36px;
+    margin-left: 18px;
+    margin-right: 18px;
+    color: #959696;
+}
+.mask-course-stop .dialog .detail .num {
+    height: 48px;
+    line-height: 48px;
+    margin-left: 18px;
+}
+.mask-course-stop .dialog .detail .num label {
+    height: 48px;
+    line-height: 48px;
+}
+.mask-course-stop .dialog .detail .num input {
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 5px;
+    width: 240px;
+    height: 32px;
+    line-height: 32px;
+    background: #FFFFFF;
+    color: #555452;
+    border: 0;
+}
+.mask-course-stop .dialog .detail .num input.active {
+    background: #D2F0FF;
+}
+.mask-course-stop .dialog .detail .pay {
+    height: 48px;
+    line-height: 48px;
+    margin-left: 18px;
+    color: #444444;
+}
+.mask-course-stop .dialog .detail .pay label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}
+.mask-course-stop .dialog .detail .pay span {
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 5px;
+    width: 240px;
+    height: 32px;
+    line-height: 32px;
+    background: #FFFFFF;
+    color: #555452;
+    border: 0;
+}
+.mask-course-stop .dialog .detail .pay span:after {
+    float: right;
+    background: url("../../images/icons_service/mask-expand.png") no-repeat;
+    width: 14px;
+    height: 21px;
+    margin-top: 9px;
+    margin-right: 10px;
+    content: '';
+}
+.mask-course-stop .dialog .detail .pay span.active {
+    background: #D2F0FF;
+}
+.mask-course-stop .dialog .detail .pay ul {
+    position: absolute;
+    width: 245px;
+    margin-left: 95px;
+    margin-top: -8px;
+    background: #FFFFFF;
+    z-index: 6;
+}
+.mask-course-stop .dialog .detail .pay ul li {
+    padding-left: 5px;
+    line-height: 31px;
+    height: 31px;
+    border-top: 1px solid #F6F6F6;
+}
+.mask-course-stop .dialog .detail .pay ul li.active {
+    background: #A0C2F9;
+    color: #FFFFFF;
+}
+.mask-course-stop .dialog .detail .reason {
+    height: 48px;
+    line-height: 48px;
+    margin-left: 18px;
+    color: #444444;
+}
+.mask-course-stop .dialog .detail .reason label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}
+.mask-course-stop .dialog .detail .reason input {
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 5px;
+    width: 240px;
+    height: 32px;
+    line-height: 32px;
+    background: #FFFFFF;
+    color: #555452;
+    border: 0;
+}
+.mask-course-stop .dialog .detail .reason input.active {
+    background: #D2F0FF;
+}
+.mask-course-stop .dialog .bar {
+    position: absolute;
+    background: #F6F6F6;
+    width: 100%;
+    height: 74px;
+    bottom: 0;
+}
+.mask-course-stop .dialog .bar .btn-confirm {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    width: 332px;
+    margin: 10px auto 16px auto;
+    color: #FFFFFF;
+    background: #B44F4E;
+}
+/*mask-course-stop --- END */
 /*mask-batch-import --- BEGIN */
 .mask-batch-import {
     z-index: 6;

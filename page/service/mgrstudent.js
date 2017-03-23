@@ -105,7 +105,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], fu
     .on('click', '#student-list li', function() {
         var $this = $(this);
         $this.addClass('active').siblings('li').removeClass('active');
-        $('#sidebar-right-list').addClass('dn');
+        $('#sidebar-right-list,#signin-list,#course-detail').addClass('dn');
         $('#sidebar-right-student-detail').removeClass('dn');
     })
     .on('mouseover', '#student-list li', function() {
@@ -120,7 +120,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], fu
         $('#mask-batch-import').removeClass('dn');
     })
     .on('click', '#sidebar-right-student-detail h3.title i,#sidebar-right-student-detail h3.title span', function() {
-        $('#sidebar-right-student-detail').addClass('dn');
+        $('#sidebar-right-student-detail,#signin-list,#course-detail').addClass('dn');
         $('#sidebar-right-list').removeClass('dn');
     })
     .on('click', '#sidebar-right-student-detail .student-birth .slide', function() {

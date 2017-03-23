@@ -3,8 +3,8 @@
     margin-top: 10px;
 }
 /*comm --- END*/
-/*sidebar --- BEGIN*/
-.sidebar {
+/*sidebar-nav --- BEGIN*/
+.sidebar-nav {
     width: 48px;
     background: #1C1D1F;
     position: fixed;
@@ -12,15 +12,15 @@
     bottom: 0;
     left: 0;
 }
-.sidebar li {
+.sidebar-nav li {
     height: 48px;
     width: 100%;
 }
-.sidebar .home {
+.sidebar-nav .home {
     margin-top: 48px;
     border-top: 2px solid #000000;
 }
-.sidebar .home:before {
+.sidebar-nav .home:before {
     background: url("../images/icons_admin/sidebar-home-light.png") no-repeat;
     display: inline-block;
     width: 25px;
@@ -29,10 +29,10 @@
     margin-top: 15px;
     content: '';
 }
-.sidebar .setting {
+.sidebar-nav .setting {
     border-top: 2px solid #000000;
 }
-.sidebar .setting:before {
+.sidebar-nav .setting:before {
     background: url("../images/icons_admin/sidebar-setting.png") no-repeat;
     display: inline-block;
     width: 22px;
@@ -41,10 +41,10 @@
     margin-top: 13px;
     content: '';
 }
-.sidebar .fullscreen {
+.sidebar-nav .fullscreen {
     border-top: 2px solid #000000;
 }
-.sidebar .fullscreen:before {
+.sidebar-nav .fullscreen:before {
     background: url("../images/icons_admin/sidebar-fullscreen.png") no-repeat;
     display: inline-block;
     width: 22px;
@@ -53,14 +53,14 @@
     margin-top: 13px;
     content: '';
 }
-.sidebar .fullscreen.exit:before {
+.sidebar-nav .fullscreen.exit:before {
     background: url("../images/icons_admin/sidebar-exitfullscreen.png") no-repeat;
 }
-.sidebar .help {
+.sidebar-nav .help {
     border-top: 2px solid #000000;
     border-bottom: 2px solid #000000;
 }
-.sidebar .help:before {
+.sidebar-nav .help:before {
     background: url("../images/icons_admin/sidebar-help.png") no-repeat;
     display: inline-block;
     width: 15px;
@@ -69,13 +69,13 @@
     margin-top: 12px;
     content: '';
 }
-.sidebar .admin {
+.sidebar-nav .admin {
     position: absolute;
     cursor: pointer;
     left: 0;
     bottom: 0;
 }
-.sidebar .admin:before {
+.sidebar-nav .admin:before {
     background: url("../images/icons_admin/sidebar-admin.png") no-repeat;
     display: inline-block;
     width: 18px;
@@ -84,7 +84,7 @@
     margin-top: 12px;
     content: '';
 }
-/*sidebar --- BEGIN*/
+/*sidebar-nav --- BEGIN*/
 .main {
     position: absolute;
     top:0;

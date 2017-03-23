@@ -26,7 +26,7 @@
         </header>
         <section class="body">
             <!--学员生日 --- BEGIN -->
-            <div class="student-birthday">
+            <div class="student-birthday" id="student-birthday">
                 <div class="nav">
                     <ul>
                         <li class="active">今日</li>
@@ -97,7 +97,7 @@
             <!--学员生日 --- END -->
         </section>
         <!--右侧菜单栏列表 --- BEGIN -->
-        <aside class="sidebar-right-list">
+        <aside class="sidebar-right-list" id="sidebar-right-list">
             <ul>
                 <li class="first">
                     <a href="javascript:void(0);">
@@ -121,7 +121,7 @@
         </aside>
         <!--右侧菜单栏列表 --- END -->
         <!--右侧菜单栏学员生日详情 --- BEGIN -->
-        <aside class="sidebar-right-student-detail dn">
+        <aside class="sidebar-right-student-detail dn" id="sidebar-right-student-detail">
             <div class="title">
                 <i class="back"></i>
                 <label>学员详情</label>
@@ -162,7 +162,7 @@
                             </a>
                             <i></i>
                         </div>
-                        <a href="javascript:void(0);" class="btn-signin"><span>签到</span></a>
+                        <a href="javascript:void(0);" class="btn-signin"><span class="active">签到</span></a>
                     </div>
                 </div>
                 <div class="signin">
@@ -179,7 +179,188 @@
             </div>
         </aside>
         <!--右侧菜单栏学员生日详情 --- END -->
+                <!--课程详情 --- BEGIN-->
+        <div class="course-detail dn" id="course-detail">
+            <div class="title">
+                <label><i></i>课程详情</label>
+            </div>
+            <div class="content">
+                <h3>课程操作：</h3>
+                <a href="javascript:void(0);" class="operate">
+                    <span class="first">续费</span>
+                    <span class="second">扣费</span>
+                    <span class="third">停课</span>
+                </a>
+                <h3>课程详情：</h3>
+                <p>课程名称</p>
+                <a href="javascript:void(0);" class="current">
+                    <label>当前状态：</label>
+                    <span>正常/冻结/停课</span>
+                </a>
+                <ul>
+                    <li>
+                        <label>课程类型：</label>
+                        <span>按课时</span>
+                    </li>
+                    <li>
+                        <label>总课时：</label>
+                        <span>40天</span>
+                    </li>
+                    <li>
+                        <label>有效期：</label>
+                        <span>70天</span>
+                    </li>
+                    <li>
+                        <label>剩余课时：</label>
+                        <span>20课时</span>
+                    </li>
+                    <li>
+                        <label>开课时间：</label>
+                        <span>2016年8月1日</span>
+                    </li>
+                    <li>
+                        <label>累计实收金额：</label>
+                        <span>3000000元</span>
+                    </li>
+                    <li>
+                        <label>支持场馆：</label>
+                        <span></span>
+                    </li>
+                    <li>
+                        <label>备注：</label>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--课程详情 --- END-->
+        <!--签到记录 --- BEGIN-->
+        <div class="signin-list dn" id="signin-list">
+            <div class="title">
+                <label><i></i>签到记录</label>
+            </div>
+            <div class="content">
+                <span>签到记录：</span>
+                <ul>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="info">
+                            <span class="time">2016-07-25 10:14</span>
+                        <span class="name">课程名</span>
+                        </span>
+                        <span class="num">1课时</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="info">
+                            <span class="time">2016-07-25 10:14</span>
+                        <span class="name">课程名</span>
+                        </span>
+                        <span class="num">1课时</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="info">
+                            <span class="time">2016-07-25 10:14</span>
+                        <span class="name">课程名</span>
+                        </span>
+                        <span class="num">1课时</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="info">
+                            <span class="time">2016-07-25 10:14</span>
+                        <span class="name">课程名</span>
+                        </span>
+                        <span class="num">1课时</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="info">
+                            <span class="time">2016-07-25 10:14</span>
+                        <span class="name">课程名</span>
+                        </span>
+                        <span class="num">1课时</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--签到记录 --- END-->
     </article>
+        <!--增加dn 课程签到 --- BEGIN-->
+    <section class="mask-course-signin dn" id="mask-course-signin">
+        <div class="dialog">
+            <h3><span>课程签到</span><i></i></h3>
+            <div class="detail">
+                <p class="name">课程名称</p>
+                <p class="status">当前状态：正常/冻结/停课</p>
+                <p class="current">剩余课时：剩余课时/总课时</p>
+            </div>
+            <ul>
+                <li>1课时</li>
+                <li>2课时</li>
+                <li>3课时</li>
+                <li>4课时</li>
+                <li class="self-define">自定义课时</li>
+            </ul>
+        </div>
+    </section>
+    <!--课程签到 --- END-->
+    <!--增加dn 课程扣费 --- BEGIN-->
+    <section class="mask-course-reduce dn" id="mask-course-reduce">
+        <div class="dialog">
+            <h3><span>课程扣费</span><i></i></h3>
+            <div class="detail">
+                <p class="name">课程名称</p>
+                <p class="status">当前状态：<span>正常/冻结/停课</span></p>
+                <p class="current">剩余课时：<span>剩余课时/总课时</span></p>
+                <p class="num">
+                    <label>减少：</label>
+                    <input type="text" placeholder="课时数" name="amount" />
+                </p>
+                <p class="reason">
+                    <label>说明：</label>
+                    <input type="text" placeholder="扣费说明" name="comment" />
+                </p>
+            </div>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </section>
+    <!--课程扣费 --- END-->
+    <!--增加dn 课程停课 --- BEGIN-->
+    <section class="mask-course-stop dn" id="mask-course-stop">
+        <div class="dialog">
+            <h3><span>课程停课</span><i></i></h3>
+            <div class="detail">
+                <p class="name">课程名称</p>
+                <p class="status">当前状态：<span>正常/冻结/停课</span></p>
+                <p class="current">剩余课时：<span>剩余课时/总课时</span></p>
+                <p class="num">
+                    <label>退款金额：</label>
+                    <input type="text" placeholder="金额" name="amount" />
+                </p>
+                <div class="pay">
+                    <label>支付方式：</label>
+                    <span>请选择支付方式</span>
+                    <ul class="dn">
+                        <li>现金</li>
+                        <li>微信</li>
+                        <li>支付宝</li>
+                    </ul>
+                </div>
+                <p class="reason">
+                    <label>说明：</label>
+                    <input type="text" placeholder="停课说明" name="comment" />
+                </p>
+            </div>
+            <div class="bar">
+                <a href="javascript:void(0);" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </section>
+    <!--课程停课 --- END-->
     <script src="../admin/birthstudent.js"></script>
 </body>
 

@@ -8,14 +8,22 @@
     <meta name="keywords" content="youke">
     <link rel="stylesheet" href="../../css/third-party/normalize.css">
     <link rel="stylesheet" href="../../css/comm.css">
-    <link rel="stylesheet" href="../../css/comm_service.css">
-    <link rel="stylesheet" href="../../page/service/buynew.css">
+    <link rel="stylesheet" href="../../css/comm_admin.css">
+    <link rel="stylesheet" href="../../page/admin/buynew.css">
     <script src="../common/script.js"></script>
 </head>
 
 <body>
-    <include src="../common/service-nav.html" class="dn"></include>
+    <include src="../common/admin-nav.html" class="sidebar"></include>
     <div class="main">
+        <header class="top">
+            <span class="home">管理者主页</span>
+            <div class="school">
+                <i class="back"></i>
+                <span class="first">学校名称</span>
+                <span class="second">校区</span>
+            </div>
+        </header>
         <div class="sidebar" id="sidebar">
             <div class="title">
                 <h3>购买课程</h3>
@@ -260,8 +268,7 @@
         </div>
     </section>
     <!-- 输入优惠/折扣 --- END -->
-    <include src="../common/service-footer.html" class="footer"></include>
-    <script src="../service/buynew.js"></script>
+    <script src="../admin/buynew.js"></script>
 </body>
 
 </html>

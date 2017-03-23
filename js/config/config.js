@@ -62,6 +62,7 @@ YOUKE.Core.config({
         //---Admin管理端---BEGIN
         // Admin主页
         'Admin-Index'                        :           '../../page/admin/index.html',
+        'Admin-BuyNew'                       :           '../../page/admin/buynew.html',
 
         // Admin报表
         'Admin-Daily'                        :           '../../page/admin/daily.html',
