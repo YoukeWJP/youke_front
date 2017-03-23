@@ -132,6 +132,15 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], fu
         $('#signin-list').addClass('dn');
         $('#course-detail').removeClass('dn');
     })
+    //备注
+    .on('click', '#sidebar-student-detail .content .remark i', function() {
+        var $selector = $(this).closest('h3').siblings('.detail');
+        var remark = $selector.text();
+        Alert.showText(remark, function (msg) {
+            $selector.text(msg)
+            $('#sidebar-student-detail .student-info [data-type="remark"] span').text(msg);
+        });
+    })
     //签到按钮
     .on('click', '#sidebar-student-detail .content .btn-signin span', function() {
         $('#mask-course-signin').removeClass('dn');

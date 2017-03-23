@@ -61,6 +61,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], fu
             $this.closest('.student-birth').siblings('.detail').addClass('dn');
         }
     })
+    .on('click', '#sidebar-right-student-detail .btn-buy', function() {
+        $core.nextPage('Service-BuyNew');
+    })
     //  右侧列表相关操作  --- END
     ;
 

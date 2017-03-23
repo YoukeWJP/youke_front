@@ -77,16 +77,16 @@ define(['YOUKE.Util'], function () {
         },
         showConfirm: function () {
             var msg, cb, title, len = arguments.length;
-            if(len < 3) {
+            if (len < 3) {
                 title = '确认删除';
                 msg = arguments[0] || '';
                 cb = arguments[1];
-            } else if(len === 3) {
+            } else if (len === 3) {
                 title = arguments[0];
                 msg = arguments[1];
                 cb = arguments[2];
             }
-            var tpl = '<div id="_confirm-delete" style="z-index:999;position:fixed;top:0;right:0;bottom:0;left:0;background: rgba(0,0,0,0.4);">'
+            var tpl = '<section id="_confirm-delete" style="z-index:999;position:fixed;top:0;right:0;bottom:0;left:0;background: rgba(0,0,0,0.4);">'
                     + '<div style="position:absolute;left:50%;top:50%;width:344px;height:240px;margin-left:-172px;margin-top:-120px;background: #F6F6F6;font-family:Microsoft Yahei;">'
                     + '<h3 style="width:100%;height:50px;line-height:50px;background:#444;color:#FFF;margin-top:0;margin-bottom:0;font-size:16px;"><span style="margin-left:15px;font-weight:normal;">' + title + '</span><i id="_exit" style="float:right;width:16px;height:16px;margin-right:12px;margin-top:17px;background:url(' + urlBase64 + ') no-repeat;"></i></h3>'
                     + '<div style="height:136px;text-align:center;line-height:25px;"><div style="padding-top:45px;margin-left:15px;margin-right:15px;">'+ msg +'</div></div>'
@@ -95,14 +95,45 @@ define(['YOUKE.Util'], function () {
                     +   '<a href="javascript:void(0);" id="_confirm" style="float:left;text-decoration:none;text-align:center;height:54px;line-height:54px;width:50%;color:#FFF;background:#307EAC;">确定</a>'
                     + '</div>'
                     + '</div>'
-                    + '</div>';
-            $('body').append(tpl).on('click.confirm-delete', '#_exit,#_cancel', function () {
+                    + '</section>';
+            $('body').append(tpl).on('click.confirm-delete', '#_exit,#_cancel', function() {
                 $('body').off('.confirm-delete');
                 $('#_confirm-delete').remove();
-            }).on('click.confirm-delete', '#_confirm', function () {
+            }).on('click.confirm-delete', '#_confirm', function() {
                 $util.isFunction(cb) && cb();
                 $('body').off('.confirm-delete');
                 $('#_confirm-delete').remove();
+            });
+        },
+        showText: function () {
+            var msg, cb, title, len = arguments.length;
+            if (len < 3) {
+                title = '备注';
+                msg = arguments[0] || '';
+                cb = arguments[1];
+            } else if (len === 3) {
+                title = arguments[0];
+                msg = arguments[1];
+                cb = arguments[2];
+            }
+            var tpl = '<section id="_remark" style="z-index:999;position:fixed;top:0;right:0;bottom:0;left:0;background: rgba(0,0,0,0.4);">'
+                      + '<div style="position:absolute;left:50%;top:50%;width:344px;height:240px;margin-left:-172px;margin-top:-120px;background: #F6F6F6;font-family:Microsoft Yahei;">'
+                      + '<h3 style="width:100%;height:50px;line-height:50px;background:#444;color:#FFF;margin-top:0;margin-bottom:0;font-size:16px;"><span style="margin-left:15px;font-weight:normal;">' + title + '</span><i id="_exit" style="float:right;width:16px;height:16px;margin-right:12px;margin-top:17px;background:url(' + urlBase64 + ') no-repeat;"></i></h3>'
+                      + '<textarea style="display:block;padding:10px;color:#000;background:#FFF;height:140px;width:100%;resize:none;border:0;box-sizing:border-box;">'+ msg +'</textarea>'
+                      + '<div style="position:absolute;width:100%;bottom:0;">'
+                      +   '<a href="javascript:void(0);" id="_cancel" style="float:left;text-decoration:none;text-align:center;height:54px;line-height:54px;width:50%;color:#444;background:#DDD;">取消</a>'
+                      +   '<a href="javascript:void(0);" id="_confirm" style="float:left;text-decoration:none;text-align:center;height:54px;line-height:54px;width:50%;color:#FFF;background:#307EAC;">确定</a>'
+                      + '</div>'
+                      + '</div>'
+                      + '</section>';
+            $('body').append(tpl).on('click._remark', '#_exit,#_cancel', function() {
+                $('body').off('._remark');
+                $('#_remark').remove();
+            }).on('click._remark', '#_confirm', function() {
+                var remarkMsg = $.trim($('#_remark textarea').val());
+                $util.isFunction(cb) && cb(remarkMsg);
+                $('body').off('._remark');
+                $('#_remark').remove();
             });
         },
         /**
