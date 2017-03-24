@@ -16,17 +16,17 @@
     <div class="login-box">
         <h3 class="title">有课互联</h3>
         <div class="content">
-            <input type="text" class="text" placeholder="手机号" id="loginName" maxlength="11" v-on="input|checkLoginName">
+            <input type="text" class="text" placeholder="手机号" id="username" maxlength="11" v-on="input|checkUsername">
             <span class="error-msg dn error-login">请填写正确的手机号</span>
             <input type="password" class="text" placeholder="密码" id="password" maxlength="16" v-on="input|checkPassword">
             <span class="error-msg dn error-pwd">请填写正确的密码(6到16位)</span>
-            <p class="info">
-                <i v-on="click|autoLogin"></i>
-                <label>下次自动登录</label>
-                <span v-on="click|resetpwd">忘记密码？</span>
-            </p>
+            <!--<p class="info">-->
+                <!--<i v-on="click|autoLogin"></i>-->
+                <!--<label>下次自动登录</label>-->
+                <!--<span v-on="click|resetpwd">忘记密码？</span>-->
+            <!--</p>-->
             <a href="javascript:void(0);" class="login-btn" v-on="click|login">登录</a>
-            <a href="javascript:void(0);" class="warn" v-on="click|register">没有账号？立刻加入有课互联</a>
+            <!-- <a href="javascript:void(0);" class="warn" v-on="click|register">没有账号？立刻加入有课互联</a> -->
         </div>
     </div>
     <script src="../login/login.js"></script>

@@ -4,13 +4,13 @@
  * Date: 2016/8/24
  * Time: 13:27
  */
-require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
         $util = YOUKE.Util,
         $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
-        $http = YOUKE.Services;
+        $http = YOUKE.Service;
 
     // 修改产品分类的校验 --- BEGIN
     var checkUpdate = {

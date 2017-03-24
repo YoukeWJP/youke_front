@@ -67,7 +67,10 @@ define(['YOUKE.Adapter', 'YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert'], func
         },
         post: function(obj) {
             formatHeader(obj, 'POST');
+        },
+        put: function(obj) {
+            formatHeader(obj, 'PUT');
         }
     };
-    NameSpace.Register('YOUKE.Services', $http);
+    NameSpace.Register('YOUKE.Service', $http);
 });

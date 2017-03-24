@@ -4,13 +4,13 @@
  * Date: 2016/11/16
  * Time: 18:36
  */
-require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
         $util = YOUKE.Util,
         $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
-        $http = YOUKE.Services;
+        $http = YOUKE.Service;
 
     $('body').on('click', '#footer .detail .third', function(e) {
         $util.stop(e);

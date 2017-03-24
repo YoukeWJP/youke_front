@@ -163,6 +163,18 @@
 }
 .body .content .info .detail .time {
     margin-top: 40px;
+    height: 24px;
+    line-height: 24px;
+}
+.body .content .info .detail .time label {
+    float: left;
+}
+.body .content .info .detail .time span {
+    width: 90px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .body .content .contact {
     height: 100px;

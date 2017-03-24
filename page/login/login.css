@@ -6,9 +6,11 @@ html,body {
     left: 50%;
     top: 50%;
     width: 378px;
-    height: 304px;
+    /*height: 304px;*/
+    height: 264px;
     margin-left: -179px;
-    margin-top: -152px;
+    /*margin-top: -152px;*/
+    margin-top: -132px;
     background: #F6F6F6;
 }
 .login-box .title {
@@ -35,6 +37,7 @@ html,body {
     padding-left: 16px;
     padding-right: 16px;
     background: #FFFFFF;
+    /*margin-bottom: 30px;*/
     margin-bottom: 20px;
 }
 .login-box .content .error-msg {

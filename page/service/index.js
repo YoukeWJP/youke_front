@@ -4,13 +4,13 @@
  * Date: 2016/11/7
  * Time: 10:49
  */
-require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
         $util = YOUKE.Util,
         $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
-        $http = YOUKE.Services;
+        $http = YOUKE.Service;
 
     // 停课校验
     var checkStopCourse = {

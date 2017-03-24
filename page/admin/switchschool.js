@@ -4,13 +4,15 @@
  * Date: 2016/11/15
  * Time: 21:53
  */
-require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
         $util = YOUKE.Util,
         $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
-        $http = YOUKE.Services;
+        $http = YOUKE.Service;
+    var userInfo = JSON.parse(localStorage.getItem('ykUserInfo')) || {};
+    var currentCampusId = userInfo.campusid;//当前校区ID
 
     $('body').on('click', '.sidebar .setting', function (e) {
         $util.stop(e);
@@ -62,15 +64,66 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], fu
         $core.nextPage('Admin-AddSchool');
     })
     .on('click', '.body .content .operate', function() {
+        var $this = $(this),
+            campusid = $this.closest('li').attr('data-campusid');
         Alert.showConfirm('确认切换', '确认切换校区么？', function() {
-            //TODO
-            alert('切换了校区');
+            switchCampus(campusid, function(){
+                $this.closest('li').addClass('selected').siblings('li').removeClass('selected');
+            });
         });
     })
     //校区列表相关操作 --- END
     ;
 
+    function getCampusList() {
+        $http.get({
+            url: 'api/campus/lists',
+            success: function(data) {
+                if(data.code === $comm.HttpStatus.OK) {
+                    var tpl = '<li data-campusid="{#campusid#}" class="{#selected#}">'
+                            +   '<span class="name">{#name#}</span>'
+                            +   '<a href="javascript:void(0);" class="operate">'
+                            +   '</a>'
+                            + '</li>',
+                        list = [];
+                    for(var i = 0; i < data.data.length; i++) {
+                        var item = data.data[i];
+                        list.push($util.strReplace(tpl, {
+                            '{#campusid#}' : item.campusid,
+                            '{#name#}' : item.name,
+                            '{#selected#}' : currentCampusId == item.campusid ? 'selected' : ''
+                        }));
+                    }
+                    $('#schools').html(list.join(''));
+                }
+            }
+        });
+    }
+
+    function switchCampus(campusid, cb) {
+        $http.post({
+            url: 'api/campus/switching',
+            data: {
+                campusid: campusid
+            },
+            success: function(data) {
+                if (data.code === $comm.HttpStatus.OK) {
+                    currentCampusId = campusid;
+                    userInfo.campusid = currentCampusId;
+                    updateLocalStorage();
+                    $util.isFunction(cb) && cb();
+                } else {
+                    Alert.showError(data.message || '切换校区失败');
+                }
+            }
+        });
+    }
+
+    function updateLocalStorage() {
+        localStorage.setItem('ykUserInfo', JSON.stringify(userInfo));
+    }
     $core.Ready(function() {
         console.log('switchschool');
+        getCampusList();
     });
 });

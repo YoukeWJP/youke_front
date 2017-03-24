@@ -4,10 +4,10 @@
  * Date: 2016/11/18
  * Time: 14:15
  */
-require(['YOUKE.Util', 'YOUKE.Services', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $util = YOUKE.Util,
-        $http = YOUKE.Services,
+        $http = YOUKE.Service,
         Alert = YOUKE.Widget.Alert;
 
     $(document)

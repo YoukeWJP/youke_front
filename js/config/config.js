@@ -21,7 +21,8 @@ YOUKE.Core.config({
             'YOUKE.Parse'                    :           'js/youke/parse.js',
             'YOUKE.Filter'                   :           'js/youke/filter.js',
             'YOUKE.Adapter'                  :           'js/youke/adapter.js',
-            'YOUKE.Services'                 :           'js/youke/service.js',
+            'YOUKE.Service'                  :           'js/youke/service.js',
+            'YOUKE.Request'                  :           'js/youke/request.js',
             //YOUKE --- END
 
             //Widget --- BEGIN

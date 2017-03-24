@@ -4,13 +4,13 @@
  * Date: 2016/10/29
  * Time: 20:58
  */
-require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
         $util = YOUKE.Util,
         $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
-        $http = YOUKE.Services;
+        $http = YOUKE.Service;
 
     //校验单项课程折扣中表格的折扣
     var checkTableDiscountFunc = function() {

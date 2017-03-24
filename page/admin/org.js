@@ -4,13 +4,15 @@
  * Date: 2016/9/28
  * Time: 17:29
  */
-require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
         $util = YOUKE.Util,
         $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
-        $http = YOUKE.Services;
+        $http = YOUKE.Service;
+    var userInfo = JSON.parse(localStorage.getItem('ykUserInfo')) || {};
+    var currentCampusId = userInfo.campusid;//当前校区ID
 
     $('body').on('click', '.sidebar .setting', function (e) {
         $util.stop(e);
@@ -72,78 +74,88 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Services', 'YOUKE.Widget.Alert'], fu
         $('#mask-modify-logo').addClass('dn');
         initUploadModle();
     })
-    .on('click', '#mask-modify-logo .bar .confirm', function(){
-        var item = {};
-        var $image = $('#mask-modify-logo .left img');
-        var result = $image.cropper('getCroppedCanvas');
-        var url = result.toDataURL('image/jpeg');
-        $image.cropper('clear');
-        $('#mask-modify-logo .normal img').attr('src', url);
-        uploadImage(item, function(){
-            $('#mask-modify-logo').addClass('dn');
-        });
-    })
+    // .on('click', '#mask-modify-logo .bar .confirm', function(){
+    //     var item = {};
+    //     var $image = $('#mask-modify-logo .left img');
+    //     var result = $image.cropper('getCroppedCanvas');
+    //     var url = result.toDataURL('image/jpeg');
+    //     $image.cropper('clear');
+    //     $('#mask-modify-logo .normal img').attr('src', url);
+    //     uploadImage(item, function(){
+    //         $('#mask-modify-logo').addClass('dn');
+    //     });
+    // })
     //上传图片相关操作 --- END
     ;
 
-    function uploadImage(item, cb) {
+    // function uploadImage(item, cb) {
+    //     $http.post({
+    //         url: '',
+    //         data: item,
+    //         success: function(data) {
+    //             if (data.code === $comm.HttpStatus.OK) {
+    //                 $util.isFunction(cb) && cb();
+    //             } else {
+    //                 Alert.showError('上传图片失败');
+    //             }
+    //         },
+    //         error: function() {
+    //             Alert.showError('上传图片失败');
+    //         },
+    //         complete: function () {
+    //             initUploadModle();
+    //         }
+    //     });
+    // }
+
+    // function cropper(file) {
+    //     var reader = new FileReader();
+    //     // 将文件以Data URL形式进行读入页面
+    //     reader.readAsDataURL(file);
+    //     reader.onload = function(e) {
+    //         var el = e.srcElement || e.target;
+    //         var $selector = $('#mask-modify-logo .modify .left img');
+    //         $selector.attr('src', el.result);
+    //         $selector.cropper({
+    //             aspectRatio: 1 / 1,
+    //             preview: '.img-preview',
+    //             modal: false,
+    //             crop: function(e) {
+    //                 // Output the result data for cropping image.
+    //                 console.log(e);
+    //                 console.log(e.x);
+    //                 console.log(e.y);
+    //                 console.log(e.width);
+    //                 console.log(e.height);
+    //                 console.log(e.rotate);
+    //                 console.log(e.scaleX);
+    //                 console.log(e.scaleY);
+    //             }
+    //         });
+    //     };
+    // }
+
+    // function initUploadModle() {
+    //     $('#file').off('change').replaceWith('<input type="file" class="file" id="file">');
+    //     $('#file').on('change', function() {
+    //         var file = this.files[0];
+    //         cropper(file);
+    //     });
+    // }
+
+    function getCampusInfo() {
         $http.post({
-            url: '',
-            data: item,
+            url: 'api/campus/info/campusid/' + currentCampusId,
             success: function(data) {
+                console.log(data);
                 if (data.code === $comm.HttpStatus.OK) {
-                    $util.isFunction(cb) && cb();
-                } else {
-                    Alert.showError('上传图片失败');
+                    //
                 }
-            },
-            error: function() {
-                Alert.showError('上传图片失败');
-            },
-            complete: function () {
-                initUploadModle();
             }
-        });
-    }
-
-    function cropper(file) {
-        var reader = new FileReader();
-        // 将文件以Data URL形式进行读入页面
-        reader.readAsDataURL(file);
-        reader.onload = function(e) {
-            var el = e.srcElement || e.target;
-            var $selector = $('#mask-modify-logo .modify .left img');
-            $selector.attr('src', el.result);
-            $selector.cropper({
-                aspectRatio: 1 / 1,
-                preview: '.img-preview',
-                modal: false,
-                crop: function(e) {
-                    // Output the result data for cropping image.
-                    console.log(e);
-                    console.log(e.x);
-                    console.log(e.y);
-                    console.log(e.width);
-                    console.log(e.height);
-                    console.log(e.rotate);
-                    console.log(e.scaleX);
-                    console.log(e.scaleY);
-                }
-            });
-        };
-    }
-
-    function initUploadModle() {
-        console.log('111');
-        console.log('xxx');
-        console.log('222');
-        $('#file').off('change').replaceWith('<input type="file" class="file" id="file">');
-        $('#file').on('change', function() {
-            var file = this.files[0];
-            cropper(file);
         });
     }
     $core.Ready(function() {
         console.log('org');
+        getCampusInfo();
     });
 });

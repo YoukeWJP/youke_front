@@ -133,7 +133,7 @@
     width: 80%;
     padding-left: 100px;
 }
-.body .content ul li .name.selected:after{
+.body .content ul li.selected .name:after{
     color: #BA5050;
     content: '（已选择）';
 }

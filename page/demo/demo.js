@@ -1,7 +1,7 @@
-require(['YOUKE.Services', 'YOUKE.Parse'], function(require, exports, module) {
+require(['YOUKE.Service', 'YOUKE.Parse'], function(require, exports, module) {
     var $core = YOUKE.Core;
     var $scope = YOUKE.Scope;
-    var $http = YOUKE.Services;
+    var $http = YOUKE.Service;
     var $parse = YOUKE.Parse;
     var $util = YOUKE.Util;
     console.log(window.echarts);

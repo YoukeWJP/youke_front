@@ -4,22 +4,22 @@
  * Date: 2016/10/20
  * Time: 10:27
  */
-require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Services', 'YOUKE.Parse', 'YOUKE.Services'], function() {
+require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Service', 'YOUKE.Parse', 'YOUKE.Service'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
         $util = YOUKE.Util,
         Alert = YOUKE.Widget.Alert,
         $comm = YOUKE.Comm,
-        $http = YOUKE.Services;
+        $http = YOUKE.Service;
 
     var checkFunc = {
-        loginName: function() {
+        username: function() {
             var flag = false,
-                loginName = $('#loginName').val(),
+                username = $('#username').val(),
                 $selector = $('.error-login');
-            if (!loginName) {
+            if (!username) {
                 $selector.removeClass('dn');
-            } else if (!$util.isMobile(loginName)) {
+            } else if (!$util.isMobile(username)) {
                 $selector.removeClass('dn');
             } else {
                 flag = true;
@@ -43,7 +43,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Services', 'YO
         }
     };
 
-    $scope.checkLoginName = checkFunc.loginName;
+    $scope.checkUsername = checkFunc.username;
     $scope.checkPassword = checkFunc.password;
 
     $scope.autoLogin = function(e) {
@@ -79,11 +79,12 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Services', 'YO
         $http.post({
             url: 'api/auth/login',
             data: {
-                username: $.trim($('#loginName').val()),
+                username: $.trim($('#username').val()),
                 password: $('#password').val()
             },
             success: function(data) {
                 if (data.code === $comm.HttpStatus.OK) {
+                    localStorage.setItem('ykUserInfo', JSON.stringify(data.data));
                     $util.isFunction(cb) && cb(data.data);
                 } else {
                     Alert.showError(data.message || '登录失败');
@@ -104,7 +105,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Services', 'YO
     ;
 
     $core.Ready(function() {
-        console.log('login');
         localStorage.clear();
-    }, 1);
+        console.log('login');
+    });
 });

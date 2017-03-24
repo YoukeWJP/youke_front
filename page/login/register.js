@@ -4,11 +4,11 @@
  * Date: 2016/10/20
  * Time: 11:41
  */
-require(['YOUKE.Util', 'YOUKE.Services', 'YOUKE.Parse'], function() {
+require(['YOUKE.Util', 'YOUKE.Service', 'YOUKE.Parse'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
         $util = YOUKE.Util,
-        $http = YOUKE.Services;
+        $http = YOUKE.Service;
 
     var checkFunc = {
         loginName: function() {

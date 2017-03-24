@@ -4,13 +4,13 @@
  * Date: 2016/10/20
  * Time: 18:41
  */
-require(['YOUKE.Util', 'YOUKE.Parse', 'YOUKE.Services', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Parse', 'YOUKE.Request', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
         $util = YOUKE.Util,
         Alert = YOUKE.Widget.Alert,
-        $http = YOUKE.Services;
-
+        $request = YOUKE.Request;
+    var userInfo = JSON.parse(localStorage.getItem('ykUserInfo')) || {};
     var checkFunc = {
         oldPassword: function() {
             var flag = false,
@@ -86,9 +86,11 @@ require(['YOUKE.Util', 'YOUKE.Parse', 'YOUKE.Services', 'YOUKE.Widget.Alert'], f
         $core.nextPage('Admin-Home-About');
     })
     .on('click', '#person-info li.exit', function() {
-        Alert.showConfirm('确认退出', '确认退出账号：<br/>员工名(18512345678)', function() {
-            //TODO
-            $core.nextPage('Login-Login');
+        var username = userInfo.username || '';
+        Alert.showConfirm('确认退出', '确认退出账号：<br/>员工账号(' + username + ')', function() {
+            $request.logout(function() {
+                $core.nextPage('Login-Login');
+            });
         });
     })
     //左侧菜单相关操作 --- END
@@ -118,6 +120,7 @@ require(['YOUKE.Util', 'YOUKE.Parse', 'YOUKE.Services', 'YOUKE.Widget.Alert'], f
     $scope.checkOldPassword = checkFunc.oldPassword;
     $scope.checkNewPassword = checkFunc.newPassword;
     $scope.checkNewConfirmPassword = checkFunc.newConfirmPassword;
+
     $core.Ready(function() {
         console.log('personalinfo');
     });
