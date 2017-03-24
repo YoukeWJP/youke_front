@@ -4,10 +4,11 @@
  * Date: 2016/10/29
  * Time: 21:00
  */
-require(['YOUKE.Util', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
         $util = YOUKE.Util,
+        $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
         $http = YOUKE.Service;
 
@@ -177,5 +178,8 @@ require(['YOUKE.Util', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     }
     $core.Ready(function() {
         console.log('discountmgr');
+        if ($util.getCurrentRole() === $comm.Role.admin) {
+            $('#setting').parents('li').removeClass('dn');
+        }
     });
 });

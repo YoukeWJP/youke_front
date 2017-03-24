@@ -167,6 +167,11 @@ define(function() {
             });
             return uuid;
         },
+        // 获取当前用户的角色
+        getCurrentRole: function(){
+            var userInfo = JSON.parse(localStorage.getItem('ykUserInfo')) || {};
+            return userInfo.role || '';
+        },
         // 获取当前URL的参数
         getParams: function() {
             var args = {};

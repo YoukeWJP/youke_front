@@ -173,6 +173,9 @@ require(['YOUKE.Util', 'YOUKE.Parse', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widg
     }
     $core.Ready(function() {
         console.log('org');
+        if ($util.getCurrentRole() === $comm.Role.admin) {
+            $('#setting').parents('li').removeClass('dn');
+        }
         getCampusInfo();
     });
 });

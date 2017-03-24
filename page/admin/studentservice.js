@@ -95,5 +95,8 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
 
     $core.Ready(function() {
         console.log('studentservice');
+        if ($util.getCurrentRole() === $comm.Role.admin) {
+            $('#setting').parents('li').removeClass('dn');
+        }
     });
 });
