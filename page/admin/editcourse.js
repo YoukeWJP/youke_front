@@ -159,7 +159,8 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         createCourse(item, function() {
             //
         });
-    }).on('click', '.top .confirm,.bottom .confirm', function() {
+    })
+    .on('click', '.top .confirm,.bottom .confirm', function() {
         for (var key in checkFunc) {
             if (!checkFunc[key]()) {
                 return;
@@ -173,38 +174,53 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     // 输入校验 --- BEGIN
     .on('input', '#courseName', function() {
         checkFunc.courseName();
-    }).on('input', '#price', function() {
+    })
+    .on('input', '#price', function() {
         checkFunc.price();
-    }).on('input', '#totalHours', function() {
+    })
+    .on('input', '#totalHours', function() {
         checkFunc.totalHours();
-    }).on('input', '#expirationDate', function() {
+    })
+    .on('input', '#expirationDate', function() {
         checkFunc.expirationDate();
-    }).on('input', '#hoursPerClass', function() {
+    })
+    .on('input', '#hoursPerClass', function() {
         checkFunc.hoursPerClass();
-    }).on('input', '#comment', function() {
+    })
+    .on('input', '#comment', function() {
         checkFunc.comment();
     })
     // 输入校验 --- END
     .on('click', '#category>span', function() {
         $('#category ul').removeClass('dn');
-    }).on('mouseover', '#category li', function() {
+    })
+    .on('mouseover', '#category li', function() {
         $(this).addClass('active').siblings('li').removeClass('active');
-    }).on('click', '#category li', function() {
+    })
+    .on('click', '#category li', function() {
         var $this = $(this);
         var categoryId = $this.attr('data-categoryid'),
             categoryName = $this.text();
         $('#category>span').attr('data-categoryid', categoryId).text(categoryName).removeClass('error');
         $('#category ul').addClass('dn');
-    }).on('click', '#course>span', function() {
+    })
+    .on('click', '#course>span', function() {
         $('#course ul').removeClass('dn');
-    }).on('mouseover', '#course li', function() {
+    })
+    .on('mouseover', '#course li', function() {
         $(this).addClass('active').siblings('li').removeClass('active');
-    }).on('click', '#course li', function() {
+    })
+    .on('click', '#course li', function() {
         var $this = $(this);
         var courseId = $this.attr('data-coursetype'),
             coursetype = $this.text();
         $('#course>span').attr('data-coursetype', courseId).text(coursetype).removeClass('error');
         $('#course ul').addClass('dn');
+        if (courseId === 'by_expiration') {
+            $('#totalHours,#hoursPerClass').closest('li').addClass('dn');
+        } else {
+            $('#totalHours,#hoursPerClass').closest('li').removeClass('dn');
+        }
     });
     // 获取类别数据
     function getCategory() {

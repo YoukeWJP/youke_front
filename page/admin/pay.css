@@ -125,7 +125,7 @@
     width: 60%;
     padding-left: 100px;
 }
-.body .content ul li .type.close:after {
+.body .content ul li.close .type:after {
     color: #BA5050;
     content: '（已关闭）';
 }

@@ -212,6 +212,11 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             coursetype = $this.text();
         $('#course>span').attr('data-coursetype', courseId).text(coursetype).removeClass('error');
         $('#course ul').addClass('dn');
+        if(courseId === 'by_expiration') {
+            $('#totalHours,#hoursPerClass').closest('li').addClass('dn');
+        } else {
+            $('#totalHours,#hoursPerClass').closest('li').removeClass('dn');
+        }
     })
     ;
 

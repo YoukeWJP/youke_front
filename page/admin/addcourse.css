@@ -215,21 +215,13 @@
     float: left;
     margin-left: 10px;
 }
-.main .content>ul li.eighth {
-    position: absolute;
-    top: 378px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
 .main .content>ul li.eighth textarea {
     border: 0;
     width: 100%;
     box-sizing: border-box;
     padding: 12px;
-    position: absolute;
-    top: 18px;
     bottom: 12px;
+    margin-top: 10px;
     resize: none;
     font-size: 16px;
 }

@@ -169,7 +169,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         $this.addClass('active').siblings('li').removeClass('active');
         if (!$this.hasClass('self-define')) {
             Alert.showConfirm('签到确认', '签到内容<br/>课程名称：' + content, function() {
-                //TODO
+                $('#mask-course-signin').addClass('dn');
             });
         }
     })

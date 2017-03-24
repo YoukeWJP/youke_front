@@ -16,7 +16,6 @@
     margin-right: 14px;
     cursor: pointer;
 }
-
 .main .sidebar .content .student{
 	width: 348px;
 	height: 90px;
@@ -445,6 +444,16 @@
     background: #EEEEEE;
     font-size: 24px;
 }
+.mask-settle .dialog .content .pay .confirm {
+    text-align: center;
+    width: 346px;
+    height: 90px;
+    line-height: 90px;
+    position: absolute;
+    right: 16px;
+    bottom: 126px;
+    font-size: 24px;
+}
 .mask-settle .dialog .content .pay .way .way1 {
     float: left;
     width: 168px;
@@ -461,7 +470,7 @@
     background: #FFFFFF;
     text-align: center;
 }
-.mask-settle .dialog .content .pay .way .way3 {
+.mask-settle .dialog .content .pay .confirm .way3 {
     width: 100%;
     height: 80px;
     line-height: 80px;
@@ -470,7 +479,7 @@
 }
 .mask-settle .dialog .content .pay .way .way1.active,
 .mask-settle .dialog .content .pay .way .way2.active,
-.mask-settle .dialog .content .pay .way .way3.active {
+.mask-settle .dialog .content .pay .confirm .way3.active {
     background: #317FAF;
     color: #FFFFFF;
 }

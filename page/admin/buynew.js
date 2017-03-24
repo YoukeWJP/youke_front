@@ -40,7 +40,8 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     $(document)
     //左侧相关操作 --- BEGIN
     .on('click', '#sidebar .title i', function() {
-        $core.nextPage('Service-Index');
+        // $core.nextPage('Admin-MgrStudent');
+        window.history.go(-1);
     })
     .on('click', '#sidebar .course i', function() {
         var $this = $(this);
@@ -92,7 +93,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     })
     .on('click', '#mask-favorable .content li', function() {
         var $this = $(this);
-        $this.addClass('active').siblings('li').removeClass('active');
+        $this.toggleClass('active').siblings('li').removeClass('active');
     })
     .on('click', '#mask-favorable .other', function() {
         $('#mask-favorable-input .content .money').val('0');
