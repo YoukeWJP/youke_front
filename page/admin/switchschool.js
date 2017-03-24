@@ -14,7 +14,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     var userInfo = JSON.parse(localStorage.getItem('ykUserInfo')) || {};
     var currentCampusId = userInfo.campusid;//当前校区ID
 
-    $('body').on('click', '.sidebar .setting', function (e) {
+    $('body').on('click', '.sidebar-nav .setting', function (e) {
         $util.stop(e);
     });
     $(document)

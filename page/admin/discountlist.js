@@ -28,7 +28,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             return flag;
         }
     };
-    $('body').on('click', '.sidebar .setting', function (e) {
+    $('body').on('click', '.sidebar-nav .setting', function (e) {
         $util.stop(e);
     });
     $(document)

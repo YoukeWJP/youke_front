@@ -12,7 +12,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         Alert = YOUKE.Widget.Alert,
         $http = YOUKE.Service;
 
-    $('body').on('click', '.sidebar .setting', function (e) {
+    $('body').on('click', '.sidebar-nav .setting', function (e) {
         $util.stop(e);
     });
     $(document)
