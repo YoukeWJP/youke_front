@@ -4,20 +4,21 @@
  * Date: 2016/10/10
  * Time: 16:20
  */
-require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Parse', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
+        $parse = YOUKE.Parse,
         $util = YOUKE.Util,
         $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
         $http = YOUKE.Service;
-    var CONST = {
-        cid: 1 //$util.getQuery('cid')
-    };
+    var userInfo = JSON.parse(localStorage.getItem('ykUserInfo')) || {};
+    var currentCampusId = userInfo.campusid;//当前校区ID
+
     var checkFunc = {
-        school: function() {
+        shortname: function() {
             var flag = false,
-                $selector = $('#school');
+                $selector = $('#shortname');
             var value = $selector.val().trim();
             if (!value) {
                 $selector.addClass('error');
@@ -32,13 +33,13 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             }
             return flag;
         },
-        org: function() {
+        name: function() {
             var flag = false,
-                $selector = $('#org');
+                $selector = $('#name');
             var value = $selector.val().trim();
             if (!value) {
                 $selector.addClass('error');
-                Alert.showTips($selector, '请输入机构全称');
+                Alert.showTips($selector, '请输入校区全称');
             } else {
                 flag = true;
                 Alert.hideTips();
@@ -46,9 +47,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             }
             return flag;
         },
-        url: function() {
+        website: function() {
             var flag = false,
-                $selector = $('#url');
+                $selector = $('#website');
             var value = $selector.val().trim();
             if (!value) {
                 $selector.addClass('error');
@@ -63,9 +64,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             }
             return flag;
         },
-        mobile: function() {
+        phone: function() {
             var flag = false,
-                $selector = $('#mobile');
+                $selector = $('#phone');
             var value = $selector.val().trim();
             if (!value) {
                 $selector.addClass('error');
@@ -97,9 +98,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             }
             return flag;
         },
-        desc: function() {
+        description: function() {
             var flag = false,
-                $selector = $('#desc');
+                $selector = $('#description');
             var value = $selector.val().trim();
             if (!value) {
                 $selector.addClass('error');
@@ -123,8 +124,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
                 return;
             }
         }
-        var item = {};
-        modifyOrg(item, function() {
+        updateCampusInfo(function() {
             $core.nextPage('Admin-Org');
         });
     })
@@ -144,28 +144,32 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     })
     // 输入校验 --- END
     ;
-    // 获取类别数据
-    function getOrgInfo() {
-        $http.get({
-            url: 'org/list/' + CONST.cid,
+    // 获取机构数据
+    function getCampusInfo() {
+        $http.post({
+            url: 'api/campus/info/campusid/' + currentCampusId,
             success: function(data) {
                 if (data.code === $comm.HttpStatus.OK) {
-                    var info = data.data;
-                    $('#school').val(info.school);
-                    $('#org').val(info.org);
-                    $('#url').val(info.url);
-                    $('#mobile').val(info.mobile);
-                    $('#email').val(info.email);
-                    $('#desc').val(info.desc);
+                    var item = data.data;
+                    currentCampusId = item.campusid;
+                    $parse.sync(item);
                 }
             }
         });
     }
-    //创建新课程
-    function modifyOrg(item, cb) {
+    //修改机构信息
+    function updateCampusInfo(cb) {
         $http.post({
-            url: 'org/update',
-            data: item,
+            url: 'api/campus/update',
+            data: {
+                campusid : currentCampusId,
+                name : $.trim($('#name').val()),
+                shortname : $.trim($('#shortname').val()),
+                website : $.trim($('#website').val()),
+                phone : $.trim($('#phone').val()),
+                email : $.trim($('#email').val()),
+                description : $.trim($('#description').val())
+            },
             success: function(data) {
                 if (data.code === $comm.HttpStatus.OK) {
                     Alert.showSuccess();
@@ -176,6 +180,6 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     }
     $core.Ready(function() {
         console.log('modifyorg');
-        getOrgInfo();
+        getCampusInfo();
     });
 });

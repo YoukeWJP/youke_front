@@ -4,9 +4,10 @@
  * Date: 2016/9/28
  * Time: 17:29
  */
-require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Parse', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
+        $parse = YOUKE.Parse,
         $util = YOUKE.Util,
         $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
@@ -147,9 +148,25 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         $http.post({
             url: 'api/campus/info/campusid/' + currentCampusId,
             success: function(data) {
-                console.log(data);
                 if (data.code === $comm.HttpStatus.OK) {
-                    //
+                    var item = data.data;
+                    var website = item.website,
+                        phone = item.phone,
+                        email = item.email;
+                    $parse.sync(item);
+                    $selector = $('.body .contact .detail');
+                    $selector.find('[data-type="website"] a').attr({
+                        href: website,
+                        title: website
+                    });
+                    $selector.find('[data-type="phone"] a').attr({
+                        href: 'tel:' + phone,
+                        title: phone
+                    });
+                    $selector.find('[data-type="email"] a').attr({
+                        href: 'mailto:' + email,
+                        title: email
+                    });
                 }
             }
         });

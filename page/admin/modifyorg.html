@@ -27,32 +27,32 @@
                 </li>
                 <li class="detail">
                     <label>校区名称：</label>
-                    <input type="text" placeholder="校区名称" maxlength="16" id="school">
+                    <input type="text" placeholder="校区名称" maxlength="16" id="shortname" v-data="shortname">
                 </li>
                 <li class="detail">
-                    <label>机构全称：</label>
-                    <input type="text" placeholder="机构全称" maxlength="16" id="org">
+                    <label>校区全称：</label>
+                    <input type="text" placeholder="校区全称" maxlength="16" id="name" v-data="name">
                 </li>
                 <li class="title">
                     <label>联系方式：</label>
                 </li>
                 <li class="detail">
                     <label>网址：</label>
-                    <input type="text" placeholder="网址" maxlength="50" id="url">
+                    <input type="text" placeholder="网址" maxlength="50" id="website" v-data="website">
                 </li>
                 <li class="detail">
                     <label>电话：</label>
-                    <input type="text" placeholder="电话" maxlength="16" id="mobile">
+                    <input type="text" placeholder="电话" maxlength="16" id="phone" v-data="phone">
                 </li>
                 <li class="detail">
                     <label>邮箱：</label>
-                    <input type="text" placeholder="邮箱" maxlength="50" id="email">
+                    <input type="text" placeholder="邮箱" maxlength="50" id="email" v-data="email">
                 </li>
                 <li class="title">
                     <label>描述：</label>
                 </li>
                 <li class="desc">
-                    <textarea placeholder="机构的简介(不超过200个字)" cols="30" rows="10" id="desc"></textarea>
+                    <textarea placeholder="机构的简介(不超过200个字)" cols="30" rows="10" id="description" v-data="description"></textarea>
                 </li>
             </ul>
         </div>

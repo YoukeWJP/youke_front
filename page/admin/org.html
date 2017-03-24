@@ -70,33 +70,33 @@
                         <img id="orgLogo" src="">
                     </div>
                     <div class="detail">
-                        <h2>门店名称</h2>
-                        <p class="name">机构全称</p>
+                        <h2 v-data="shortname">有课互联</h2>
+                        <p class="name" v-data="name">有课互联</p>
                         <div class="time">
                             <label>创建于：</label>
-                            <span>2016-09-01 00:00:00</span>
+                            <span v-data="create">2016-09-01 00:00:00</span>
                         </div>
                     </div>
                 </div>
                 <div class="contact">
                     <label class="label">联系方式：</label>
                     <div class="detail">
-                        <p>
+                        <p data-type="website">
                             <label>网址：</label>
-                            <a href="http://www.youkeonline.cn" title="http://www.youkeonline.cn">http://www.youkeonline.cn</a>
+                            <a href="http://www.youkehulian.com" title="http://www.youkehulian.com" v-data="website">http://www.youkehulian.com</a>
                         </p>
-                        <p>
-                            <label>电话：</label><a href="tel:12345678" title="12345678">12345678</a>
+                        <p data-type="phone">
+                            <label>电话：</label><a href="tel:18217669021" title="18217669021" v-data="phone">18217669021</a>
                         </p>
-                        <p>
-                            <label>邮箱：</label><a href="mailto:zed@youkeonline.cn" title="zed@youkeonline.cn">zed@youkeonline.cn</a>
+                        <p data-type="email">
+                            <label>邮箱：</label><a href="mailto:zed@youkeonline.cn" title="zed@youkeonline.cn" v-data="email">zed@youkeonline.cn</a>
                         </p>
                     </div>
                 </div>
                 <div class="desc">
                     <label class="label">描述：</label>
-                    <div class="detail">
-                        我的酒窝没有酒，你却醉得像 条狗.
+                    <div class="detail" v-data="description">
+                        有课互联，技术驱动教育。
                     </div>
                 </div>
             </div>

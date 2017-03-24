@@ -12,9 +12,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         Alert = YOUKE.Widget.Alert,
         $http = YOUKE.Service;
     var checkFunc = {
-        schoolName: function() {
+        shortname: function() {
             var flag = false,
-                $selector = $('#schoolName'),
+                $selector = $('#shortname'),
                 value = $selector.val().trim();
             if (!value) {
                 $selector.addClass('error');
@@ -29,9 +29,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             }
             return flag;
         },
-        schoolFullName: function() {
+        name: function() {
             var flag = false,
-                $selector = $('#schoolFullName'),
+                $selector = $('#name'),
                 value = $selector.val().trim();
             if (!value) {
                 $selector.addClass('error');
@@ -46,9 +46,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             }
             return flag;
         },
-        url: function() {
+        website: function() {
             var flag = false,
-                $selector = $('#url'),
+                $selector = $('#website'),
                 value = $selector.val().trim();
             if (!value) {
                 $selector.addClass('error');
@@ -97,9 +97,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             }
             return flag;
         },
-        comment: function() {
+        description: function() {
             var flag = false,
-                $selector = $('#comment'),
+                $selector = $('#description'),
                 value = $selector.val().trim();
             if (value.length > 200) {
                 $selector.addClass('error');
@@ -123,8 +123,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
                 return;
             }
         }
-        var item = {};
-        addSchool(item, function () {
+        addCampusInfo(function () {
             $core.nextPage('Admin-SwitchSchool');
         });
     })
@@ -135,20 +134,20 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             }
         }
         var item = {};
-        addSchool(item, function () {
+        addCampusInfo(function () {
             //
         });
     })
     //顶部菜单栏相关操作 --- END
     // 输入校验 --- BEGIN
-    .on('input', '#schoolName', function(){
-        checkFunc.schoolName();
+    .on('input', '#shortname', function(){
+        checkFunc.shortname();
     })
-    .on('input', '#schoolFullName', function(){
-        checkFunc.schoolFullName();
+    .on('input', '#name', function(){
+        checkFunc.name();
     })
-    .on('input', '#url', function(){
-        checkFunc.url();
+    .on('input', '#website', function(){
+        checkFunc.website();
     })
     .on('input', '#phone', function(){
         checkFunc.phone();
@@ -156,24 +155,32 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     .on('input', '#email', function(){
         checkFunc.email();
     })
-    .on('input', '#comment', function(){
-        checkFunc.comment();
+    .on('input', '#description', function(){
+        checkFunc.description();
     })
     // 输入校验 --- END
     ;
 
-    function addSchool(item, cb) {
+    function addCampusInfo(cb) {
         $http.post({
-            url: '',
-            data: item,
+            url: 'api/campus/update',
+            data: {
+                campusid: '',
+                name: $.trim($('#name').val()),
+                shortname: $.trim($('#shortname').val()),
+                website: $.trim($('#website').val()),
+                phone: $.trim($('#phone').val()),
+                email: $.trim($('#email').val()),
+                description: $.trim($('#description').val())
+            },
             success: function(data) {
                 if (data.code === $comm.HttpStatus.OK) {
+                    Alert.showSuccess();
                     $util.isFunction(cb) && cb();
                 }
             }
         });
     }
-
     $core.Ready(function() {
         console.log('addschool');
     });
