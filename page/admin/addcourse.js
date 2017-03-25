@@ -123,10 +123,10 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             }
             return flag;
         },
-        comment: function() {
+        description: function() {
             var flag = false,
-                $selector = $('#comment');
-            var value = $selector.val().trim();
+                $selector = $('#description');
+            var value = $.trim($selector.val());
             if (!$util.strLenGB(value)) {
                 $selector.addClass('error');
                 Alert.showTips($selector, '请填写描述');
@@ -152,8 +152,8 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             }
         }
         var item = getPostData();
-        createCourse(item, function () {
-            $('#price,#totalHours,#expirationDate,#hoursPerClass,#comment').val();
+        addCourse(item, function () {
+            $('#price,#totalHours,#expirationDate,#hoursPerClass,#description').val();
         });
     })
     .on('click', '.top .confirm,.bottom .confirm', function(){
@@ -163,7 +163,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             }
         }
         var item = getPostData();
-        createCourse(item, function () {
+        addCourse(item, function () {
             $core.nextPage('Admin-MgrCourse');
         });
     })
@@ -183,8 +183,8 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     .on('input', '#hoursPerClass', function(){
         checkFunc.hoursPerClass();
     })
-    .on('input', '#comment', function(){
-        checkFunc.comment();
+    .on('input', '#description', function(){
+        checkFunc.description();
     })
     // 输入校验 --- END
     .on('click', '#category>span', function(){
@@ -212,7 +212,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             coursetype = $this.text();
         $('#course>span').attr('data-coursetype', courseId).text(coursetype).removeClass('error');
         $('#course ul').addClass('dn');
-        if(courseId === 'by_expiration') {
+        if(courseId === '2') {//按有效期
             $('#totalHours,#hoursPerClass').closest('li').addClass('dn');
         } else {
             $('#totalHours,#hoursPerClass').closest('li').removeClass('dn');
@@ -223,31 +223,32 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     // 获取提交的数据
     function getPostData() {
         var item = {};
-        item.courseName = $.trim($('#courseName').val());
-        item.categoryId = $('#category span').attr('data-categoryid');
-        item.courseType = $('#course span').attr('data-coursetype');
+        item.course_name = $.trim($('#courseName').val());
+        item.categoryid = $('#category span').attr('data-categoryid');
+        // course_type 1、按课时 2、按有效期
+        item.course_type = $('#course span').attr('data-coursetype');
         item.price = $.trim($('#price').val());
-        item.totalHours = $.trim($('#totalHours').val());
-        item.expirationDate = $.trim($('#expirationDate').val());
-        item.hoursPerClass = $.trim($('#hoursPerClass').val());
-        item.comment = $.trim($('#comment').val());
+        item.total_course_hours = $.trim($('#totalHours').val());
+        item.expiration_days = $.trim($('#expirationDate').val());
+        item.hours_per_unit = $.trim($('#hoursPerClass').val());
+        item.description = $.trim($('#description').val());
         return item;
     }
 
     // 获取类别数据
-    function getCategory(){
+    function getCategory() {
         $http.get({
-            url : 'category/list/' + 1,
-            success : function (data) {
-                if(data.code === $comm.HttpStatus.OK) {
+            url: 'api/category/lists',
+            success: function(data) {
+                if (data.code === $comm.HttpStatus.OK) {
                     var result = [],
                         item,
-                        tpl = '<li data-categoryid="{#categoryId#}">{#categoryName#}</li>';
-                    for(var i = 0; i < data.data.length; i++){
+                        tpl = '<li data-categoryid="{#categoryid#}">{#category_name#}</li>';
+                    for (var i = 0; i < data.data.length; i++) {
                         item = data.data[i];
                         result.push($util.strReplace(tpl, {
-                            '{#categoryId#}' : item.categoryId,
-                            '{#categoryName#}' : item.categoryName
+                            '{#categoryid#}': item.categoryid,
+                            '{#category_name#}': item.category_name
                         }));
                     }
                     $('#category ul').html(result.join(''));
@@ -257,9 +258,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     }
 
     //创建新课程
-    function createCourse(item, cb) {
+    function addCourse(item, cb) {
         $http.post({
-            url : 'course/create',
+            url : 'api/course/update',
             data: item,
             success : function (data) {
                 if(data.code === $comm.HttpStatus.OK) {

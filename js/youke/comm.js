@@ -17,6 +17,11 @@ define(function() {
             'principal'         :           'principal',    //校长
             'admin'             :           'admin',        //管理员
             'superuser'         :           'superuser'     //超级用户
+        },
+        // 课程类型
+        CourseType: {
+            '1'                 :           '按课时',
+            '2'                 :           '按有效期'
         }
     };
     NameSpace.Register('YOUKE.Comm', $Comm);

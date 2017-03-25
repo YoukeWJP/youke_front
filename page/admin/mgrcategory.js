@@ -208,9 +208,8 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     // 获取类别数据
     function getCategoryList(){
         $http.post({
-            url: 'api/category/lists/',
+            url: 'api/category/lists',
             success: function(data) {
-                console.log(data);
                 if (data.code === $comm.HttpStatus.OK) {
                     var result = [],
                         item,

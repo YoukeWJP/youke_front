@@ -5,6 +5,7 @@
     bottom: 0;
     left: 48px;
     background: #FFFFFF;
+    overflow: hidden;
 }
 /*top --- BEGIN*/
 .main .top{
@@ -104,10 +105,14 @@
     bottom: 3px;
     content: '';
 }
+.main .body .content {
+    height: 100%;
+    overflow: auto;
+}
 .main .body .content ul {
-    position: absolute;
-    left: 16px;
-    right: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    height: 100%;
 }
 .main .body .content ul li {
     height: 60px;

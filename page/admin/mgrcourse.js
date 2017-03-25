@@ -11,9 +11,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
         $http = YOUKE.Service;
-    var CONST = {
-        cid : 1 //$util.getQuery('cid')
-    };
+
     $(document)
     //顶部菜单栏相关操作 --- BEGIN
     .on('click', '.top .back', function() {
@@ -23,19 +21,21 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     //  中间列表 --- BEGIN
     .on('click', '#nav li', function() {
         var $this = $(this),
-            cid = $this.attr('data-categoryid');
+            categoryid = $this.attr('data-categoryid');
         $this.addClass('active').siblings('li').removeClass('active');
-        // getCategory(cid);
+        getCourseList(categoryid);
     })
     .on('click', '#nav .back', function() {
         var $selector = $('#nav li');
         var max = $selector.length,
             first = $selector.filter(':not(.dn)').filter(':first').index(),
             last = $selector.filter(':not(.dn)').filter(':last').index();
-        if(first){
+        if (first) {
             $selector.eq(first - 1).removeClass('dn');
             $selector.eq(last).addClass('dn');
         }
+        // var categoryid = $selector.filter('active').attr('data-categoryid');
+        // getCourseList(categoryid);
     })
     .on('click', '#nav .forward', function() {
         var $selector = $('#nav li');
@@ -46,6 +46,8 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             $selector.eq(last + 1).removeClass('dn');
             $selector.eq(first).addClass('dn');
         }
+        // var categoryid = $selector.filter('active').attr('data-categoryid');
+        // getCourseList(categoryid);
     })
     .on('mouseover', '#content li', function () {
         $(this).addClass('active').siblings('li').removeClass('active');
@@ -112,30 +114,74 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     }
 
     // 获取类别数据
-    function getCategory(cid){
-        cid = cid || CONST.cid;
-        $http.get({
-            url : 'category/list/' + cid,
-            success : function (data) {
-                if(data.code === $comm.HttpStatus.OK) {
-                    var result = ['<li data-categoryid="0" class="active">全部</li>'],
+    function getCategoryList(cb){
+        $http.post({
+            url: 'api/category/lists',
+            success: function(data) {
+                if (data.code === $comm.HttpStatus.OK) {
+                    var result = ['<li data-categoryid="" class="active">全部</li>'],
                         item,
-                        tpl = '<li data-categoryid="{#categoryId#}" class="{#dn#}">{#categoryName#}</li>';
-                    for(var i = 0; i < data.data.length; i++){
+                        tpl = '<li data-categoryid="{#categoryid#}" class="{#dn#}">{#category_name#}</li>';
+                    for (var i = 0; i < data.data.length; i++) {
                         item = data.data[i];
                         result.push($util.strReplace(tpl, {
-                            '{#categoryId#}' : item.categoryId,
-                            '{#categoryName#}' : item.categoryName,
-                            '{#dn#}' : i > 3 ? 'dn' : ''
+                            '{#categoryid#}': item.categoryid,
+                            '{#category_name#}': item.category_name,
+                            '{#dn#}': i > 3 ? 'dn' : ''
                         }));
                     }
                     $('#nav ul').html(result.join(''));
+                }
+            },
+            complete: function() {
+                $util.isFunction(cb) && cb();
+            }
+        });
+    }
+
+    function getCourseList(categoryid) {
+        $http.post({
+            url: 'api/course/lists',
+            data: {
+                page : 1,
+                pagesize : 10,
+                status : '',
+                categoryid : categoryid
+            },
+            success: function(data) {
+                if (data.code === $comm.HttpStatus.OK) {
+                    var result = [],
+                        item,
+                        tpl = '<li data-courseid="{#courseid#}" data-categoryid="{#categoryid#}" data-coursetype="{#course_type#}">'
+                            +   '<span class="icon {#down#}"></span>'
+                            +   '<span class="name">'
+                            +       '<h3>{#course_name#}</h3>'
+                            +       '<span>{#courseTypeName#}</span>'
+                            +   '</span>'
+                            +   '<span class="category">产品分类</span>'
+                            +   '<span class="price">{#price#}</span>'
+                            + '</li>';
+                    for (var i = 0; i < data.data.length; i++) {
+                        item = data.data[i];
+                        result.push($util.strReplace(tpl, {
+                            '{#courseid#}': item.courseid,
+                            '{#categoryid#}': item.categoryid,
+                            '{#course_type#}': item.course_type,
+                            '{#down#}': item.status == '0' ? 'down' : '',
+                            '{#course_name#}': item.course_name,
+                            '{#courseTypeName#}': $comm.CourseType[item.course_type],
+                            '{#price#}': '￥' + (item.price || '0.00'),
+                        }));
+                    }
+                    $('#content ul').html(result.join(''));
                 }
             }
         });
     }
     $core.Ready(function() {
         console.log('mgrcourse');
-        getCategory();
+        getCategoryList(function() {
+            getCourseList();
+        });
     });
 });
