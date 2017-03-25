@@ -68,6 +68,7 @@
     top: 0;
     bottom: 0;
     padding-left: 12px;
+    overflow: auto;
 }
 .main .content ul li {
     height: 82px;
