@@ -128,11 +128,12 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         }
         var $selector = $('#mask-add-category');
         var item = {};
-        item.categoryName = $.trim($selector.find('.category-name').val());
-        item.rankScore = $.trim($selector.find('.rank').val());
+        item.category_name = $.trim($selector.find('.category-name').val());
+        item.listorder = $.trim($selector.find('.rank').val());
         item.bgcolor = $util.parseStyle($selector.find('.text i').attr('style'))['background'];
-        createCategory(item, function() {
+        addOrUpdateCategory(item, function() {
             $selector.addClass('dn');
+            getCategoryList();
         });
     })
     //增加课程分类 --- END
@@ -141,10 +142,14 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         var $this = $(this),
             $selector = $('#mask-edit-category');
         var bgColor = $this.attr('style'),
-            categoryName = $this.text();
+            categoryName = $this.text(),
+            categoryid = $this.attr('data-categoryid'),
+            listorder = $this.attr('data-listorder');
         $selector.find('.category-name').val(categoryName);
+        $selector.find('.categoryid').val(categoryid);
+        $selector.find('.rank').val(listorder);
         $selector.find('.text i').attr({
-            'style' : bgColor
+            'style': bgColor
         }).text(categoryName);
         $selector.removeClass('dn');
     })
@@ -156,10 +161,11 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         $('#mask-edit-category .text i').attr('style', bgColor);
     })
     .on('click', '#mask-edit-category .btn-delete', function() {
-        var cid = '';
+        var categoryid = $.trim($('#mask-edit-category .categoryid').val());
         Alert.showConfirm('确认删除该产品分类吗？', function() {
-            deleteCategory(cid, function() {
+            deleteCategory(categoryid, function() {
                 $('#mask-edit-category').addClass('dn');
+                getCategoryList();
             });
         });
     })
@@ -178,11 +184,14 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         }
         var $selector = $('#mask-edit-category');
         var item = {};
-        item.categoryName = $.trim($selector.find('.category-name').val());
-        item.rankScore = $.trim($selector.find('.rank').val());
+        item.categoryid = $.trim($selector.find('.categoryid').val());
+        item.category_name = $.trim($selector.find('.category-name').val());
+        item.listorder = $.trim($selector.find('.rank').val());
+        item.description = '';
         item.bgcolor = $util.parseStyle($selector.find('.text i').attr('style'))['background'];
-        updateCategory(item, function() {
+        addOrUpdateCategory(item, function() {
             $('#mask-edit-category').addClass('dn');
+            getCategoryList();
         });
     })
     //修改课程分类 --- END
@@ -196,35 +205,23 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         $core.nextPage('Admin-MgrCourse');
     });
 
-    // 增加类别
-    function createCategory(item, cb) {
-        $http.post({
-            url: 'category/create',
-            data: item,
-            success: function(data) {
-                if (data.code === $comm.HttpStatus.OK) {
-                    $util.isFunction(cb) && cb(data.data);
-                } else {
-                    Alert.showError(data.message || '添加课程类别失败');
-                }
-            }
-        });
-    }
-
     // 获取类别数据
-    function getCategory(){
-        $http.get({
-            url : 'category/list/' + 1,
-            success : function (data) {
-                if(data.code === $comm.HttpStatus.OK) {
+    function getCategoryList(){
+        $http.post({
+            url: 'api/category/lists/',
+            success: function(data) {
+                console.log(data);
+                if (data.code === $comm.HttpStatus.OK) {
                     var result = [],
                         item,
-                        tpl = '<li style="background: {#bgcolor#}">{#categoryName#}</li>';
-                    for(var i = 0; i < data.data.length; i++){
+                        tpl = '<li style="background: {#bgcolor#}" data-listorder="{#listorder#}" data-categoryid="{#categoryid#}">{#category_name#}</li>';
+                    for (var i = 0; i < data.data.length; i++) {
                         item = data.data[i];
                         result.push($util.strReplace(tpl, {
-                            '{#bgcolor#}' : item.bgcolor || '#187EAD',
-                            '{#categoryName#}' : item.categoryName
+                            '{#bgcolor#}': item.bgcolor || '#187EAD',
+                            '{#listorder#}': item.listorder,
+                            '{#categoryid#}': item.categoryid,
+                            '{#category_name#}': item.category_name
                         }));
                     }
                     $('#categoryList').html(result.join(''));
@@ -234,46 +231,46 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     }
 
     // 删除类别
-    function deleteCategory(cid, cb){
+    function deleteCategory(categoryid, cb){
         $http.post({
-            url: 'category/archive',
+            url: 'api/category/delete',
             data: {
-                cid : cid
+                categoryid: categoryid
             },
-            success: function (data) {
-                if(data.code === $comm.HttpStatus.OK) {
+            success: function(data) {
+                if (data.code === $comm.HttpStatus.OK) {
                     Alert.showSuccess();
                 } else {
                     Alert.showError();
                 }
                 $util.isFunction(cb) && cb();
             },
-            error : function () {
+            error: function() {
                 Alert.showError();
             }
         });
     }
 
-    // 更新类别数据
-    function updateCategory(item, cb) {
+    // 新增或者更新类别数据
+    function addOrUpdateCategory(item, cb) {
         $http.post({
-            url: 'category/update',
+            url: 'api/category/update',
             data: item,
-            success: function (data) {
-                if(data.code === $comm.HttpStatus.OK) {
+            success: function(data) {
+                if (data.code === $comm.HttpStatus.OK) {
                     Alert.showSuccess();
                 } else {
                     Alert.showError();
                 }
                 $util.isFunction(cb) && cb();
             },
-            error : function () {
+            error: function() {
                 Alert.showError();
             }
         });
     }
     $core.Ready(function() {
         console.log('mgrcategory');
-        getCategory();
+        getCategoryList();
     });
 });
