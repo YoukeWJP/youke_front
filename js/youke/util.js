@@ -361,7 +361,7 @@ define(function() {
             for (var i = 0; i < list.length; i++) {
                 if (list[i]) {
                     var item = list[i].split(':');
-                    result[item[0].trim()] = item[1].trim();
+                    result[$.trim(item[0])] = $.trim(item[1]);
                 }
             }
             return result;
