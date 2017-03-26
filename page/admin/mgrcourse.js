@@ -58,6 +58,8 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             var $selector = $('#sidebar-detail .content');
             $selector.find('.courseid').val(data.courseid);
             $selector.find('h3 span').text(data.course_name);
+            $selector.find('.category').children('label').text($comm.CourseType[data.course_type]);
+            $selector.find('.category [data-status="'+data.status+'"]').addClass('active');
             $selector.find('.price').text('￥' + data.price);
             $selector.find('.coursetype').text($comm.CourseType[data.course_type]);
             $selector.find('.totalhours').text(data.total_course_hours + '课时');
@@ -90,6 +92,18 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
                 var categoryid = $('#nav li.active').attr('data-categoryid');
                 getCourseList(categoryid);
             });
+        });
+    })
+    .on('click', '#sidebar-detail .category span label', function() {
+        var $this = $(this),
+            courseid = $('#sidebar-detail .courseid').val(),
+            operation = $this.attr('data-operation');
+        switchCourseStatus({
+            courseid: courseid,
+            operation: operation
+        }, function() {
+            $this.addClass('active').siblings('label').removeClass('active');
+            $('#content li[data-courseid="' + courseid + '"]').find('.icon').toggleClass('down');
         });
     })
     .on('click', '#sidebar-detail .edit', function() {
@@ -204,6 +218,21 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             },
             error: function() {
                 Alert.showError();
+            }
+        });
+    }
+
+    //切换课程状态
+    function switchCourseStatus(item, cb) {
+        $http.post({
+            url: 'api/course/switching',
+            data: item,
+            success: function(data) {
+                if (data.code === $comm.HttpStatus.OK) {
+                    $util.isFunction(cb) && cb(data.data);
+                } else {
+                    Alert.showError(data.message || '操作失败');
+                }
             }
         });
     }

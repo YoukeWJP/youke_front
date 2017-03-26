@@ -283,10 +283,10 @@
     width: 50%;
     box-sizing: border-box;
 }
-.main .sidebar-detail .content .category>span .onsale {
+.main .sidebar-detail .content .category .first.active {
     color: #187FAD;
 }
-.main .sidebar-detail .content .category>span .saleout {
+.main .sidebar-detail .content .category .second.active {
     color: #BB5050;
 }
 .main .sidebar-detail .content ul li:first-child {
