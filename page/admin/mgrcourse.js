@@ -34,8 +34,6 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             $selector.eq(first - 1).removeClass('dn');
             $selector.eq(last).addClass('dn');
         }
-        // var categoryid = $selector.filter('active').attr('data-categoryid');
-        // getCourseList(categoryid);
     })
     .on('click', '#nav .forward', function() {
         var $selector = $('#nav li');
@@ -46,17 +44,27 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             $selector.eq(last + 1).removeClass('dn');
             $selector.eq(first).addClass('dn');
         }
-        // var categoryid = $selector.filter('active').attr('data-categoryid');
-        // getCourseList(categoryid);
     })
     .on('mouseover', '#content li', function () {
         $(this).addClass('active').siblings('li').removeClass('active');
     })
     .on('click', '#content li', function () {
-        var $this = $(this);
+        var $this = $(this),
+            courseid = $this.attr('data-courseid');
         $this.addClass('active').siblings('li').removeClass('active');
-        $('#sidebar-right').addClass('dn');
-        $('#sidebar-detail').removeClass('dn');
+        getCourseDetail(courseid, function(data) {
+            $('#sidebar-right').addClass('dn');
+            $('#sidebar-detail').removeClass('dn');
+            var $selector = $('#sidebar-detail .content');
+            $selector.find('.courseid').val(data.courseid);
+            $selector.find('h3 span').text(data.course_name);
+            $selector.find('.price').text('￥' + data.price);
+            $selector.find('.coursetype').text($comm.CourseType[data.course_type]);
+            $selector.find('.totalhours').text(data.total_course_hours + '课时');
+            $selector.find('.expiration').text(data.expiration_days + '天');
+            $selector.find('.perunit').text(data.hours_per_unit + '课时');
+            $selector.find('.describe').text(data.description);
+        });
     })
     //  中间列表 --- END
     //  右侧导航菜单栏 --- BEGIN
@@ -75,16 +83,20 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     //  右侧导航菜单栏 --- END
     //  右侧详情菜单栏 --- BEGIN
     .on('click', '#sidebar-detail .delete', function() {
-        var course = $('#sidebar-detail h3').text(),
-            cid = '1';
-        Alert.showConfirm('删除课程[' + course + ']后将不能恢复，<br/>确认删除？', function () {
-            deleteCourse(cid, function () {
-                console.log('删除课程[%s]成功', course);
+        var course_name = $('#sidebar-detail h3 span').text(),
+            courseid = $('#sidebar-detail .courseid').val();
+        Alert.showConfirm('删除课程[<span style="color:red;">' + course_name + '</span>]后将不能恢复，<br/>确认删除？', function () {
+            deleteCourse(courseid, function () {
+                var categoryid = $('#nav li.active').attr('data-categoryid');
+                getCourseList(categoryid);
             });
         });
     })
     .on('click', '#sidebar-detail .edit', function() {
-        $core.nextPage('Admin-EditCourse');
+        var courseid = $('#sidebar-detail .courseid').val();
+        $core.nextPage('Admin-EditCourse', {
+            courseid: courseid
+        });
     })
     .on('click', '#sidebar-detail h3 i', function() {
         $('#sidebar-detail').addClass('dn');
@@ -93,24 +105,24 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     //  右侧详情菜单栏 --- END
     ;
     // 删除课程
-    function deleteCourse(cid, cb){
+    function deleteCourse(courseid, cb){
         $http.post({
-            url: 'course/archive',
+            url: 'api/course/delete',
             data: {
-                cid : cid
+                courseid: courseid
             },
-            success: function (data) {
-               if(data.code === $comm.HttpStatus.OK) {
-                   Alert.showSuccess();
-               } else {
-                   Alert.showError();
-               }
-               $util.isFunction(cb) && cb();
+            success: function(data) {
+                if (data.code === $comm.HttpStatus.OK) {
+                    Alert.showSuccess();
+                    $util.isFunction(cb) && cb();
+                } else {
+                    Alert.showError();
+                }
             },
-            error : function () {
-               Alert.showError();
+            error: function() {
+                Alert.showError();
             }
-       });
+        });
     }
 
     // 获取类别数据
@@ -175,6 +187,23 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
                     }
                     $('#content ul').html(result.join(''));
                 }
+            }
+        });
+    }
+    //获取单节课程详情
+    function getCourseDetail(courseid, cb) {
+        $http.get({
+            url: 'api/course/info/courseid/' + courseid,
+            success: function(data) {
+                if (data.code === $comm.HttpStatus.OK) {
+                    $util.isFunction(cb) && cb(data.data);
+                } else {
+                    Alert.showError(data.message ||'获取课程信息失败');
+                }
+
+            },
+            error: function() {
+                Alert.showError();
             }
         });
     }

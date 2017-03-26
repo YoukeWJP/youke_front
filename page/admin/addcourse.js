@@ -16,7 +16,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         courseName: function() {
             var flag = false,
                 $selector = $('#courseName');
-            var value = $selector.val().trim();
+            var value = $.trim($selector.val());
             if (!value.length) {
                 $selector.addClass('error');
                 Alert.showTips($selector, '请输入产品名称');
@@ -61,7 +61,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         price: function() {
             var flag = false,
                 $selector = $('#price');
-            var value = $selector.val().trim();
+            var value = $.trim($selector.val());
             if (!value.length) {
                 $selector.addClass('error');
                 Alert.showTips($selector, '请输入价格');
@@ -76,9 +76,12 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             return flag;
         },
         totalHours: function() {
+            if ($('#course>span').attr('data-coursetype')) { //如果是按照有效期
+                return true;
+            }
             var flag = false,
                 $selector = $('#totalHours');
-            var value = $selector.val().trim();
+            var value = $.trim($selector.val());
             if (!value.length) {
                 $selector.addClass('error');
                 Alert.showTips($selector, '请输入总课时');
@@ -95,7 +98,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         expirationDate: function() {
             var flag = false,
                 $selector = $('#expirationDate');
-            var value = $selector.val().trim();
+            var value = $.trim($selector.val());
             if (value.length && value < 0) {
                 $selector.addClass('error');
                 Alert.showTips($selector, '有效天数不能小于零');
@@ -107,9 +110,12 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             return flag;
         },
         hoursPerClass: function() {
+            if ($('#course>span').attr('data-coursetype')) { //如果是按照有效期
+                return true;
+            }
             var flag = false,
                 $selector = $('#hoursPerClass');
-            var value = $selector.val().trim();
+            var value = $.trim($selector.val());
             if (!value.length) {
                 $selector.addClass('error');
                 Alert.showTips($selector, '请输入单课消耗');
@@ -126,11 +132,12 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         description: function() {
             var flag = false,
                 $selector = $('#description');
-            var value = $.trim($selector.val());
-            if (!$util.strLenGB(value)) {
+            var value = $.trim($selector.val()),
+                len = $util.strLenGB(value);
+            if (!len) {
                 $selector.addClass('error');
                 Alert.showTips($selector, '请填写描述');
-            } else if (value > 200) {
+            } else if (len > 200) {
                 $selector.addClass('error');
                 Alert.showTips($selector, '描述不能超过200个字符');
             } else {
@@ -146,14 +153,14 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     	$core.nextPage('Admin-MgrCourse');
     })
     .on('click', '.bottom .cancel', function(){
-        for(var key in checkFunc){
-            if(!checkFunc[key]()){
+        for (var key in checkFunc) {
+            if (!checkFunc[key]()) {
                 return;
             }
         }
         var item = getPostData();
-        addCourse(item, function () {
-            $('#price,#totalHours,#expirationDate,#hoursPerClass,#description').val();
+        addCourse(item, function() {
+            $('#price,#totalHours,#expirationDate,#hoursPerClass,#description').val('');
         });
     })
     .on('click', '.top .confirm,.bottom .confirm', function(){
@@ -263,9 +270,11 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             url : 'api/course/update',
             data: item,
             success : function (data) {
-                if(data.code === $comm.HttpStatus.OK) {
+                if (data.code === $comm.HttpStatus.OK) {
                     Alert.showSuccess();
                     $util.isFunction(cb) && cb();
+                } else {
+                    Alert.showError(data.message || '创建新课程失败');
                 }
             }
         });
