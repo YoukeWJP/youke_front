@@ -236,9 +236,14 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         // course_type 1、按课时 2、按有效期
         item.course_type = $('#course span').attr('data-coursetype');
         item.price = $.trim($('#price').val());
-        item.total_course_hours = $.trim($('#totalHours').val());
+        if (item.course_type == '1') {
+            item.total_course_hours = $.trim($('#totalHours').val());
+            item.hours_per_unit = $.trim($('#hoursPerClass').val());
+        } else {
+            item.total_course_hours = '';
+            item.hours_per_unit = '';
+        }
         item.expiration_days = $.trim($('#expirationDate').val());
-        item.hours_per_unit = $.trim($('#hoursPerClass').val());
         item.description = $.trim($('#description').val());
         return item;
     }
@@ -303,13 +308,17 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     $core.Ready(function() {
         getCategory(function() {
             getCourseDetail(courseid, function(data) {
+                var course_type = data.course_type;
+                if (data.course_type == '1') {//如果是按照课时
+                    $('#totalHours,#hoursPerClass').closest('li').removeClass('dn');
+                }
                 $('#courseName').val(data.course_name);
                 $('#category span').attr({
                     'data-categoryid': data.categoryid
                 }).text(data.category_name);
                 $('#course span').attr({
-                    'data-coursetype': data.course_type
-                }).text($comm.CourseType[data.course_type]);
+                    'data-coursetype': course_type
+                }).text($comm.CourseType[course_type]);
                 $('#price').val(data.price);
                 $('#totalHours').val(data.total_course_hours);
                 $('#expirationDate').val(data.expiration_days);

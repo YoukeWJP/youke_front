@@ -235,9 +235,14 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         // course_type 1、按课时 2、按有效期
         item.course_type = $('#course span').attr('data-coursetype');
         item.price = $.trim($('#price').val());
-        item.total_course_hours = $.trim($('#totalHours').val());
+        if (item.course_type == '1') {
+            item.total_course_hours = $.trim($('#totalHours').val());
+            item.hours_per_unit = $.trim($('#hoursPerClass').val());
+        } else {
+            item.total_course_hours = '';
+            item.hours_per_unit = '';
+        }
         item.expiration_days = $.trim($('#expirationDate').val());
-        item.hours_per_unit = $.trim($('#hoursPerClass').val());
         item.description = $.trim($('#description').val());
         return item;
     }

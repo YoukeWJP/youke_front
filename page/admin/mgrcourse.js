@@ -59,7 +59,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             $selector.find('.courseid').val(data.courseid);
             $selector.find('h3 span').text(data.course_name);
             $selector.find('.category').children('label').text($comm.CourseType[data.course_type]);
-            $selector.find('.category [data-status="'+data.status+'"]').addClass('active');
+            $selector.find('.category [data-status="' + data.status + '"]').addClass('active').siblings('label').removeClass('active');
             $selector.find('.price').text('￥' + data.price);
             $selector.find('.coursetype').text($comm.CourseType[data.course_type]);
             $selector.find('.totalhours').text(data.total_course_hours + '课时');
