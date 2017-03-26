@@ -184,7 +184,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
                             +       '<h3>{#course_name#}</h3>'
                             +       '<span>{#courseTypeName#}</span>'
                             +   '</span>'
-                            +   '<span class="category">产品分类</span>'
+                            +   '<span class="category">{#category_name#}</span>'
                             +   '<span class="price">{#price#}</span>'
                             + '</li>';
                     for (var i = 0; i < data.data.length; i++) {
@@ -196,6 +196,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
                             '{#down#}': item.status == '0' ? 'down' : '',
                             '{#course_name#}': item.course_name,
                             '{#courseTypeName#}': $comm.CourseType[item.course_type],
+                            '{#category_name#}': item.category_name,
                             '{#price#}': '￥' + (item.price || '0.00'),
                         }));
                     }
