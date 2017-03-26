@@ -155,18 +155,24 @@ require(['YOUKE.Util', 'YOUKE.Parse', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widg
                         email = item.email;
                     $parse.sync(item);
                     $selector = $('.body .contact .detail');
-                    $selector.find('[data-type="website"] a').attr({
-                        href: website,
-                        title: website
-                    });
-                    $selector.find('[data-type="phone"] a').attr({
-                        href: 'tel:' + phone,
-                        title: phone
-                    });
-                    $selector.find('[data-type="email"] a').attr({
-                        href: 'mailto:' + email,
-                        title: email
-                    });
+                    if (website) {
+                        $selector.find('[data-type="website"] a').attr({
+                            href: website,
+                            title: website
+                        });
+                    }
+                    if (phone) {
+                        $selector.find('[data-type="phone"] a').attr({
+                            href: 'tel:' + phone,
+                            title: phone
+                        });
+                    }
+                    if (email) {
+                        $selector.find('[data-type="email"] a').attr({
+                            href: 'mailto:' + email,
+                            title: email
+                        });
+                    }
                 }
             }
         });
