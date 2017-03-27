@@ -1,4 +1,4 @@
-(function() {
+!(function() {
     window.NameSpace = {
         Register: function(name, cls) {
             var context = window,

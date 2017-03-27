@@ -76,7 +76,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             return flag;
         },
         totalHours: function() {
-            if ($('#course>span').attr('data-coursetype')) { //如果是按照有效期
+            if ($('#course>span').attr('data-coursetype') == '2') { //如果是按照有效期
                 return true;
             }
             var flag = false,
@@ -110,18 +110,20 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             return flag;
         },
         hoursPerClass: function() {
-            if ($('#course>span').attr('data-coursetype')) { //如果是按照有效期
-                return true;
-            }
             var flag = false,
                 $selector = $('#hoursPerClass');
-            var value = $.trim($selector.val());
+            var value = $.trim($selector.val()),
+                totalHours = $.trim($('#totalHours').val()),
+                courseid = $('#course>span').attr('data-coursetype');
             if (!value.length) {
                 $selector.addClass('error');
                 Alert.showTips($selector, '请输入单课消耗');
             } else if (value < 0) {
                 $selector.addClass('error');
                 Alert.showTips($selector, '单课消耗不能小于零');
+            } else if (courseid == '1' && value > totalHours) {
+                $selector.addClass('error');
+                Alert.showTips($selector, '单课消耗不能大于总课时');
             } else {
                 flag = true;
                 Alert.hideTips();
@@ -220,9 +222,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         $('#course>span').attr('data-coursetype', courseId).text(coursetype).removeClass('error');
         $('#course ul').addClass('dn');
         if(courseId === '2') {//按有效期
-            $('#totalHours,#hoursPerClass').closest('li').addClass('dn');
+            $('#totalHours').closest('li').addClass('dn');
         } else {
-            $('#totalHours,#hoursPerClass').closest('li').removeClass('dn');
+            $('#totalHours').closest('li').removeClass('dn');
         }
     })
     ;
@@ -237,11 +239,10 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         item.price = $.trim($('#price').val());
         if (item.course_type == '1') {
             item.total_course_hours = $.trim($('#totalHours').val());
-            item.hours_per_unit = $.trim($('#hoursPerClass').val());
         } else {
             item.total_course_hours = '';
-            item.hours_per_unit = '';
         }
+        item.hours_per_unit = $.trim($('#hoursPerClass').val());
         item.expiration_days = $.trim($('#expirationDate').val());
         item.description = $.trim($('#description').val());
         return item;
