@@ -239,10 +239,10 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             success: function(data) {
                 if (data.code === $comm.HttpStatus.OK) {
                     Alert.showSuccess();
+                    $util.isFunction(cb) && cb();
                 } else {
-                    Alert.showError();
+                    Alert.showError(data.message);
                 }
-                $util.isFunction(cb) && cb();
             },
             error: function() {
                 Alert.showError();
@@ -258,10 +258,10 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
             success: function(data) {
                 if (data.code === $comm.HttpStatus.OK) {
                     Alert.showSuccess();
+                    $util.isFunction(cb) && cb();
                 } else {
-                    Alert.showError();
+                    Alert.showError(data.message);
                 }
-                $util.isFunction(cb) && cb();
             },
             error: function() {
                 Alert.showError();

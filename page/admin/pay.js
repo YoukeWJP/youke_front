@@ -113,7 +113,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
                 if (data.code === $comm.HttpStatus.OK) {
                     $util.isFunction(cb) && cb();
                 } else {
-                    Alert.showError(data.message || '操作失败');
+                    Alert.showError(data.message);
                 }
             }
         });
