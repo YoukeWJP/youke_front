@@ -92,6 +92,7 @@
     right: 0;
     bottom: 0;
     left: 234px;
+    overflow: auto;
 }
 .body .content h3.title {
     height:54px;
@@ -262,8 +263,12 @@
     text-align: left;
 }
 .body .sidebar-right .student-detail ul .detail>span{
+    width: 200px;
     float: right;
     text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .body .sidebar-right .student-detail ul .mobile:before {
     position: absolute;

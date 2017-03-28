@@ -69,7 +69,7 @@ require(['YOUKE.Util', 'YOUKE.Parse', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widg
     .on('change', '#file', function() {
         $('#mask-modify-logo').removeClass('dn');
         var file = this.files[0];
-        cropper(file);
+        // cropper(file);
     })
     .on('click', '#mask-modify-logo h3 i,#mask-modify-logo .bar .cancel', function(){
         $('#mask-modify-logo').addClass('dn');

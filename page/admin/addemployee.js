@@ -86,26 +86,26 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     .on('click', '.top .back', function () {
         $core.nextPage('Admin-MgrEmployee');
     })
-    .on('click', '.top .confirm,.bar .confirm', function () {
-        for(var key in checkFunc){
-            if(!checkFunc[key]()){
+    .on('click', '.top .confirm,.bar .cancel', function () {
+        for (var key in checkFunc) {
+            if (!checkFunc[key]()) {
                 return;
             }
         }
-        var item = {};
-        addEmployee(item, function () {
-            $core.nextPage('Admin-MgrEmployee');
+        var item = getPostData();
+        addEmployee(item, function() {
+
         });
     })
-    .on('click', '.top .confirm,.bar .cancel', function () {
-        for(var key in checkFunc){
-            if(!checkFunc[key]()){
+    .on('click', '.bar .confirm', function () {
+        for (var key in checkFunc) {
+            if (!checkFunc[key]()) {
                 return;
             }
         }
-        var item = {};
-        addEmployee(item, function () {
-        //
+        var item = getPostData();
+        addEmployee(item, function() {
+            $core.nextPage('Admin-MgrEmployee');
         });
     })
     //顶部菜单栏相关操作 --- END
@@ -139,25 +139,62 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         $util.stop(e);
         var $this = $(this);
         var text = $this.text(),
-            posid = $this.attr('data-posid');
-        $('#authority>input').attr('data-posid', posid).val(text);
+            role_id = $this.attr('data-id');
+        $('#authority>input').attr('data-id', role_id).val(text);
         $this.closest('ul').addClass('dn');
     })
     // 岗位权限 --- END
     ;
 
+    function getPostData(){
+        var item = {};
+        item.username = $.trim($('#mobile').val());
+        item.password = $.trim($('#password').val());
+        item.nicename = $.trim($('#name').val());
+        item.sex = $('#sex .active').attr('data-id');
+        item.role_id = $('#authority input').attr('data-id');
+        return item;
+    }
     function addEmployee(item, cb) {
         $http.post({
-            url: '',
+            url: 'api/employee/create',
             data: item,
             success: function(data) {
                 if (data.code === $comm.HttpStatus.OK) {
+                    Alert.showSuccess(data.message);
                     $util.isFunction(cb) && cb();
+                } else {
+                    Alert.showError(data.message);
+                }
+            }
+        });
+    }
+
+    //获取角色
+    function getRoles() {
+        $http.post({
+            url: 'api/employee/roles',
+            success: function(data) {
+                if (data.code === $comm.HttpStatus.OK) {
+                    var result = [],
+                        item,
+                        tpl = '<li data-id="{#id#}">{#name#}</li>';
+                    if (data.data && data.data.length) {
+                        for (var i = 0; i < data.data.length; i++) {
+                            item = data.data[i];
+                            result.push($util.strReplace(tpl, {
+                                '{#id#}': item.id,
+                                '{#name#}': item.name
+                            }));
+                        }
+                        $('#authority ul').html(result.join(''));
+                    }
                 }
             }
         });
     }
     $core.Ready(function() {
         console.log('addemployee');
+        getRoles();
     });
 });
