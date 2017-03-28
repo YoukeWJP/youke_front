@@ -4,12 +4,14 @@
  * Date: 2016/10/18
  * Time: 17:10
  */
-require(['YOUKE.Util', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
+require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
     var $core = YOUKE.Core,
         $scope = YOUKE.Scope,
         $util = YOUKE.Util,
+        $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
         $http = YOUKE.Service;
+    var referer = $util.getQuery('referer');//页面来源
 
     var checkStopCourse = {
         amount: function() {
@@ -295,5 +297,9 @@ require(['YOUKE.Util', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
 
     $core.Ready(function() {
         console.log('mgrstudent');
+        if (referer == '91' && $comm.Referer[referer]) {
+            $('#sidebar-right-list').addClass('dn');
+            $('#sidebar-right-student-detail').removeClass('dn');
+        }
     });
 });

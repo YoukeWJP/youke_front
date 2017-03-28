@@ -11,6 +11,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         $comm = YOUKE.Comm,
         Alert = YOUKE.Widget.Alert,
         $http = YOUKE.Service;
+    var referer = $util.getQuery('referer');//页面来源
 
     // 停课校验
     var checkStopCourse = {
@@ -247,5 +248,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     $core.Ready(function() {
         console.log('studentbirthday');
         $('.footer .detail .second').addClass('active');
+        if (referer == '90' && $comm.Referer[referer]) {
+            $('#sidebar-right-list').addClass('dn');
+            $('#sidebar-right-student-detail').removeClass('dn');
+        }
     });
 });

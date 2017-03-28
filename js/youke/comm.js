@@ -29,7 +29,9 @@ define(function() {
             '11'                :           'Service-MgrStudent',       //小妹端学员管理
             '12'                :           'Service-StudentBirthday',  //小妹端学员生日
             '21'                :           'Admin-MgrStudent',         //管理端学员管理
-            '22'                :           'Admin-BirthStudent'        //管理端学员生日
+            '22'                :           'Admin-BirthStudent',       //管理端学员生日
+            '90'                :           'Service-BuyNew',           //小妹端购买页面
+            '91'                :           'Admin-BuyNew'              //管理端购买页面
         }
     };
     NameSpace.Register('YOUKE.Comm', $Comm);

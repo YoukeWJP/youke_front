@@ -42,7 +42,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     .on('click', '#sidebar .title i', function() {
         var referer = $util.getQuery('referer');
         if (referer >= 10 && referer < 20 && $comm.Referer[referer]) {
-            $core.nextPage($comm.Referer[referer]);
+            $core.nextPage($comm.Referer[referer], {
+                referer: 90
+            });
         } else {
             $core.nextPage('Service-Index');
         }
