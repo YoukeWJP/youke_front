@@ -139,7 +139,9 @@ require(['YOUKE.Util', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
         }
     })
     .on('click', '#sidebar-right-student-detail .btn-buy', function() {
-        $core.nextPage('Admin-BuyNew');
+        $core.nextPage('Admin-BuyNew', {
+            referer: 22
+        });
     })
     //生日详情相关操作 --- END
     .on('click', '#sidebar-right-student-detail .content .remark i', function() {
@@ -187,7 +189,9 @@ require(['YOUKE.Util', 'YOUKE.Service', 'YOUKE.Widget.Alert'], function() {
         $this.addClass('active').siblings('span').removeClass('active');
         if ($this.hasClass('first')) {
             //TODO
-            $core.nextPage('Service-BuyNew');
+            $core.nextPage('Admin-BuyNew', {
+                referer: 22
+            });
         } else if ($this.hasClass('second')) {
             $('#mask-course-reduce').removeClass('dn');
         } else if ($this.hasClass('third')) {

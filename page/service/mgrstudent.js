@@ -134,7 +134,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         }
     })
     .on('click', '#sidebar-right-student-detail .btn-buy', function() {
-        $core.nextPage('Service-BuyNew');
+        $core.nextPage('Service-BuyNew', {
+            referer: 11
+        });
     })
     .on('click', '#sidebar-right-student-detail .content .remark i', function() {        var $selector = $(this).closest('h3').siblings('.detail');
         var remark = $selector.text();

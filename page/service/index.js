@@ -151,7 +151,9 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         $('#signin-list').removeClass('dn');
     })
     .on('click', '#sidebar-student-detail .btn-buy', function() {
-        $core.nextPage('Service-BuyNew');
+        $core.nextPage('Service-BuyNew', {
+            referer: 10
+        });
     })
     .on('click', '#signin-list .title label', function() {
         $('#signin-list').addClass('dn');

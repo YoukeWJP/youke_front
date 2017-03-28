@@ -40,8 +40,12 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
     $(document)
     //左侧相关操作 --- BEGIN
     .on('click', '#sidebar .title i', function() {
-        // $core.nextPage('Service-Index');
-        window.history.go(-1);
+        var referer = $util.getQuery('referer');
+        if (referer >= 10 && referer < 20 && $comm.Referer[referer]) {
+            $core.nextPage($comm.Referer[referer]);
+        } else {
+            $core.nextPage('Service-Index');
+        }
     })
     .on('click', '#sidebar .course i', function() {
         var $this = $(this);

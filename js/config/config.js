@@ -130,7 +130,7 @@ YOUKE.Core.config({
         //---Student学员管理 --- END
 
         //---运维页面，超级管理员专用 --- BEGIN
-        'Super-Index'                        :           '../../page/super/index.html',
+        // 'Super-Index'                        :           '../../page/super/index.html',
         //---运维页面，超级管理员专用 --- END
 
         'Demo'                               :           '../../page/demo/demo.html',
