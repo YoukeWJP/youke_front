@@ -1,9 +1,9 @@
 YOUKE.Core.config({
     env: {
-        sever: 'test'
+        sever: 'dev'
     },
     services: {
-        dev: '',
+        dev: 'http://116.62.57.92:8080/',
         test: 'http://youke.auauu.com/',
         release: ''
     },
