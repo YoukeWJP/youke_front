@@ -80,7 +80,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Service', 'YOU
     //登录功能
     function login(cb) {
         $http.post({
-            url: 'login/validate',
+            url: 'youke/api/login/validate',
             data: {
                 fields: JSON.stringify({
                     mobile: $.trim($('#username').val()),
@@ -93,7 +93,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Service', 'YOU
                     localStorage.setItem('ykUserInfo', JSON.stringify(data.data));
                     $util.isFunction(cb) && cb(data.data);
                 } else {
-                    Alert.showError(data.message || '登录失败');
+                    Alert.showError(data.errorMassage || '登录失败');
                 }
             },
             error: function() {
