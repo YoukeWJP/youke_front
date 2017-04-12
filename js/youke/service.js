@@ -6,7 +6,7 @@ define(['YOUKE.Adapter', 'YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert'], func
         $util = YOUKE.Util;
     var apiConfig = $core.getApiConfig(),
         defaultHeaders = $.extend(true, {}, {
-            'uid': $util.generateUUID(),
+            uid: $util.generateUUID()
         }, $core.getHeaders());
 
     function formatURL(url) {
@@ -32,7 +32,7 @@ define(['YOUKE.Adapter', 'YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert'], func
         var resultFn = _o.r;
         obj.url = _o.u;
         // 如果header的Content-Type是application/json，则需要序列化
-        if (defaultHeaders['Content-Type'].indexOf('application/json') !== -1 && $util.isObject(obj.data)) {
+        if (defaultHeaders['Content-Type'] && defaultHeaders['Content-Type'].indexOf('application/json') !== -1 && $util.isObject(obj.data)) {
             obj.data = JSON.stringify(obj.data);
         }
         // 执行顺序beforeSend->success|error->complete
@@ -55,7 +55,7 @@ define(['YOUKE.Adapter', 'YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert'], func
 
     function formatHeader(obj, type) {
         var _o = $.extend(true, {}, {
-            headers: defaultHeaders,
+            // headers: defaultHeaders,
             dataType: 'json',
             type: type
         }, obj);
