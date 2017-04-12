@@ -3,7 +3,7 @@ YOUKE.Core.config({
         sever: 'dev'
     },
     services: {
-        dev: 'http://116.62.57.92:8080/',
+        dev: 'http://116.62.57.92:8080/youke/api/',
         test: 'http://youke.auauu.com/',
         release: ''
     },

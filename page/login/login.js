@@ -11,6 +11,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Service', 'YOU
         Alert = YOUKE.Widget.Alert,
         $comm = YOUKE.Comm,
         $http = YOUKE.Service;
+    var companyCode = $util.getQuery('companyCode');
 
     var checkFunc = {
         username: function() {
@@ -61,9 +62,11 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Service', 'YOU
         }
         login(function(data) {
             var role = data.role;
-            if (role === $comm.Role.principal || role === $comm.Role.admin) { //校长或管理员
+            if (role === $comm.Role.master || role === $comm.Role.admin) { //校长或管理员
                 $core.nextPage('Admin-Index');
-            } else if (role === $comm.Role.instructor) { //教员，前台小妹
+            } else if (role === $comm.Role.student) {   //学生
+                $core.nextPage('Service-Index');
+            } else if (role === $comm.Role.reception) { //教员，前台小妹
                 $core.nextPage('Service-Index');
             } else {
                 Alert.showError(data.message || '无法获取用户权限');
@@ -77,13 +80,16 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Service', 'YOU
     //登录功能
     function login(cb) {
         $http.post({
-            url: 'api/auth/login',
+            url: 'login/validate',
             data: {
-                username: $.trim($('#username').val()),
-                password: $('#password').val()
+                fields: JSON.stringify({
+                    mobile: $.trim($('#username').val()),
+                    password: $('#password').val(),
+                }),
+                companyCode: companyCode
             },
             success: function(data) {
-                if (data.code === $comm.HttpStatus.OK) {
+                if (data.errorCode === $comm.HttpStatus.OK) {
                     localStorage.setItem('ykUserInfo', JSON.stringify(data.data));
                     $util.isFunction(cb) && cb(data.data);
                 } else {
@@ -105,7 +111,10 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Widget.Alert', 'YOUKE.Service', 'YOU
     ;
 
     $core.Ready(function() {
-        localStorage.clear();
         console.log('login');
+        localStorage.clear();
+        if (!companyCode) {
+            Alert.showError('未指定机构，链接不合法！');
+        }
     });
 });

@@ -7,14 +7,14 @@
 define(function() {
     var $Comm = {
         HttpStatus: {
-            'OK'                :           200,             //成功
+            'OK'                :           0,               //成功
             'unlogin'           :           40015,           //未登录
             'noauth'            :           40016,           //无权限
         },
         Role: {
             'student'           :           'student',       //学生
-            'instructor'        :           'instructor',    //教员
-            'principal'         :           'principal',     //校长
+            'reception'         :           'reception_desk',//前台接待
+            'master'            :           'master',        //分校区校长
             'admin'             :           'admin',         //管理员
             'superuser'         :           'superuser'      //超级用户
         },
