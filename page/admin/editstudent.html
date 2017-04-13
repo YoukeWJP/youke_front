@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="../../css/comm.css">
     <link rel="stylesheet" href="../../css/comm_admin.css">
     <link rel="stylesheet" href="../../page/admin/editstudent.css">
+    <link rel="stylesheet" href="../../css/third-party/mobiscroll.custom.css">
     <script src="../common/script.js"></script>
+    <!-- 破解方法链接：http://blog.csdn.net/cdnight/article/details/49306957 -->
+    <script src="../../js/third-party/mobiscroll.custom.min.js"></script>
 </head>
 
 <body>
@@ -21,14 +24,14 @@
     </header>
     <article class="main">
         <div class="content">
-            <input type="text" class="title" placeholder="请输入学员名">
+            <input type="text" class="title" placeholder="请输入会员名" maxlength="16" id="studentName">
             <ul>
                 <li class="first">
                     <label>学员卡ID：</label>
-                    <input type="text" placeholder="学员卡ID">
+                    <input type="text" placeholder="学员卡ID（选填）" maxlength="16" id="studentId">
                 </li>
                 <li class="second">
-                    <label>个人信息：</label>
+                    <label>个人信息（必填）：</label>
                 </li>
                 <li class="third">
                     <label>性别：</label>
@@ -39,21 +42,21 @@
                 </li>
                 <li class="fourth">
                     <label>移动电话：</label>
-                    <input type="text" placeholder="13800138000">
+                    <input type="text" placeholder="13800138000" maxlength="11" id="mobile">
                 </li>
                 <li class="fifth">
                     <label>出生日期：</label>
-                    <input type="text" placeholder="出生日期">
+                    <input type="text" placeholder="出生日期" maxlength="10" readonly="readonly" id="birthday">
                 </li>
                 <li class="sixth">
-                    <label>其他信息：</label>
+                    <label>其他信息（必填）：</label>
                 </li>
                 <li class="seventh">
                     <label>邮箱：</label>
-                    <input type="text" placeholder="wjp@youkeonline.cn">
+                    <input type="text" placeholder="wjp@youkeonline.cn" maxlength="48" id="email">
                 </li>
                 <li class="eighth">
-                    <label>备注：</label>
+                    <label>备注（选填）：</label>
                 </li>
                 <li class="ninth">
                     <textarea cols="30" rows="10" placeholder="备注"></textarea>

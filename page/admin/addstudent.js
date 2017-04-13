@@ -184,7 +184,7 @@ require(['YOUKE.Util', 'YOUKE.Comm', 'YOUKE.Service', 'YOUKE.Widget.Alert'], fun
         });
     }
     $core.Ready(function() {
-        console.log('editstudent');
+        console.log('addstudent');
         calendarBasicInit();
         $('.footer .detail .first').addClass('active');
     });

@@ -75,6 +75,7 @@ YOUKE.Core.config({
 
         // Admin学员管理
         'Admin-IndexStudent'                 :           '../../page/admin/indexstudent.html',
+        'Admin-AddStudent'                   :           '../../page/admin/addstudent.html',
         'Admin-EditStudent'                  :           '../../page/admin/editstudent.html',
         'Admin-MgrStudent'                   :           '../../page/admin/mgrstudent.html',
         'Admin-BirthStudent'                 :           '../../page/admin/birthstudent.html',
@@ -114,6 +115,7 @@ YOUKE.Core.config({
         'Service-Index'                      :           '../../page/service/index.html',
         'Service-BuyNew'                     :           '../../page/service/buynew.html',
         'Service-AddStudent'                 :           '../../page/service/addstudent.html',
+        'Service-EditStudent'                :           '../../page/service/editstudent.html',
         'Service-StudentIndex'               :           '../../page/service/studentindex.html',
         'Service-MgrStudent'                 :           '../../page/service/mgrstudent.html',
         'Service-StudentBirthday'            :           '../../page/service/studentbirthday.html',
